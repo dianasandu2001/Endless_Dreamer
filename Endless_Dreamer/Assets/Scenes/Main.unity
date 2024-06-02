@@ -417,6 +417,7 @@ GameObject:
   - component: {fileID: 67874293}
   - component: {fileID: 67874292}
   - component: {fileID: 67874291}
+  - component: {fileID: 67874295}
   m_Layer: 0
   m_Name: Fallen Tree
   m_TagString: Untagged
@@ -439,7 +440,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -517,6 +518,20 @@ Transform:
   - {fileID: 1228267324}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &67874295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67874290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f980e5cfb39b5ab408e9b832689aa14d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  the_player: {fileID: 1340781046}
+  stumble_animation: {fileID: 1263831991}
 --- !u!4 &71456759 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c1a0aca5be3463a4ca436b69a2f2a231, type: 3}
@@ -2729,6 +2744,7 @@ GameObject:
   - component: {fileID: 300591908}
   - component: {fileID: 300591907}
   - component: {fileID: 300591906}
+  - component: {fileID: 300591910}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -2751,7 +2767,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2782,7 +2798,7 @@ MeshRenderer:
     firstSubMesh: 0
     subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
+  m_ProbeAnchor: {fileID: 5465940246521907071, guid: db0ad70612b1eba4d859a26bf1336c41, type: 3}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_ReceiveGI: 1
@@ -2826,6 +2842,20 @@ Transform:
   - {fileID: 830676695}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &300591910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300591905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f980e5cfb39b5ab408e9b832689aa14d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  the_player: {fileID: 1340781046}
+  stumble_animation: {fileID: 1263831991}
 --- !u!1001 &303005754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11404,6 +11434,7 @@ GameObject:
   - component: {fileID: 1391773798}
   - component: {fileID: 1391773797}
   - component: {fileID: 1391773796}
+  - component: {fileID: 1391773800}
   m_Layer: 0
   m_Name: Tree_Stump
   m_TagString: Untagged
@@ -11426,7 +11457,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -11505,6 +11536,20 @@ Transform:
   - {fileID: 1815769}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1391773800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391773795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f980e5cfb39b5ab408e9b832689aa14d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  the_player: {fileID: 1340781046}
+  stumble_animation: {fileID: 1263831991}
 --- !u!4 &1392643905 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3321783486682060937, guid: e6ee60cd48ca7fa478e3065e30330864, type: 3}
@@ -12432,6 +12477,7 @@ GameObject:
   - component: {fileID: 1518959273}
   - component: {fileID: 1518959272}
   - component: {fileID: 1518959271}
+  - component: {fileID: 1518959274}
   m_Layer: 0
   m_Name: Tree_Stump (1)
   m_TagString: Untagged
@@ -12482,7 +12528,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -12538,6 +12584,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518959269}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1518959274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518959269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f980e5cfb39b5ab408e9b832689aa14d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  the_player: {fileID: 1340781046}
+  stumble_animation: {fileID: 1263831991}
 --- !u!1001 &1532241217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15421,6 +15481,7 @@ GameObject:
   - component: {fileID: 1834668918}
   - component: {fileID: 1834668917}
   - component: {fileID: 1834668916}
+  - component: {fileID: 1834668920}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -15443,7 +15504,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -15516,6 +15577,20 @@ Transform:
   - {fileID: 716302539}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1834668920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834668915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f980e5cfb39b5ab408e9b832689aa14d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  the_player: {fileID: 1340781046}
+  stumble_animation: {fileID: 1263831991}
 --- !u!1001 &1838997171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15673,6 +15748,7 @@ GameObject:
   - component: {fileID: 1876839912}
   - component: {fileID: 1876839911}
   - component: {fileID: 1876839910}
+  - component: {fileID: 1876839914}
   m_Layer: 0
   m_Name: Tree_Stump (2)
   m_TagString: Untagged
@@ -15695,7 +15771,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -15779,6 +15855,20 @@ Transform:
   - {fileID: 1756605707}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1876839914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876839909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f980e5cfb39b5ab408e9b832689aa14d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  the_player: {fileID: 1340781046}
+  stumble_animation: {fileID: 1263831991}
 --- !u!1 &1881554425
 GameObject:
   m_ObjectHideFlags: 0
