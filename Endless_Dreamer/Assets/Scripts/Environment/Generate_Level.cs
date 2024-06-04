@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Generate_Level : MonoBehaviour
 {
-    public GameObject[] section;
+    public GameObject[] obsticles;
+    public GameObject section;
     public int z_pos = 50;
     public bool creating_section = false;
-    public int sec_num;
     public float seconds;
+
+    public int obj_num;
+    public int obj_z_pos = 0;
+    public bool creating_object = false;
 
     void Update()
     {
@@ -17,13 +21,27 @@ public class Generate_Level : MonoBehaviour
             creating_section = true;
             StartCoroutine(Generating_section());
         }
+
+        if (creating_object == false)
+        {
+            creating_section = true;
+            StartCoroutine(Generating_obsticle());
+        }
     }
     
     IEnumerator Generating_section()
     {
-        sec_num = Random.Range(0, 3);
-        Instantiate(section[sec_num], new Vector3(0,0,z_pos), Quaternion.identity);
+        Instantiate(section, new Vector3(0,0,z_pos), Quaternion.identity);
         z_pos += 50;
+        yield return new WaitForSeconds(seconds);
+        creating_section = false;
+    }
+
+    IEnumerator Generating_obsticle()
+    {
+        obj_num = Random.Range(0, 4);
+        Instantiate(obsticles[obj_num], new Vector3(0, 1, obj_z_pos), Quaternion.identity);
+        obj_z_pos += 5;
         yield return new WaitForSeconds(seconds);
         creating_section = false;
     }

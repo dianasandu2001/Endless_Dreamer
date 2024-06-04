@@ -2352,9 +2352,6 @@ Transform:
   m_Children:
   - {fileID: 1453898822}
   - {fileID: 437557465}
-  - {fileID: 1753643305}
-  - {fileID: 1376619282}
-  - {fileID: 958019750}
   - {fileID: 1182337746}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7957,7 +7954,7 @@ Transform:
   - {fileID: 1421051991}
   - {fileID: 1334197180}
   - {fileID: 24613442}
-  m_Father: {fileID: 251432984}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &958019751
 BoxCollider:
@@ -11022,6 +11019,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move_speed: 3
   left_right_speed: 4
+  is_jumping: 0
+  coming_down: 0
+  player_object: {fileID: 1263831991}
 --- !u!143 &1340781052
 CharacterController:
   m_ObjectHideFlags: 0
@@ -11218,7 +11218,7 @@ Transform:
   m_Children:
   - {fileID: 1745411004}
   - {fileID: 569174836}
-  m_Father: {fileID: 251432984}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -29.768, z: -0.336}
 --- !u!65 &1376619283
 BoxCollider:
@@ -14491,7 +14491,7 @@ Transform:
   m_Children:
   - {fileID: 1191028560}
   - {fileID: 942351}
-  m_Father: {fileID: 251432984}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -29.768, z: 0}
 --- !u!65 &1753643306
 BoxCollider:
@@ -16722,12 +16722,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85230758d956c294fba4d7a4c0f97e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  section:
-  - {fileID: 251432983}
+  obsticles:
+  - {fileID: 300591905}
+  - {fileID: 1834668915}
+  - {fileID: 67874290}
+  - {fileID: 1391773795}
+  section: {fileID: 251432983}
   z_pos: 50
   creating_section: 0
-  sec_num: 0
   seconds: 15
+  obj_num: 0
+  obj_z_pos: 0
+  creating_object: 0
 --- !u!82 &1984615738
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18439,3 +18445,6 @@ SceneRoots:
   - {fileID: 67874294}
   - {fileID: 1518959270}
   - {fileID: 1876839913}
+  - {fileID: 1753643305}
+  - {fileID: 1376619282}
+  - {fileID: 958019750}
