@@ -53,8 +53,25 @@ public class Generate_Level : MonoBehaviour
         {
             Instantiate(obsticles[obj_num], new Vector3(lane_x_pos[x], y_pos[obj_num], obj_z_pos), Quaternion.identity);
         }
-        obj_z_pos += 5;
+        obj_z_pos += 10;
         yield return new WaitForSeconds(seconds);
         creating_section = false;
     }
+
+    //IEnumerator Generating_coins()
+    //{
+        //obj_num = Random.Range(0, 2);
+        //x = Random.Range(0, 3);
+        //if (obj_num == 2)
+        //{
+            //Instantiate(obsticles[obj_num], new Vector3(0, y_pos[obj_num], obj_z_pos), Quaternion.identity);
+        //}
+        //else
+        //{
+            //Instantiate(obsticles[obj_num], new Vector3(lane_x_pos[x], y_pos[obj_num], obj_z_pos), Quaternion.identity);
+        //}
+        //obj_z_pos += 10;
+        //yield return new WaitForSeconds(seconds);
+        //creating_section = false;
+    //}
 }
