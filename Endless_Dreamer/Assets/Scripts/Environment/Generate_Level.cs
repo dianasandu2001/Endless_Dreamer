@@ -14,6 +14,10 @@ public class Generate_Level : MonoBehaviour
     public int obj_z_pos = 0;
     public bool creating_object = false;
 
+    public float[] lane_x_pos;
+    public int x;
+    public float[] y_pos;
+
     void Update()
     {
         if (creating_section == false)
@@ -40,7 +44,15 @@ public class Generate_Level : MonoBehaviour
     IEnumerator Generating_obsticle()
     {
         obj_num = Random.Range(0, 4);
-        Instantiate(obsticles[obj_num], new Vector3(0, 1, obj_z_pos), Quaternion.identity);
+        x = Random.Range(0, 3);
+        if (obj_num == 2)
+        {
+            Instantiate(obsticles[obj_num], new Vector3(0, y_pos[obj_num], obj_z_pos), Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(obsticles[obj_num], new Vector3(lane_x_pos[x], y_pos[obj_num], obj_z_pos), Quaternion.identity);
+        }
         obj_z_pos += 5;
         yield return new WaitForSeconds(seconds);
         creating_section = false;
