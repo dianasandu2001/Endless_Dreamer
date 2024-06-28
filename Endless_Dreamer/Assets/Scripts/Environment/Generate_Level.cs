@@ -6,13 +6,15 @@ public class Generate_Level : MonoBehaviour
 {
     public GameObject[] obsticles;
     public GameObject section;
+
     public int z_pos = 50;
     public bool creating_section = false;
-    public float seconds;
+    public float sec_s;
 
     public int obj_num;
     public int obj_z_pos = 0;
     public bool creating_object = false;
+    public float obj_s;
 
     public float[] lane_x_pos;
     public int x;
@@ -37,7 +39,7 @@ public class Generate_Level : MonoBehaviour
     {
         Instantiate(section, new Vector3(0,0,z_pos), Quaternion.identity);
         z_pos += 50;
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSeconds(sec_s);
         creating_section = false;
     }
 
@@ -54,7 +56,7 @@ public class Generate_Level : MonoBehaviour
             Instantiate(obsticles[obj_num], new Vector3(lane_x_pos[x], y_pos[obj_num], obj_z_pos), Quaternion.identity);
         }
         obj_z_pos += 10;
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSeconds(obj_s);
         creating_section = false;
     }
 
