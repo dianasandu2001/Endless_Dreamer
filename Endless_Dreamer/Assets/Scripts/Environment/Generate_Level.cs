@@ -59,6 +59,7 @@ public class Generate_Level : MonoBehaviour
         yield return new WaitForSeconds(obj_s);
         creating_section = false;
     }
+    // all objects spawn at the same time :(
 
     //IEnumerator Generating_coins()
     //{
@@ -76,4 +77,6 @@ public class Generate_Level : MonoBehaviour
         //yield return new WaitForSeconds(seconds);
         //creating_section = false;
     //}
+
+    // im having problems coming up with something that says, if object and coin are in the same place, spawn coin or something like that
 }

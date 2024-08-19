@@ -419,7 +419,7 @@ GameObject:
   - component: {fileID: 67874291}
   - component: {fileID: 67874295}
   m_Layer: 0
-  m_Name: Fallen Tree
+  m_Name: Fallen_Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16750,7 +16750,7 @@ MonoBehaviour:
   obj_num: 0
   obj_z_pos: 0
   creating_object: 0
-  obj_s: 10
+  obj_s: 5
   lane_x_pos:
   - 1.5
   - 0
