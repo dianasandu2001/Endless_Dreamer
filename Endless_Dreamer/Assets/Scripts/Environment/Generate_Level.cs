@@ -83,7 +83,7 @@ public class Generate_Level : MonoBehaviour
         {
             Instantiate(coins[1], new Vector3(lane_x_pos[c], coin_y_pos, coin_z_pos), Quaternion.identity);
         }
-        if (x == c)
+        else if (x == c)
         {
             //do nothing, to prevent the coins and objects from spawning on top of each other
             //i can later add another if else statement for if it's a rock or a stump then it spawns
