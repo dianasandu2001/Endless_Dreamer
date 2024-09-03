@@ -28,6 +28,7 @@ Fantasy music that fits the theme for them. The default map is cool toned mystic
 ## **Art Style**:
 Fantasy 3D art. 
 Shying away from realism with the scope of accessibility but not towards too few polygons since details are highly important for the fantasy aesthetic.
+![Capture](https://github.com/user-attachments/assets/7b413c6a-70e6-4539-8418-81d693abdb20)
 
 ## **Aditional information**:
 
