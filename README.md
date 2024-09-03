@@ -32,5 +32,5 @@ Shying away from realism with the scope of accessibility but not towards too few
 
 ## **Aditional information**:
 
-# **Lore of Dreamer**:
+### **Lore of Dreamer**:
 ~~Should i add it here?~~
