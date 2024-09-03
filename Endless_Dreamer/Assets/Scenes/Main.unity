@@ -5126,7 +5126,7 @@ GameObject:
   - component: {fileID: 593647697}
   - component: {fileID: 593647696}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Coin_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5148,7 +5148,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -925.90295, y: 377.72357}
+  m_AnchoredPosition: {x: -889, y: 377.72357}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &593647696
@@ -8529,7 +8529,7 @@ GameObject:
   - component: {fileID: 1105825448}
   - component: {fileID: 1105825447}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Distance_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8551,7 +8551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -927.5035, y: 276.89056}
+  m_AnchoredPosition: {x: -890, y: 276.89056}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1105825447
@@ -10003,7 +10003,7 @@ GameObject:
   - component: {fileID: 1308041378}
   - component: {fileID: 1308041377}
   m_Layer: 5
-  m_Name: Coin Display
+  m_Name: Coin_Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14548,7 +14548,7 @@ GameObject:
   - component: {fileID: 1847020395}
   - component: {fileID: 1847020394}
   m_Layer: 5
-  m_Name: Coin Display
+  m_Name: Distance_Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15621,6 +15621,8 @@ MonoBehaviour:
   coins:
   - {fileID: 285999236}
   - {fileID: 464513373}
+  - {fileID: 2074560753}
+  - {fileID: 2074560753}
   z_pos: 50
   creating_section: 0
   sec_s: 15
@@ -15634,6 +15636,7 @@ MonoBehaviour:
   coin_s: 2
   coin_y_pos: 0
   c: 0
+  l: 0
   lane_x_pos:
   - 1.5
   - 0
@@ -15754,6 +15757,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coin_count_display: {fileID: 319564154}
+  player: {fileID: 1340781046}
+  distance_count_display: {fileID: 146786469}
 --- !u!1 &1990834838
 GameObject:
   m_ObjectHideFlags: 0
@@ -16722,6 +16727,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 08cc5c2c7dd9b644d8fa3ece3231d75b, type: 3}
   m_PrefabInstance: {fileID: 2073515167}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2074560753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2074560754}
+  m_Layer: 0
+  m_Name: No_Coins
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2074560754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074560753}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.781138, y: -14.698081, z: -7.1388583}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2075865633
 GameObject:
   m_ObjectHideFlags: 0
@@ -17322,3 +17358,4 @@ SceneRoots:
   - {fileID: 118735725}
   - {fileID: 384726951}
   - {fileID: 212969423}
+  - {fileID: 2074560754}

@@ -7,7 +7,12 @@ public class Collectable_Control : MonoBehaviour
 {
     public static int coin_count;
     public GameObject coin_count_display;
-    
+
+    public GameObject player;
+
+    public static float distance_count;
+    public GameObject distance_count_display;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +23,7 @@ public class Collectable_Control : MonoBehaviour
     void Update()
     {
         coin_count_display.GetComponent<Text>().text = "" + coin_count;
+        distance_count = (player.transform.position.z + 25)/2;
+        distance_count_display.GetComponent<Text>().text = "" + (int)distance_count + " m";
     }
 }
