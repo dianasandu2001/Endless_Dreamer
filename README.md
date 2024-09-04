@@ -12,7 +12,7 @@ An endless runner game situated in the realm(s) of my future game called Dreamer
 -	Upgrading powerups
 -	Purchasing new characters, cosmetics, and new maps
 
-# **Hopeful Mechanics**:
+### **Hopeful Mechanics**:
 - Quests
 - Crafting System (for crafting one time use potions like score multiplier or extending a run)
 - Achievements
