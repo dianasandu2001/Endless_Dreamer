@@ -19,7 +19,7 @@ An endless runner game situated in the realm(s) of my future game called Dreamer
 
 ## **Gameplay**:
 The player would start on the default map and run, avoiding obstacles and debuffs while collecting coins, powerups, gems, and chests. The farther you run, the higher the distance count and the higher the score count (which can be increased with power-ups and multipliers).
-Once the player trips twice consecutively or bumps into an object they would “wake up” and have to start the run again. This can be prevented with a second life with a potion, gems or maybe eventually adds.
+Once the player trips twice consecutively or bumps into an object they would “wake up” and have to start the run again. This can be prevented with a second life with a potion, gems or maybe eventually ads.
 Outside of the running, the user can upgrade the effectiveness and frequency of the powerups available during the run, buy more characters (and maybe cosmetics in the future), buy more maps, and craft potions with items acquired from chests.
 
 Here is what the game looks like so far in its early stages:
