@@ -18,15 +18,15 @@ An endless runner game situated in the realm(s) of my future game called Dreamer
 - Achievements
 
 ## **Gameplay**:
-You would start out on the default map and run, avoiding obstacles and debuffs while collecting coins, powerups, gems, and chests. The farther you run, the higher the distance count and the higher the score count (which can be increased with power-ups and multipliers)
-Once you trip twice consecutively or bump into an object you would “wake up” and have to start the run again. This can be prevented with a second life with a potion, gems or maybe eventually adds.
-Outside of the running, you can upgrade the effectiveness and frequency of the powerups you can obtain, buy more characters (and maybe cosmetics in the future), buy more maps, and craft potions with items acquired from chests.
+The player would start out on the default map and run, avoiding obstacles and debuffs while collecting coins, powerups, gems, and chests. The farther you run, the higher the distance count and the higher the score count (which can be increased with power-ups and multipliers).
+Once the player trips twice consecutively or bumps into an object they would “wake up” and have to start the run again. This can be prevented with a second life with a potion, gems or maybe eventually adds.
+Outside of the running, the user can upgrade the effectiveness and frequency of the powerups avaliable during the run, buy more characters (and maybe cosmetics in the future), buy more maps, and craft potions with items acquired from chests.
 
 ## **Music**:
 Fantasy music that fits the theme for them. The default map is a cool toned mystical mushroom-covered forest with exploration music. Other maps would include an indoor dungeon featuring creepier and more dangerous music and a map in the clouds with grand music.
 
 ## **Art Style**:
-The art style is aimed to be somewhat realistic with a 3D cartoony feel to it. The scope is to have details to elevate the experience yet keep it feeling cozy and game like.
+The art style is aimed to be somewhat realistic with a 3D cartoony feel to it. The scope is to have details to elevate the experience yet keep it feeling cozy and game like. Inspired by Temple Run as well as World of Warcraft.
 
 <img width="500" alt ="forest inspo 1" src="https://github.com/user-attachments/assets/f0879c5d-d238-4514-a455-5073e3bb16e5"> <img width="500" alt ="forest inspo 2" src="https://github.com/user-attachments/assets/a0a087ce-7c71-4a36-8c03-2efd8c964192">
 
@@ -36,4 +36,4 @@ Here is what the game looks like so far in its early stages:
 ## **Aditional information**:
 
 ### **Lore of Dreamer**:
-~~Should i add it here?~~
+Shortly on the background story 
