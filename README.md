@@ -23,6 +23,7 @@ Once the player trips twice consecutively or bumps into an object they would “
 Outside of the running, the user can upgrade the effectiveness and frequency of the powerups avaliable during the run, buy more characters (and maybe cosmetics in the future), buy more maps, and craft potions with items acquired from chests.
 
 Here is what the game looks like so far in its early stages:
+
 <img width="500" alt ="gameplay screenshot" src="https://github.com/user-attachments/assets/7b413c6a-70e6-4539-8418-81d693abdb20">
 
 ## **Music**:
