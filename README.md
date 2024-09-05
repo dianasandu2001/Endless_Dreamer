@@ -36,4 +36,4 @@ Here is what the game looks like so far in its early stages:
 ## **Aditional information**:
 
 ### **Lore of Dreamer**:
-Shortly on the background story 
+The game idea for the future to be "Dreamer" game is an open world exploration game. The player would spawn in the "real world" and can discover places and meet npc's. When the day comes to an end, they would need to return back to the in game home and go to bed, where the dream part of the game takes place. Depending on the places disovered and npc's met. different places are unlocked and new storylines are opened. The different maps for the "Endless Dreamer" game are placed unlockable in the dream world. I am hoping to add some easter eggs like rare collectales or achievements with fragments of lore to piece it all together and once the "Dreamer" game is made, the players that played both can piece it together.
