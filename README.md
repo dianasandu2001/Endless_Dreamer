@@ -24,8 +24,8 @@ Outside of the running, the user can upgrade the effectiveness and frequency of 
 
 Here is what the game looks like so far in its early stages:
 
-<img width="500" alt ="main menu" src="https://github.com/user-attachments/assets/77edeb05-2dc9-4dc9-9b60-8341d40ce41d">
-<img width="500" alt ="gameplay screenshot" src="https://github.com/user-attachments/assets/69f86418-9bdf-46e0-8008-def0f8aba670">
+<img width="400" alt ="main menu" src="https://github.com/user-attachments/assets/77edeb05-2dc9-4dc9-9b60-8341d40ce41d">
+<img width="400" alt ="gameplay screenshot" src="https://github.com/user-attachments/assets/69f86418-9bdf-46e0-8008-def0f8aba670">
 
 ## **Music**:
 Fantasy music that fits the theme for them. The default map is a cool toned mystical mushroom-covered forest with exploration music. Other maps would include an indoor dungeon featuring creepier and more dangerous music and a map in the clouds with grand music.
@@ -33,7 +33,8 @@ Fantasy music that fits the theme for them. The default map is a cool toned myst
 ## **Art Style**:
 The art style is aimed to be somewhat realistic with a 3D cartoony feel to it. The scope is to have details to elevate the experience yet keep it feeling cozy and game-like. Inspired by Temple Run as well as World of Warcraft.
 
-<img width="500" alt ="forest inspo 1" src="https://github.com/user-attachments/assets/f0879c5d-d238-4514-a455-5073e3bb16e5"> <img width="500" alt ="forest inspo 2" src="https://github.com/user-attachments/assets/a0a087ce-7c71-4a36-8c03-2efd8c964192">
+<img width="400" alt ="forest inspo 1" src="https://github.com/user-attachments/assets/f0879c5d-d238-4514-a455-5073e3bb16e5"> 
+<img width="400" alt ="forest inspo 2" src="https://github.com/user-attachments/assets/a0a087ce-7c71-4a36-8c03-2efd8c964192">
 
 ## **Aditional information**:
 
