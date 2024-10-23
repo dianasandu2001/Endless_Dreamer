@@ -10,6 +10,14 @@ public class GameManager : MonoBehaviour
 
     public string currentLevel;
 
+    //audio
+    public float volume;
+    public float soundEffects;
+
+    //map
+    public AudioClip ForentSong;
+    public string currentMap; 
+
     //currency
     public float coins;  // coins collected
     public float gems;  // gems collected
@@ -60,6 +68,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.M))
         {
+            Load();
             SceneManager.LoadScene("MainMenu");
         }
 
@@ -73,6 +82,10 @@ public class GameManager : MonoBehaviour
         PlayerData data = new PlayerData();
 
         //copy info from GM to PlayerData
+
+        //audio
+        data.volume = volume;
+        data.soundEffects = soundEffects;
 
         //currency
         data.coins = coins;
@@ -116,6 +129,10 @@ public class GameManager : MonoBehaviour
 
             // move the info to GM
 
+            //audio
+            volume = data.volume = volume;
+            soundEffects = data.soundEffects;
+
             //currency
             coins = data.coins;
             gems = data.gems;
@@ -151,6 +168,10 @@ public class GameManager : MonoBehaviour
 class PlayerData
 {
     public string currentLevel;
+
+    //audio
+    public float volume;
+    public float soundEffects;
 
     //currency
     public float coins;  // coins collected

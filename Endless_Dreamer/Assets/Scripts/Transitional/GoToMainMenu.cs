@@ -9,6 +9,8 @@ public class GoToMainMenu : MonoBehaviour
     {
         if (File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
         {
+            GameManager.manager.Load();
+            Debug.Log("Loading prev data");
             SceneManager.LoadScene("MainMenu");
         }
         else

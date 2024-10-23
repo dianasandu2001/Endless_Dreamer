@@ -23,9 +23,11 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/MainMenu.unity
   - m_enabled: 1
-    m_path: Assets/Scenes/Turorial.unity
-  - m_enabled: 1
     m_path: Assets/Scenes/Forest.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Shop.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Tutorial.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings: []
