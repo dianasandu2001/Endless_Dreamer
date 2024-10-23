@@ -20,6 +20,10 @@ public class Settings : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void Play()
+    {
+        SceneManager.LoadScene("Forest");
+    }
     public void Shop()
     {
         SceneManager.LoadScene("Shop");
@@ -60,5 +64,10 @@ public class Settings : MonoBehaviour
         {
             settingsPanel.SetActive(false);
         }
+    }
+    public void EndRun()
+    {
+        SceneManager.LoadScene("MainMenu"); // or where the character levels up to show levels
+        GameManager.manager.Save();
     }
 }

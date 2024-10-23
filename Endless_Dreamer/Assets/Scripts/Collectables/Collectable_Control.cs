@@ -23,7 +23,10 @@ public class Collectable_Control : MonoBehaviour
     void Update()
     {
         coin_count_display.GetComponent<Text>().text = "" + coin_count;
+        GameManager.manager.coins += coin_count;
+
         distance_count = (player.transform.position.z + 25)/2;
         distance_count_display.GetComponent<Text>().text = "" + (int)distance_count + " m";
+        GameManager.manager.distance += distance_count;
     }
 }
