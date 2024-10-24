@@ -1771,7 +1771,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2779704511238921876}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: EndRun
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4624,3 +4624,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d519b4ceeef921449d08b630b75a58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_count_display: {fileID: 7425546385329244700}
+  distance_count_display: {fileID: 6209355813028489876}

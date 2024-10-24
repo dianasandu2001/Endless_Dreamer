@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -986,11 +987,6 @@ MonoBehaviour:
   the_player: {fileID: 1340781046}
   stumble_animation: {fileID: 1263831991}
   panel: {fileID: 1261575484}
---- !u!1 &319564154 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1797911139599862865, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
-  m_PrefabInstance: {fileID: 782240474267431724}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &365637096 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c1a0aca5be3463a4ca436b69a2f2a231, type: 3}
@@ -4746,7 +4742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe07f1c603a7e504395e30356d188e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coin_count_display: {fileID: 319564154}
+  coin_count_display: {fileID: 782240474267431725}
   player: {fileID: 1340781046}
   distance_count_display: {fileID: 146786469}
 --- !u!1 &1990834838
@@ -5624,6 +5620,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2779704511238921876, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
+      propertyPath: coin_count_display
+      value: 
+      objectReference: {fileID: 782240474267431725}
+    - target: {fileID: 2779704511238921876, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
+      propertyPath: distance_count_display
+      value: 
+      objectReference: {fileID: 146786469}
     - target: {fileID: 3106853361872137359, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -5817,6 +5821,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
+--- !u!1 &782240474267431725 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7425546385329244700, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
+  m_PrefabInstance: {fileID: 782240474267431724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

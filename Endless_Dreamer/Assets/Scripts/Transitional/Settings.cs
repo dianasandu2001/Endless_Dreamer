@@ -1,12 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
+    public GameObject coin_count_display;
+    public GameObject distance_count_display;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        coin_count_display.GetComponent<Text>().text = "" + GameManager.manager.coins;
+        distance_count_display.GetComponent<Text>().text = "" + (int)GameManager.manager.distance + " m";
     }
 
     // Update is called once per frame
@@ -36,7 +40,8 @@ public class Settings : MonoBehaviour
 
     public void Exit()
     {
-        SceneManager.LoadScene("MainMenu");
+        Application.Quit();
+        //UnityEditor.EditorApplication.isPlaying = false;
     }
 
     public void ShowOptions(GameObject settingsPanel)
@@ -68,6 +73,13 @@ public class Settings : MonoBehaviour
     public void EndRun()
     {
         SceneManager.LoadScene("MainMenu"); // or where the character levels up to show levels
+        Debug.Log("I ended the run");
+        GameManager.manager.coins += Collectable_Control.coin_count;
+        if(Collectable_Control.distance_count> GameManager.manager.distance)
+        {
+            GameManager.manager.distance = Collectable_Control.distance_count;
+            Debug.Log("New highscore");
+        }
         GameManager.manager.Save();
     }
 }

@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent_name: 
-  sec_s: 30
+  sec_s: 50
   obj_s: 10
 --- !u!108 &-9211645135087748243
 Light:
