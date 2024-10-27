@@ -22,7 +22,15 @@ public class Shop : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+    public void ToShop()
+    {
+        SceneManager.LoadScene("Shop");
+    }
 
+    public void Upgrades()
+    {
+        SceneManager.LoadScene("Upgrades");
+    }
     public void AdventurerTab()
     {
         Panel1.SetActive(true);
@@ -40,6 +48,26 @@ public class Shop : MonoBehaviour
         Panel1.SetActive(false);
         Panel2.SetActive(false);
         Panel3.SetActive(true);
+    }
+
+    public void ShowRewards(GameObject settingsPanel)
+    {
+        if (settingsPanel.activeSelf == false)
+        {
+            settingsPanel.SetActive(true);
+        }
+        else
+        {
+            settingsPanel.SetActive(false);
+        }
+    }
+    public void HoverOn(GameObject settingsPanel)
+    {
+        settingsPanel.SetActive(true);
+    }
+    public void HoverOff(GameObject settingsPanel)
+    {
+        settingsPanel.SetActive(false);
     }
 
     //public void Buy(float currency, float item)

@@ -32,6 +32,10 @@ public class Settings : MonoBehaviour
     {
         SceneManager.LoadScene("Shop");
     }
+    public void Upgrades()
+    {
+        SceneManager.LoadScene("Upgrades");
+    }
 
     public void Challenges()
     {
