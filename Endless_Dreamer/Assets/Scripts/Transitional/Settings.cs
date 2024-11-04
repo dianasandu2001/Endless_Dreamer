@@ -6,14 +6,13 @@ public class Settings : MonoBehaviour
 {
     public GameObject coin_count_display;
     public GameObject distance_count_display;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         coin_count_display.GetComponent<Text>().text = "" + GameManager.manager.coins;
         distance_count_display.GetComponent<Text>().text = "" + (int)GameManager.manager.distance + " m";
     }
 
-    // Update is called once per frame
     void Update()
     {
         

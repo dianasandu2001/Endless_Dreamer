@@ -2,27 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Move : MonoBehaviour
+public class TestMove : MonoBehaviour
 {
-    //Moving variables
     public float move_speed = 3;
     public float left_right_speed = 4;
 
-    //Jumping variables
+    public GameObject player_object;
+
     public bool grounded;
     public Rigidbody RB;
     public float jump_force;
     public Animator animator;
 
-    //Colliding variables
     //public AudioSource coin_FX;
+    //public GameObject stumble_animation;
     public GameObject panel;
     void Update()
     {
-        //Continuous running
         transform.Translate(Vector3.forward * Time.deltaTime * move_speed, Space.World);
 
-        //Moving left-right
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             if (this.gameObject.transform.position.x > Level_Boundry.left_side)
@@ -30,6 +28,7 @@ public class Player_Move : MonoBehaviour
                 transform.Translate(Vector3.left * Time.deltaTime * left_right_speed);
             }
         }
+
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             if (this.gameObject.transform.position.x < Level_Boundry.right_side)
@@ -38,19 +37,35 @@ public class Player_Move : MonoBehaviour
             }
         }
 
-        //Jumping
         if (Input.GetButtonDown("Jump") && grounded == true)
         {
             RB.linearVelocity = new Vector2(0, jump_force);
-            animator.SetBool("Jump", true);
+            //nimator.SetTrigger("JumpT");
+            //player_object.GetComponent<Animator>().Play("Jump");
         }
     }
+    
+    void OnTriggerEnter(Collider obstacle)
+    {
+        if (obstacle.gameObject.CompareTag("Obstacle"))
+        {
+            //coin_FX.Play();
+            obstacle.gameObject.GetComponent<BoxCollider>().enabled = false;
+            this.GetComponent<TestMove>().enabled = false;
+            animator.SetTrigger("Stumble");
+            //stumble_animation.GetComponent<Animator>().Play("Stumble Backwards");
+            panel.SetActive(true);
+        }
+    }
+    
     private void OnCollisionEnter(Collision ground)
     {
         if (ground.gameObject.CompareTag("Ground"))
         {
             grounded = true;
             animator.SetBool("Jump", false);
+            //animator.SetTrigger("JumpT");
+        //player_object.GetComponent<Animator>().Play("Standard Run");
         }
     }
     private void OnCollisionExit(Collision ground)
@@ -58,18 +73,8 @@ public class Player_Move : MonoBehaviour
         if (ground.gameObject.CompareTag("Ground"))
         {
             grounded = false;
-        }
-    }
-    //Colliding with obstacles
-    void OnTriggerEnter(Collider obstacle)
-    {
-        if (obstacle.gameObject.CompareTag("Obstacle"))
-        {
-            //coin_FX.Play();
-            obstacle.gameObject.GetComponent<BoxCollider>().enabled = false;
-            this.GetComponent<Player_Move>().enabled = false;
-            animator.SetTrigger("Stumble");
-            panel.SetActive(true);
+            animator.SetBool("Jump", true);
+            animator.SetTrigger("JumpT");
         }
     }
 }

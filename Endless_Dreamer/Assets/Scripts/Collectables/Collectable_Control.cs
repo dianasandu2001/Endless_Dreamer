@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Collectable_Control : MonoBehaviour
 {
-    public static int coin_count = 0;
+    public static int coin_count;
     public GameObject coin_count_display;
 
     public GameObject player;
@@ -16,7 +16,7 @@ public class Collectable_Control : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        coin_count = 0;
     }
 
     // Update is called once per frame

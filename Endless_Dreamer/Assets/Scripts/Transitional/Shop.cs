@@ -6,13 +6,12 @@ public class Shop : MonoBehaviour
     public GameObject Panel1;
     public GameObject Panel2;
     public GameObject Panel3;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
 
