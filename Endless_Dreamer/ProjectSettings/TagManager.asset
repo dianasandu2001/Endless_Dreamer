@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Ground
   - Obstacle
+  - Gem
+  - Coin
+  - Chest
+  - ShieldPower
+  - SpeedPower
   layers:
   - Default
   - TransparentFX

@@ -17,6 +17,8 @@ public class Player_Move : MonoBehaviour
     //Colliding variables
     //public AudioSource coin_FX;
     public GameObject panel;
+
+    public AudioSource coin_FX;
     void Update()
     {
         //Continuous running
@@ -39,7 +41,7 @@ public class Player_Move : MonoBehaviour
         }
 
         //Jumping
-        if (Input.GetButtonDown("Jump") && grounded == true)
+        if (Input.GetKey(KeyCode.Space) && grounded == true)
         {
             RB.linearVelocity = new Vector2(0, jump_force);
             animator.SetBool("Jump", true);
@@ -70,6 +72,20 @@ public class Player_Move : MonoBehaviour
             this.GetComponent<Player_Move>().enabled = false;
             animator.SetTrigger("Stumble");
             panel.SetActive(true);
+        }
+
+        if (obstacle.gameObject.CompareTag("Coin"))
+        {
+            coin_FX.Play();
+            Collectable_Control.coin_count += 1;
+            obstacle.gameObject.SetActive(false);
+        }
+
+        if (obstacle.gameObject.CompareTag("Gem"))
+        {
+            coin_FX.Play();
+            Collectable_Control.gem_count += 1;
+            obstacle.gameObject.SetActive(false);
         }
     }
 }
