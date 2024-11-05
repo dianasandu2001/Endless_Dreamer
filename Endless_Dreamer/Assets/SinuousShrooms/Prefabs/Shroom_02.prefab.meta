@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b0d141d938dc75f498b07e5259f0b343
+timeCreated: 1456630477
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57048
+  packageName: Sinuous Shrooms
+  packageVersion: 1.0
+  assetPath: Assets/SinuousShrooms/Prefabs/Shroom_02.prefab
+  uploadId: 105245

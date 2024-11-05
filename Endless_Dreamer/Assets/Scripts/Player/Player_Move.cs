@@ -62,9 +62,10 @@ public class Player_Move : MonoBehaviour
             grounded = false;
         }
     }
-    //Colliding with obstacles
+    
     void OnTriggerEnter(Collider obstacle)
     {
+        //Colliding with obstacles
         if (obstacle.gameObject.CompareTag("Obstacle"))
         {
             //coin_FX.Play();
@@ -73,19 +74,43 @@ public class Player_Move : MonoBehaviour
             animator.SetTrigger("Stumble");
             panel.SetActive(true);
         }
-
+        // Collecting coins
         if (obstacle.gameObject.CompareTag("Coin"))
         {
             coin_FX.Play();
             Collectable_Control.coin_count += 1;
             obstacle.gameObject.SetActive(false);
         }
-
+        // Collecting gems
         if (obstacle.gameObject.CompareTag("Gem"))
         {
             coin_FX.Play();
             Collectable_Control.gem_count += 1;
             obstacle.gameObject.SetActive(false);
+        }
+        // Collecting chests
+        if (obstacle.gameObject.CompareTag("Chest"))
+        {
+            //coin_FX.Play();
+            //Collectable_Control.gem_count += 1;
+            obstacle.gameObject.SetActive(false);
+            Debug.Log("Chest!");
+        }
+        // Collecting a shield power
+        if (obstacle.gameObject.CompareTag("ShieldPower"))
+        {
+            //coin_FX.Play();
+            //Collectable_Control.gem_count += 1;
+            obstacle.gameObject.SetActive(false);
+            Debug.Log("Shield Power!");
+        }
+        // Collecting a speed power
+        if (obstacle.gameObject.CompareTag("SpeedPower"))
+        {
+            //coin_FX.Play();
+            //Collectable_Control.gem_count += 1;
+            obstacle.gameObject.SetActive(false);
+            Debug.Log("Speed Power!");
         }
     }
 }

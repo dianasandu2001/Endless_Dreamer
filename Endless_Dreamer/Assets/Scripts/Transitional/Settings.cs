@@ -10,6 +10,8 @@ public class Settings : MonoBehaviour
     public GameObject distance_count_display;
 
     public AudioMixer mixer;
+
+    public Player_Move Player_Move;
     void Start()
     {
         coin_count_display.GetComponent<Text>().text = "" + GameManager.manager.coins;
@@ -100,5 +102,10 @@ public class Settings : MonoBehaviour
     {
         mixer.SetFloat("SoundEffects", Mathf.Log10(sounfEffectsLevel) * 20);
         GameManager.manager.soundEffects = sounfEffectsLevel;
+    }
+
+    public void HELP()
+    {
+        Player_Move.grounded = true;
     }
 }

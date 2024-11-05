@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fbdbb821504812547aabe35c18c1b08b
+timeCreated: 1456610804
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57048
+  packageName: Sinuous Shrooms
+  packageVersion: 1.0
+  assetPath: Assets/SinuousShrooms/Prefabs/Cluster_Shroom2.prefab
+  uploadId: 105245

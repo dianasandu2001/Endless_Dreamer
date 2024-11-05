@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 5c45b9d9e169fb54ba3a48d06c48a033
+timeCreated: 1456597896
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57048
+  packageName: Sinuous Shrooms
+  packageVersion: 1.0
+  assetPath: Assets/SinuousShrooms/Scripts/CameraOrbit.cs
+  uploadId: 105245

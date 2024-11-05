@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: c52ceaec25f644448a4bbcdf3a34076e
+timeCreated: 1456600084
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57048
+  packageName: Sinuous Shrooms
+  packageVersion: 1.0
+  assetPath: Assets/SinuousShrooms/Scripts/ConstantTransform.cs
+  uploadId: 105245

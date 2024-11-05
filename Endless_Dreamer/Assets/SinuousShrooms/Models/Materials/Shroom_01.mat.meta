@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d8ee168e54b6a1448bf5b8783bd11651
+timeCreated: 1456563425
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57048
+  packageName: Sinuous Shrooms
+  packageVersion: 1.0
+  assetPath: Assets/SinuousShrooms/Models/Materials/Shroom_01.mat
+  uploadId: 105245

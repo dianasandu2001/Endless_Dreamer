@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2eba5d451423bf040a2f6a0d24029dbd
+timeCreated: 1456528984
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57048
+  packageName: Sinuous Shrooms
+  packageVersion: 1.0
+  assetPath: Assets/SinuousShrooms/Shaders/ShroomShader.shader
+  uploadId: 105245
