@@ -92,7 +92,6 @@ public class Player_Move : MonoBehaviour
         if (obstacle.gameObject.CompareTag("Chest"))
         {
             //coin_FX.Play();
-            //Collectable_Control.gem_count += 1;
             obstacle.gameObject.SetActive(false);
             Debug.Log("Chest!");
         }
@@ -100,7 +99,6 @@ public class Player_Move : MonoBehaviour
         if (obstacle.gameObject.CompareTag("ShieldPower"))
         {
             //coin_FX.Play();
-            //Collectable_Control.gem_count += 1;
             obstacle.gameObject.SetActive(false);
             Debug.Log("Shield Power!");
         }
@@ -108,9 +106,22 @@ public class Player_Move : MonoBehaviour
         if (obstacle.gameObject.CompareTag("SpeedPower"))
         {
             //coin_FX.Play();
-            //Collectable_Control.gem_count += 1;
             obstacle.gameObject.SetActive(false);
             Debug.Log("Speed Power!");
+        }
+        // Collecting a vision debuff
+        if (obstacle.gameObject.CompareTag("VisionDebuff"))
+        {
+            //coin_FX.Play();
+            obstacle.gameObject.SetActive(false);
+            Debug.Log("Vision Debuff!");
+        }
+        // Collecting a speed power
+        if (obstacle.gameObject.CompareTag("Trip"))
+        {
+            //coin_FX.Play();
+            obstacle.gameObject.SetActive(false);
+            Debug.Log("I Tripped!");
         }
     }
 }

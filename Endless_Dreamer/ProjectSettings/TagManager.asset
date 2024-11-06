@@ -11,6 +11,8 @@ TagManager:
   - Chest
   - ShieldPower
   - SpeedPower
+  - Trip
+  - VisionDebuff
   layers:
   - Default
   - TransparentFX

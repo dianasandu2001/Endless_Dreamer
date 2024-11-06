@@ -18,10 +18,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Forest.unity
     guid: e8725129d62e82648b3a01b818fe4628
   - enabled: 1
-    path: Assets/Scenes/Shop.unity
-    guid: c74fc8fa4f25b884da0a7b9a9932a620
+    path: Assets/Scenes/Craft.unity
+    guid: 735257f938b55d54bb2b21ddce182034
   - enabled: 1
     path: Assets/Scenes/Upgrades.unity
     guid: 8cdeeecae92371744a31bb05771e0b4f
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: c74fc8fa4f25b884da0a7b9a9932a620
+  - enabled: 1
+    path: Assets/Scenes/Maps.unity
+    guid: ad36e6ea4a5386c469715d1fcfe6abb8
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

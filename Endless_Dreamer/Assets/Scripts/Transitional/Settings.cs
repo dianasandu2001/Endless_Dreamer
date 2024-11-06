@@ -8,6 +8,7 @@ public class Settings : MonoBehaviour
     public GameObject coin_count_display;
     public GameObject gem_count_display;
     public GameObject distance_count_display;
+    public GameObject score_count_display;
 
     public AudioMixer mixer;
 
@@ -17,6 +18,7 @@ public class Settings : MonoBehaviour
         coin_count_display.GetComponent<Text>().text = "" + GameManager.manager.coins;
         gem_count_display.GetComponent<Text>().text = "" + GameManager.manager.gems;
         distance_count_display.GetComponent<Text>().text = "" + (int)GameManager.manager.distance + " m";
+        score_count_display.GetComponent<Text>().text = "" + (int)GameManager.manager.score;
     }
 
     void Update()
@@ -42,11 +44,14 @@ public class Settings : MonoBehaviour
         SceneManager.LoadScene("Upgrades");
     }
 
-    public void Challenges()
+    public void Craft()
     {
-        SceneManager.LoadScene("Challenges");
+        SceneManager.LoadScene("Craft");
     }
-
+    public void Maps()
+    {
+        SceneManager.LoadScene("Maps");
+    }
     public void Exit()
     {
         Application.Quit();
@@ -88,7 +93,12 @@ public class Settings : MonoBehaviour
         if (Collectable_Control.distance_count> GameManager.manager.distance)
         {
             GameManager.manager.distance = Collectable_Control.distance_count;
-            Debug.Log("New highscore");
+            Debug.Log("New highscore (distance)");
+        }
+        if (Collectable_Control.score_count > GameManager.manager.score)
+        {
+            GameManager.manager.score += Collectable_Control.score_count;
+            Debug.Log("New highscore (score)");
         }
         GameManager.manager.Save();
     }

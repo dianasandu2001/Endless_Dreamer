@@ -2085,7 +2085,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 811178119}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 972289664}
+        m_TargetAssemblyTypeName: Settings, Assembly-CSharp
+        m_MethodName: Maps
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &811178119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2364,7 +2376,9 @@ MonoBehaviour:
   coin_count_display: {fileID: 152302465}
   gem_count_display: {fileID: 488383907}
   distance_count_display: {fileID: 1824927402}
+  score_count_display: {fileID: 1979935809}
   mixer: {fileID: 24100000, guid: 1a139c897f5b81741b0c66da544837de, type: 2}
+  Player_Move: {fileID: 0}
 --- !u!224 &972289665
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2604,7 +2618,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Challenges
+  m_Text: Craft
 --- !u!222 &1021011323
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2834,7 +2848,7 @@ GameObject:
   - component: {fileID: 1077565410}
   - component: {fileID: 1077565409}
   m_Layer: 5
-  m_Name: Challenges
+  m_Name: Craft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2906,7 +2920,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 972289664}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
-        m_MethodName: Challenges
+        m_MethodName: Craft
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

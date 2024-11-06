@@ -121,5 +121,4 @@ public class Generate_Level : MonoBehaviour
         creating_collectables = false;
     }
 
-    // im having problems coming up with something that says, if object and coin are in the same place, spawn coin or something like that
 }
