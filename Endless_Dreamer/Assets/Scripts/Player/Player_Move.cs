@@ -121,6 +121,7 @@ public class Player_Move : MonoBehaviour
         {
             //coin_FX.Play();
             obstacle.gameObject.SetActive(false);
+            // Make the screen black and white
             Debug.Log("I Tripped!");
         }
     }
