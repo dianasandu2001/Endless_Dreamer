@@ -3791,6 +3791,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1420044116055465763, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1921315725995998660, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199607727400562827, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2779704511238921876, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: mixer
       value: 
@@ -3918,6 +3930,14 @@ PrefabInstance:
     - target: {fileID: 3843554153094117263, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_Name
       value: UI_Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3899278504717003215, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159379524986698521, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4198739479363846029, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_AnchorMax.x
