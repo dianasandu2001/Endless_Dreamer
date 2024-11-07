@@ -79,6 +79,7 @@ public class Craft : MonoBehaviour
     //crafting functions
     public void ScorePotion()
     {
+        Debug.Log("ScorePotion function triggered.");
         if (GameManager.manager.stoneDust >= 2 && GameManager.manager.flowerDust >= 1 && GameManager.manager.fireflies >= 2)
         {
             Debug.Log($"Attempting to craft Score Potion. Current resources - StoneDust: {GameManager.manager.stoneDust}, FlowerDust: {GameManager.manager.flowerDust}, LivingDust: {GameManager.manager.livingDust}");
@@ -101,6 +102,7 @@ public class Craft : MonoBehaviour
     }
     public void DebuffPotion()
     {
+        Debug.Log("DebuffPotion function triggered.");
         if (GameManager.manager.stoneDust >= 1 && GameManager.manager.flowerDust >= 3 && GameManager.manager.fireflies >= 2)
         {
             Debug.Log($"Attempting to craft debuff Potion. Current resources - StoneDust: {GameManager.manager.stoneDust}, FlowerDust: {GameManager.manager.flowerDust}, LivingDust: {GameManager.manager.livingDust}");
@@ -123,6 +125,7 @@ public class Craft : MonoBehaviour
     }
     public void HealthPotion()
     {
+        Debug.Log("HealthPotion function triggered.");
         if (GameManager.manager.stoneDust >= 2 && GameManager.manager.flowerDust >= 2 && GameManager.manager.fireflies >= 3)
         {
             Debug.Log($"Attempting to craft Health Potion. Current resources - StoneDust: {GameManager.manager.stoneDust}, FlowerDust: {GameManager.manager.flowerDust}, LivingDust: {GameManager.manager.livingDust}");

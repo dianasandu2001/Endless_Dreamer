@@ -42,10 +42,6 @@ public class GameManager : MonoBehaviour
     public float orchids; //amount of flower ingredients
     public float fireflies; // amount of living ingredients
 
-    //public bool Level1;
-    //public bool Level2;
-    //public bool Level3;
-
     private void Awake()
     {
         if (manager == null)
@@ -110,10 +106,6 @@ public class GameManager : MonoBehaviour
         data.orchids = orchids;
         data.fireflies = fireflies;
 
-        //data.Level1 = Level1;
-        //data.Level2 = Level2;
-        //data.Level3 = Level3;
-
         bf.Serialize(file, data);
         file.Close();
     }
@@ -155,10 +147,6 @@ public class GameManager : MonoBehaviour
             glowStones = data.glowStones;
             orchids = data.orchids;
             fireflies = data.fireflies;
-
-            //Level1 = data.Level1;
-            //Level2 = data.Level2;
-            //Level3 = data.Level3;
         }
     }
 }
@@ -197,7 +185,4 @@ class PlayerData
     public float orchids; //amount of flower ingredients
     public float fireflies; // amount of living ingredients
 
-    //public bool Level1;
-    //public bool Level2;
-    //public bool Level3;
 }
