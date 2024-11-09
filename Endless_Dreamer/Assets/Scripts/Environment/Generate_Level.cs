@@ -1,6 +1,6 @@
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class Generate_Level : MonoBehaviour
 {
@@ -29,6 +29,16 @@ public class Generate_Level : MonoBehaviour
     public int x;
     public float[] y_pos;
 
+    public GameObject spawn;
+    private GameObject player;
+    public GameObject cloud;
+    public GameObject cam;
+    void Start()
+    {
+        player = Instantiate(GameManager.manager.characters[2], spawn.transform);
+        Instantiate(cloud, player.transform);
+        Instantiate(cam, player.transform);
+    }
     void Update()
     {
         if (creating_section == false)

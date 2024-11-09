@@ -74,6 +74,7 @@ public class Player_Move : MonoBehaviour
             animator.SetTrigger("Stumble");
             panel.SetActive(true);
         }
+        /*
         // Collecting coins
         if (obstacle.gameObject.CompareTag("Coin"))
         {
@@ -81,6 +82,7 @@ public class Player_Move : MonoBehaviour
             Collectable_Control.coin_count += 1;
             obstacle.gameObject.SetActive(false);
         }
+        
         // Collecting gems
         if (obstacle.gameObject.CompareTag("Gem"))
         {
@@ -95,6 +97,7 @@ public class Player_Move : MonoBehaviour
             obstacle.gameObject.SetActive(false);
             Debug.Log("Chest!");
         }
+        
         // Collecting a shield power
         if (obstacle.gameObject.CompareTag("ShieldPower"))
         {
@@ -124,5 +127,6 @@ public class Player_Move : MonoBehaviour
             // Make the screen black and white
             Debug.Log("I Tripped!");
         }
+        */
     }
 }

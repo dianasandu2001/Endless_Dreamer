@@ -42,6 +42,17 @@ public class GameManager : MonoBehaviour
     public float orchids; //amount of flower ingredients
     public float fireflies; // amount of living ingredients
 
+    //characters bool
+    public bool Amy;
+    public bool Claire;
+    public bool Aj;
+    public bool Granny;
+    public bool Michelle;
+
+    //changing characters
+    public GameObject[] characters;
+    public int currentCharacter;
+ 
     private void Awake()
     {
         if (manager == null)
@@ -106,6 +117,17 @@ public class GameManager : MonoBehaviour
         data.orchids = orchids;
         data.fireflies = fireflies;
 
+        //character bool
+        data.Amy = Amy;
+        data.Claire = Claire;
+        data.Aj = Aj;
+        data.Granny = Granny;
+        data.Michelle = Michelle;
+
+        //changing characters
+        data.currentCharacter = currentCharacter;
+
+
         bf.Serialize(file, data);
         file.Close();
     }
@@ -147,6 +169,16 @@ public class GameManager : MonoBehaviour
             glowStones = data.glowStones;
             orchids = data.orchids;
             fireflies = data.fireflies;
+
+            //character bool
+            Amy = data.Amy;
+            Claire = data.Claire;
+            Aj = data.Aj;
+            Granny = data.Granny;
+            Michelle = data.Michelle;
+
+            //changing characters
+            currentCharacter = data.currentCharacter;
         }
     }
 }
@@ -185,4 +217,13 @@ class PlayerData
     public float orchids; //amount of flower ingredients
     public float fireflies; // amount of living ingredients
 
+    //characters bool
+    public bool Amy;
+    public bool Claire;
+    public bool Aj;
+    public bool Granny;
+    public bool Michelle;
+
+    //changing characters
+    public int currentCharacter;
 }

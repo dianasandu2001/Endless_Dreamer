@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -255,6 +256,18 @@ MonoBehaviour:
   glowStones: 0
   orchids: 0
   fireflies: 0
+  Amy: 0
+  Claire: 0
+  Aj: 0
+  Granny: 0
+  Michelle: 0
+  characters:
+  - {fileID: 3656705443799353815, guid: 8424f5b6e24a3a14b9d495bccd22a419, type: 3}
+  - {fileID: 7701310924888965233, guid: 2472d7b71adab2a4fbb380dd940e2490, type: 3}
+  - {fileID: 7255251548386752414, guid: 166bf2c949dbcd648baa948f31caae5a, type: 3}
+  - {fileID: 4410868703902349055, guid: e9c1d5565b83b7d4c8abc8b37b025d5d, type: 3}
+  - {fileID: 5036884174772005992, guid: d7f1f2b16192670418fadd1eff96ceea, type: 3}
+  currentCharacter: 0
 --- !u!1 &627910114
 GameObject:
   m_ObjectHideFlags: 0

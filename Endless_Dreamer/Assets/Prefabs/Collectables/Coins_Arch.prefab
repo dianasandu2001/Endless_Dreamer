@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 1769395783187104912}
   - component: {fileID: 3656452328369981244}
   - component: {fileID: 8323737258101151115}
-  - component: {fileID: 2923956470690088354}
-  - component: {fileID: 8901911301164122654}
+  - component: {fileID: 3520918405893823842}
   m_Layer: 0
   m_Name: Coin (3)
   m_TagString: Untagged
@@ -112,7 +111,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &2923956470690088354
+--- !u!114 &3520918405893823842
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,23 +120,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1111643153660519261}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b728ccda1cd250f43922c1eb50796f3b, type: 3}
+  m_Script: {fileID: 11500000, guid: b6bc86d02045ca249ba75e27150e54fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotate_speed: 1
---- !u!114 &8901911301164122654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111643153660519261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24d3a1e6bc59c984782e8cd0f3d674fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coin_FX: {fileID: 0}
+  coin_FX: {fileID: 5841876494070431813}
 --- !u!1 &1503614579943634935
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,8 +136,7 @@ GameObject:
   - component: {fileID: 7237976928622324253}
   - component: {fileID: 5332780097935477056}
   - component: {fileID: 6746232333118502524}
-  - component: {fileID: 2248670724017329459}
-  - component: {fileID: 3427962205460588910}
+  - component: {fileID: 4532257716292921209}
   m_Layer: 0
   m_Name: Coin (2)
   m_TagString: Untagged
@@ -250,7 +235,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &2248670724017329459
+--- !u!114 &4532257716292921209
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,23 +244,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1503614579943634935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b728ccda1cd250f43922c1eb50796f3b, type: 3}
+  m_Script: {fileID: 11500000, guid: b6bc86d02045ca249ba75e27150e54fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotate_speed: 1
---- !u!114 &3427962205460588910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1503614579943634935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24d3a1e6bc59c984782e8cd0f3d674fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coin_FX: {fileID: 0}
+  coin_FX: {fileID: 5841876494070431813}
 --- !u!1 &3899558424171302421
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,8 +260,7 @@ GameObject:
   - component: {fileID: 2439316535782522687}
   - component: {fileID: 4365633714239908378}
   - component: {fileID: 6060972580727119752}
-  - component: {fileID: 3593040449305909915}
-  - component: {fileID: 5755956673296146802}
+  - component: {fileID: 4773719589709719564}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -388,7 +359,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &3593040449305909915
+--- !u!114 &4773719589709719564
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -397,23 +368,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3899558424171302421}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b728ccda1cd250f43922c1eb50796f3b, type: 3}
+  m_Script: {fileID: 11500000, guid: b6bc86d02045ca249ba75e27150e54fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotate_speed: 1
---- !u!114 &5755956673296146802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3899558424171302421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24d3a1e6bc59c984782e8cd0f3d674fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coin_FX: {fileID: 0}
+  coin_FX: {fileID: 5841876494070431813}
 --- !u!1 &5197078837561965086
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,8 +384,7 @@ GameObject:
   - component: {fileID: 4771119728012388879}
   - component: {fileID: 6017222014666807989}
   - component: {fileID: 6865700180573592837}
-  - component: {fileID: 8433414738898193315}
-  - component: {fileID: 4205207001905939335}
+  - component: {fileID: 2457053992837733571}
   m_Layer: 0
   m_Name: Coin (4)
   m_TagString: Untagged
@@ -526,7 +483,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &8433414738898193315
+--- !u!114 &2457053992837733571
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -535,23 +492,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5197078837561965086}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b728ccda1cd250f43922c1eb50796f3b, type: 3}
+  m_Script: {fileID: 11500000, guid: b6bc86d02045ca249ba75e27150e54fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotate_speed: 1
---- !u!114 &4205207001905939335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5197078837561965086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24d3a1e6bc59c984782e8cd0f3d674fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coin_FX: {fileID: 0}
+  coin_FX: {fileID: 5841876494070431813}
 --- !u!1 &5694150759327259979
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,8 +508,7 @@ GameObject:
   - component: {fileID: 3691586393839265773}
   - component: {fileID: 6120339980835075432}
   - component: {fileID: 8370144296269968260}
-  - component: {fileID: 6029508360805421568}
-  - component: {fileID: 2438776452588827439}
+  - component: {fileID: 8809051793265812017}
   m_Layer: 0
   m_Name: Coin (1)
   m_TagString: Untagged
@@ -664,7 +607,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &6029508360805421568
+--- !u!114 &8809051793265812017
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -673,23 +616,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5694150759327259979}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b728ccda1cd250f43922c1eb50796f3b, type: 3}
+  m_Script: {fileID: 11500000, guid: b6bc86d02045ca249ba75e27150e54fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotate_speed: 1
---- !u!114 &2438776452588827439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5694150759327259979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24d3a1e6bc59c984782e8cd0f3d674fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coin_FX: {fileID: 0}
+  coin_FX: {fileID: 5841876494070431813}
 --- !u!1 &5884831952427268772
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,6 +630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3598419627824106189}
   - component: {fileID: 2046428453529606244}
+  - component: {fileID: 5841876494070431813}
   m_Layer: 0
   m_Name: Coins_Arch
   m_TagString: Untagged
@@ -792,3 +723,100 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!82 &5841876494070431813
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5884831952427268772}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -6695566031635813909, guid: 1a139c897f5b81741b0c66da544837de, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 20504f127b51fca438e849fde7693e6c, type: 3}
+  m_Resource: {fileID: 8300000, guid: 20504f127b51fca438e849fde7693e6c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
