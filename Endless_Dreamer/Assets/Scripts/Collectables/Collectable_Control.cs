@@ -11,7 +11,7 @@ public class Collectable_Control : MonoBehaviour
     public static int gem_count;
     public GameObject gem_count_display;
 
-    //public GameObject player;
+    public GameObject player;
 
     public static float distance_count;
     public GameObject distance_count_display;
@@ -34,10 +34,10 @@ public class Collectable_Control : MonoBehaviour
         coin_count_display.GetComponent<Text>().text = "" + coin_count;
         gem_count_display.GetComponent<Text>().text = "" + gem_count;
         
-        //distance_count = (player.transform.position.z + 25)/2;
-        //distance_count_display.GetComponent<Text>().text = "" + (int)distance_count + " m";
+        distance_count = (player.transform.position.z + 25)/2;
+        distance_count_display.GetComponent<Text>().text = "" + (int)distance_count + " m";
 
-        //score_count = distance_count; // *potion_score_multiplier * player_score_multiplier
-        //score_count_display.GetComponent<Text>().text = "" + (int)score_count;
+        score_count = distance_count; // *potion_score_multiplier * player_score_multiplier
+        score_count_display.GetComponent<Text>().text = "" + (int)score_count;
     }
 }

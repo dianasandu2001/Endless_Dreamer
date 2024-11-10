@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
@@ -13,12 +14,22 @@ public class Settings : MonoBehaviour
     public AudioMixer mixer;
 
     public Player_Move Player_Move;
+
+    public GameObject spawn;
+    public GameObject player;
+    public Animator animator;
     void Start()
     {
         coin_count_display.GetComponent<Text>().text = "" + GameManager.manager.coins;
         gem_count_display.GetComponent<Text>().text = "" + GameManager.manager.gems;
         distance_count_display.GetComponent<Text>().text = "" + (int)GameManager.manager.distance + " m";
         score_count_display.GetComponent<Text>().text = "" + (int)GameManager.manager.score;
+
+        //spawning currently selected character
+        player = Instantiate(GameManager.manager.characters[1], spawn.transform);
+        player.GetComponent<Player_Move>().enabled = false;
+        animator = player.GetComponent<Animator>();
+        animator.SetBool("Menu", true);
     }
 
     void Update()

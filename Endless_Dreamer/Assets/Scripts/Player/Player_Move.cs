@@ -65,6 +65,7 @@ public class Player_Move : MonoBehaviour
     
     void OnTriggerEnter(Collider obstacle)
     {
+        /*
         //Colliding with obstacles
         if (obstacle.gameObject.CompareTag("Obstacle"))
         {
@@ -74,7 +75,7 @@ public class Player_Move : MonoBehaviour
             animator.SetTrigger("Stumble");
             panel.SetActive(true);
         }
-        /*
+        
         // Collecting coins
         if (obstacle.gameObject.CompareTag("Coin"))
         {

@@ -6,16 +6,16 @@ using UnityEngine.UIElements;
 public class Obsticle_Collision : MonoBehaviour
 {
     //public AudioSource coin_FX;
-    public GameObject the_player;
-    public GameObject stumble_animation;
+    public Animator animator;
     public GameObject panel;
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider player)
     {
         //coin_FX.Play();
         this.gameObject.GetComponent<BoxCollider>().enabled = false;
-        the_player.GetComponent<Player_Move>().enabled = false;
-        stumble_animation.GetComponent<Animator>().Play("Stumble Backwards");
+        player.GetComponent<Player_Move>().enabled = false;
+        animator = player.GetComponent<Animator>();
+        animator.SetTrigger("Stumble");
         panel.SetActive(true);
     }
 }

@@ -33,11 +33,15 @@ public class Generate_Level : MonoBehaviour
     private GameObject player;
     public GameObject cloud;
     public GameObject cam;
+
+    public Collectable_Control control;
     void Start()
     {
         player = Instantiate(GameManager.manager.characters[2], spawn.transform);
         Instantiate(cloud, player.transform);
         Instantiate(cam, player.transform);
+
+        control.player = player;
     }
     void Update()
     {

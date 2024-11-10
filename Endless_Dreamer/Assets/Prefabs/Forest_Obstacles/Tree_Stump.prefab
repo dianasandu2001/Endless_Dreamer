@@ -118,6 +118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 46004628289075344}
   - component: {fileID: 4685713689310430068}
+  - component: {fileID: 6921265908778359260}
   m_Layer: 0
   m_Name: Tree_Stump
   m_TagString: Obstacle
@@ -170,6 +171,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.8959551, z: 1}
   m_Center: {x: 0, y: -0.052022606, z: 0}
+--- !u!114 &6921265908778359260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8449746081526770993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f980e5cfb39b5ab408e9b832689aa14d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  panel: {fileID: 0}
 --- !u!1001 &379965922263536426
 PrefabInstance:
   m_ObjectHideFlags: 0
