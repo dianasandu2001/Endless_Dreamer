@@ -69,9 +69,65 @@ public class Shop : MonoBehaviour
         settingsPanel.SetActive(false);
     }
 
-    //public void Buy(float currency, float item)
-    //{
-    //    GameManager.manager.currency -= currency;
-    //    GameManager.manager.item += item;
-    //}
+    public void BuyAmy()
+    {
+        if(GameManager.manager.Amy == true)
+        {
+            GameManager.manager.currentCharacter = 0;
+        }
+        else
+        {
+            //Currency amount here
+            //she is default so no need to get 
+            GameManager.manager.Amy = true;
+        }
+    }
+    public void BuyClaire()
+    {
+        if (GameManager.manager.Claire == true)
+        {
+            GameManager.manager.currentCharacter = 1;
+        }
+        else
+        {
+            //Currency amount here
+            GameManager.manager.Claire = true;
+        }
+    }
+    public void BuyAj()
+    {
+        if (GameManager.manager.Aj == true)
+        {
+            GameManager.manager.currentCharacter = 2;
+        }
+        else
+        {
+            //Currency amount here
+            GameManager.manager.Aj = true;
+        }
+    }
+    public void BuyGranny()
+    {
+        if (GameManager.manager.Granny == true)
+        {
+            GameManager.manager.currentCharacter = 3;
+        }
+        else
+        {
+            //Currency amount here
+            GameManager.manager.Granny = true;
+        }
+    }
+    public void BuyMichelle()
+    {
+        if (GameManager.manager.Michelle == true)
+        {
+            GameManager.manager.currentCharacter = 4;
+        }
+        else
+        {
+            //Currency amount here
+            GameManager.manager.Michelle = true;
+        }
+    }
 }

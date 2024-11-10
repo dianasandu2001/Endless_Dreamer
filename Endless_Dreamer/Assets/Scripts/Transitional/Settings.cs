@@ -26,7 +26,7 @@ public class Settings : MonoBehaviour
         score_count_display.GetComponent<Text>().text = "" + (int)GameManager.manager.score;
 
         //spawning currently selected character
-        player = Instantiate(GameManager.manager.characters[1], spawn.transform);
+        player = Instantiate(GameManager.manager.characters[GameManager.manager.currentCharacter], spawn.transform);
         player.GetComponent<Player_Move>().enabled = false;
         animator = player.GetComponent<Animator>();
         animator.SetBool("Menu", true);

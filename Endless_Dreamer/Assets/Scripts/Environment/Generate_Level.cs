@@ -37,10 +37,12 @@ public class Generate_Level : MonoBehaviour
     public Collectable_Control control;
     void Start()
     {
-        player = Instantiate(GameManager.manager.characters[2], spawn.transform);
+        //spawning in the currently selected character
+        player = Instantiate(GameManager.manager.characters[GameManager.manager.currentCharacter], spawn.transform);
         Instantiate(cloud, player.transform);
         Instantiate(cam, player.transform);
 
+        //assigning the spawned character to the distance tracker in Collectable_Control
         control.player = player;
     }
     void Update()

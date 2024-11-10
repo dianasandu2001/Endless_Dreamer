@@ -15,6 +15,7 @@ public class GoToMainMenu : MonoBehaviour
         }
         else
         {
+            GameManager.manager.Amy = true;
             SceneManager.LoadScene("Tutorial");
         }    
     }
