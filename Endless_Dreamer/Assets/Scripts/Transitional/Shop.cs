@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
+    //character tab var
     public GameObject coin_count_display;
     public GameObject gem_count_display;
 
@@ -13,12 +14,26 @@ public class Shop : MonoBehaviour
     public Animator Granny;
     public Animator Michelle;
 
+    //apothecary tab var
+    public GameObject coin_display_apothecary;
+    public GameObject gem_display_apothecary;
+
+    public GameObject stone_dust_display_apothecary;
+    public GameObject flower_dust_display_apothecary;
+    public GameObject living_dust_display_apothecary;
+
+    public GameObject health_potion_display_apothecary;
+    public GameObject score_potion_display_apothecary;
+    public GameObject debuff_potion_display_apothecary;
+
+    //changing tabs
     public GameObject Panel1;
     public GameObject Panel2;
     public GameObject Panel3;
 
     void Start()
     {
+        // character tab
         coin_count_display.GetComponent<Text>().text = "" + GameManager.manager.coins;
         gem_count_display.GetComponent<Text>().text = "" + GameManager.manager.gems;
 
@@ -27,6 +42,18 @@ public class Shop : MonoBehaviour
         Claire.SetBool("Menu", true);
         Granny.SetBool("Menu", true);
         Michelle.SetBool("Menu", true);
+
+        // apothecary tab
+        coin_display_apothecary.GetComponent<Text>().text = "" + GameManager.manager.coins;
+        gem_display_apothecary.GetComponent<Text>().text = "" + GameManager.manager.gems;
+
+        stone_dust_display_apothecary.GetComponent<Text>().text = "" + GameManager.manager.stoneDust;
+        flower_dust_display_apothecary.GetComponent<Text>().text = "" + GameManager.manager.flowerDust;
+        living_dust_display_apothecary.GetComponent<Text>().text = "" + GameManager.manager.livingDust;
+
+        health_potion_display_apothecary.GetComponent<Text>().text = "" + GameManager.manager.redPotion;
+        score_potion_display_apothecary.GetComponent<Text>().text = "" + GameManager.manager.yellowPotion;
+        debuff_potion_display_apothecary.GetComponent<Text>().text = "" + GameManager.manager.greenPotion;
     }
 
     void Update()
@@ -91,12 +118,15 @@ public class Shop : MonoBehaviour
         if(GameManager.manager.Amy == true)
         {
             GameManager.manager.currentCharacter = 0;
+            GameManager.manager.Save();
         }
         else
         {
             //Currency amount here
             //she is default so no need to get 
             GameManager.manager.Amy = true;
+            GameManager.manager.currentCharacter = 0;
+            GameManager.manager.Save();
         }
     }
     public void BuyClaire()
@@ -104,11 +134,14 @@ public class Shop : MonoBehaviour
         if (GameManager.manager.Claire == true)
         {
             GameManager.manager.currentCharacter = 1;
+            GameManager.manager.Save();
         }
         else
         {
             //Currency amount here
             GameManager.manager.Claire = true;
+            GameManager.manager.currentCharacter = 1;
+            GameManager.manager.Save();
         }
     }
     public void BuyAj()
@@ -116,11 +149,14 @@ public class Shop : MonoBehaviour
         if (GameManager.manager.Aj == true)
         {
             GameManager.manager.currentCharacter = 2;
+            GameManager.manager.Save();
         }
         else
         {
             //Currency amount here
             GameManager.manager.Aj = true;
+            GameManager.manager.currentCharacter = 2;
+            GameManager.manager.Save();
         }
     }
     public void BuyGranny()
@@ -128,11 +164,14 @@ public class Shop : MonoBehaviour
         if (GameManager.manager.Granny == true)
         {
             GameManager.manager.currentCharacter = 3;
+            GameManager.manager.Save();
         }
         else
         {
             //Currency amount here
             GameManager.manager.Granny = true;
+            GameManager.manager.currentCharacter = 3;
+            GameManager.manager.Save();
         }
     }
     public void BuyMichelle()
@@ -140,11 +179,14 @@ public class Shop : MonoBehaviour
         if (GameManager.manager.Michelle == true)
         {
             GameManager.manager.currentCharacter = 4;
+            GameManager.manager.Save();
         }
         else
         {
             //Currency amount here
             GameManager.manager.Michelle = true;
+            GameManager.manager.currentCharacter = 4;
+            GameManager.manager.Save();
         }
     }
 }
