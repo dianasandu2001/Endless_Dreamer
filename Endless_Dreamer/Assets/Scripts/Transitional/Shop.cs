@@ -1,15 +1,32 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
+    public GameObject coin_count_display;
+    public GameObject gem_count_display;
+
+    public Animator Amy;
+    public Animator Aj;
+    public Animator Claire;
+    public Animator Granny;
+    public Animator Michelle;
+
     public GameObject Panel1;
     public GameObject Panel2;
     public GameObject Panel3;
 
     void Start()
     {
+        coin_count_display.GetComponent<Text>().text = "" + GameManager.manager.coins;
+        gem_count_display.GetComponent<Text>().text = "" + GameManager.manager.gems;
 
+        Amy.SetBool("Menu", true);
+        Aj.SetBool("Menu", true);
+        Claire.SetBool("Menu", true);
+        Granny.SetBool("Menu", true);
+        Michelle.SetBool("Menu", true);
     }
 
     void Update()
