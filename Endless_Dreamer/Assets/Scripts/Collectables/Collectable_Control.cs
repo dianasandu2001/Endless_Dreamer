@@ -6,18 +6,18 @@ using UnityEngine.UI;
 public class Collectable_Control : MonoBehaviour
 {
     public static int coin_count;
-    public GameObject coin_count_display;
+    public Text coin_count_display;
 
     public static int gem_count;
-    public GameObject gem_count_display;
+    public Text gem_count_display;
 
     public GameObject player;
 
     public static float distance_count;
-    public GameObject distance_count_display;
+    public Text distance_count_display;
 
     public static float score_count;
-    public GameObject score_count_display;
+    public Text score_count_display;
 
     // Start is called before the first frame update
     void Start()
@@ -31,13 +31,13 @@ public class Collectable_Control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        coin_count_display.GetComponent<Text>().text = "" + coin_count;
-        gem_count_display.GetComponent<Text>().text = "" + gem_count;
+        coin_count_display.text = "" + coin_count;
+        gem_count_display.text = "" + gem_count;
         
         distance_count = (player.transform.position.z + 25)/2;
-        distance_count_display.GetComponent<Text>().text = "" + (int)distance_count + " m";
+        distance_count_display.text = "" + (int)distance_count + " m";
 
         score_count = distance_count; // *potion_score_multiplier * player_score_multiplier
-        score_count_display.GetComponent<Text>().text = "" + (int)score_count;
+        score_count_display.text = "" + (int)score_count;
     }
 }

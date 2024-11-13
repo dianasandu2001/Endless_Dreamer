@@ -2327,10 +2327,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d519b4ceeef921449d08b630b75a58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coin_count_display: {fileID: 1613282333}
-  gem_count_display: {fileID: 63194802}
-  distance_count_display: {fileID: 1583167196}
-  score_count_display: {fileID: 38223554}
+  coin_count_display: {fileID: 1613282334}
+  gem_count_display: {fileID: 63194803}
+  distance_count_display: {fileID: 1583167197}
+  score_count_display: {fileID: 38223555}
   mixer: {fileID: 24100000, guid: 1a139c897f5b81741b0c66da544837de, type: 2}
   Player_Move: {fileID: 0}
   spawn: {fileID: 864149275}

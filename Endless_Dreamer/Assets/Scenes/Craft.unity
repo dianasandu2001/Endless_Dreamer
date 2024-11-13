@@ -18862,18 +18862,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panel1: {fileID: 1047699584}
   Panel2: {fileID: 1680524299}
-  stone_dust_craft: {fileID: 207918549}
-  flower_dust_craft: {fileID: 2031517471}
-  living_dust_craft: {fileID: 623720873}
-  score_potion_craft: {fileID: 2111691297}
-  debuff_potion_craft: {fileID: 1691724207}
-  health_potion_craft: {fileID: 1178413932}
-  stone_dust_mill: {fileID: 1622657816}
-  flower_dust_mill: {fileID: 1568531524}
-  living_dust_mill: {fileID: 1387906754}
-  glowstone_mill: {fileID: 1431496026}
-  orchid_mill: {fileID: 1698921335}
-  firefly_mill: {fileID: 1781136093}
+  stone_dust_craft: {fileID: 207918551}
+  flower_dust_craft: {fileID: 2031517473}
+  living_dust_craft: {fileID: 623720875}
+  score_potion_craft: {fileID: 2111691299}
+  debuff_potion_craft: {fileID: 1691724209}
+  health_potion_craft: {fileID: 1178413934}
+  stone_dust_mill: {fileID: 1622657818}
+  flower_dust_mill: {fileID: 1568531526}
+  living_dust_mill: {fileID: 1387906756}
+  glowstone_mill: {fileID: 1431496028}
+  orchid_mill: {fileID: 1698921337}
+  firefly_mill: {fileID: 1781136095}
 --- !u!1 &1848471036
 GameObject:
   m_ObjectHideFlags: 0

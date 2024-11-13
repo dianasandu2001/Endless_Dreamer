@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
-    public GameObject coin_count_display;
-    public GameObject gem_count_display;
-    public GameObject distance_count_display;
-    public GameObject score_count_display;
+    public Text coin_count_display;
+    public Text gem_count_display;
+    public Text distance_count_display;
+    public Text score_count_display;
 
     public AudioMixer mixer;
 
@@ -20,15 +20,16 @@ public class Settings : MonoBehaviour
     public Animator animator;
     void Start()
     {
-        coin_count_display.GetComponent<Text>().text = "" + GameManager.manager.coins;
-        gem_count_display.GetComponent<Text>().text = "" + GameManager.manager.gems;
-        distance_count_display.GetComponent<Text>().text = "" + (int)GameManager.manager.distance + " m";
-        score_count_display.GetComponent<Text>().text = "" + (int)GameManager.manager.score;
+        coin_count_display.text = "" + GameManager.manager.coins;
+        gem_count_display.text = "" + GameManager.manager.gems;
+        distance_count_display.text = "" + (int)GameManager.manager.distance + " m";
+        score_count_display.text = "" + (int)GameManager.manager.score;
 
         //spawning currently selected character
         player = Instantiate(GameManager.manager.characters[GameManager.manager.currentCharacter], spawn.transform);
         player.GetComponent<Player_Move>().enabled = false;
         animator = player.GetComponent<Animator>();
+        Player_Move = player.GetComponent<Player_Move>();
         animator.SetBool("Menu", true);
     }
 

@@ -1,12 +1,15 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
+    public Costs costs;
+
     //character tab var
-    public GameObject coin_count_display;
-    public GameObject gem_count_display;
+    public Text coin_count_display;
+    public Text gem_count_display;
 
     public Animator Amy;
     public Animator Aj;
@@ -15,27 +18,44 @@ public class Shop : MonoBehaviour
     public Animator Michelle;
 
     //apothecary tab var
-    public GameObject coin_display_apothecary;
-    public GameObject gem_display_apothecary;
+    public Text coin_display_apothecary;
+    public Text gem_display_apothecary;
 
-    public GameObject stone_dust_display_apothecary;
-    public GameObject flower_dust_display_apothecary;
-    public GameObject living_dust_display_apothecary;
+    public Text stone_dust_display_apothecary;
+    public Text flower_dust_display_apothecary;
+    public Text living_dust_display_apothecary;
 
-    public GameObject health_potion_display_apothecary;
-    public GameObject score_potion_display_apothecary;
-    public GameObject debuff_potion_display_apothecary;
+    public Text health_potion_display_apothecary;
+    public Text score_potion_display_apothecary;
+    public Text debuff_potion_display_apothecary;
+
+    public Text coin_display_shop;
+    public Text gem_display_shop;
 
     //changing tabs
     public GameObject Panel1;
     public GameObject Panel2;
     public GameObject Panel3;
 
+    // potion purchase buttons
+    public TMP_Text health_button;
+    public TMP_Text score_button;
+    public TMP_Text debuff_button;
+
+    //dust purchase buttons
+    public TMP_Text stone_button;
+    public TMP_Text flower_button;
+    public TMP_Text living_button;
+
+    //coins purchase buttons
+    public TMP_Text coins100;
+    public TMP_Text coins500;
+    public TMP_Text coins1000;
     void Start()
     {
         // character tab
-        coin_count_display.GetComponent<Text>().text = "" + GameManager.manager.coins;
-        gem_count_display.GetComponent<Text>().text = "" + GameManager.manager.gems;
+        coin_count_display.text = "" + GameManager.manager.coins;
+        gem_count_display.text = "" + GameManager.manager.gems;
 
         Amy.SetBool("Menu", true);
         Aj.SetBool("Menu", true);
@@ -44,16 +64,33 @@ public class Shop : MonoBehaviour
         Michelle.SetBool("Menu", true);
 
         // apothecary tab
-        coin_display_apothecary.GetComponent<Text>().text = "" + GameManager.manager.coins;
-        gem_display_apothecary.GetComponent<Text>().text = "" + GameManager.manager.gems;
+        coin_display_apothecary.text = "" + GameManager.manager.coins;
+        gem_display_apothecary.text = "" + GameManager.manager.gems;
 
-        stone_dust_display_apothecary.GetComponent<Text>().text = "" + GameManager.manager.stoneDust;
-        flower_dust_display_apothecary.GetComponent<Text>().text = "" + GameManager.manager.flowerDust;
-        living_dust_display_apothecary.GetComponent<Text>().text = "" + GameManager.manager.livingDust;
+        stone_dust_display_apothecary.text = "" + GameManager.manager.stoneDust;
+        flower_dust_display_apothecary.text = "" + GameManager.manager.flowerDust;
+        living_dust_display_apothecary.text = "" + GameManager.manager.livingDust;
 
-        health_potion_display_apothecary.GetComponent<Text>().text = "" + GameManager.manager.redPotion;
-        score_potion_display_apothecary.GetComponent<Text>().text = "" + GameManager.manager.yellowPotion;
-        debuff_potion_display_apothecary.GetComponent<Text>().text = "" + GameManager.manager.greenPotion;
+        health_potion_display_apothecary.text = "" + GameManager.manager.redPotion;
+        score_potion_display_apothecary.text = "" + GameManager.manager.yellowPotion;
+        debuff_potion_display_apothecary.text = "" + GameManager.manager.greenPotion;
+
+        // price on buttons
+        health_button.text = "" + costs.healthPotionCost;
+        score_button.text = "" + costs.scorePotionCost;
+        debuff_button.text = "" + costs.debuffPotionCost;
+
+        stone_button.text = "" + (costs.dustCost * costs.DustAmount);
+        flower_button.text = "" + (costs.dustCost * costs.DustAmount);
+        living_button.text = "" + (costs.dustCost * costs.DustAmount);
+
+        coins100.text = "" + costs.Coins100Cost;
+        coins500.text = "" + costs.Coins500Cost;
+        coins1000.text = "" + costs.Coins1000Cost;
+
+        //shop
+        coin_display_shop.text = "" + GameManager.manager.coins;
+        gem_display_shop.text = "" + GameManager.manager.gems;
     }
 
     void Update()
@@ -112,7 +149,7 @@ public class Shop : MonoBehaviour
     {
         settingsPanel.SetActive(false);
     }
-
+    // Buying and/or switching to chacters
     public void BuyAmy()
     {
         if(GameManager.manager.Amy == true)
@@ -126,6 +163,7 @@ public class Shop : MonoBehaviour
             //she is default so no need to get 
             GameManager.manager.Amy = true;
             GameManager.manager.currentCharacter = 0;
+            //change button from amount to switch
             GameManager.manager.Save();
         }
     }
@@ -138,10 +176,13 @@ public class Shop : MonoBehaviour
         }
         else
         {
-            //Currency amount here
-            GameManager.manager.Claire = true;
-            GameManager.manager.currentCharacter = 1;
-            GameManager.manager.Save();
+            if (GameManager.manager.coins >= costs.ClaireCost)
+            {
+                GameManager.manager.coins -= costs.ClaireCost;
+                GameManager.manager.Claire = true;
+                GameManager.manager.currentCharacter = 1;
+                GameManager.manager.Save();
+            }
         }
     }
     public void BuyAj()
@@ -153,10 +194,13 @@ public class Shop : MonoBehaviour
         }
         else
         {
-            //Currency amount here
-            GameManager.manager.Aj = true;
-            GameManager.manager.currentCharacter = 2;
-            GameManager.manager.Save();
+            if (GameManager.manager.coins >= costs.AjCost)
+            {
+                GameManager.manager.coins -= costs.AjCost;
+                GameManager.manager.Aj = true;
+                GameManager.manager.currentCharacter = 2;
+                GameManager.manager.Save();
+            }
         }
     }
     public void BuyGranny()
@@ -168,10 +212,13 @@ public class Shop : MonoBehaviour
         }
         else
         {
-            //Currency amount here
-            GameManager.manager.Granny = true;
-            GameManager.manager.currentCharacter = 3;
-            GameManager.manager.Save();
+            if (GameManager.manager.gems >= costs.GrannyCost)
+            {
+                GameManager.manager.gems -= costs.GrannyCost;
+                GameManager.manager.Granny = true;
+                GameManager.manager.currentCharacter = 3;
+                GameManager.manager.Save();
+            }
         }
     }
     public void BuyMichelle()
@@ -183,9 +230,132 @@ public class Shop : MonoBehaviour
         }
         else
         {
-            //Currency amount here
-            GameManager.manager.Michelle = true;
-            GameManager.manager.currentCharacter = 4;
+            if (GameManager.manager.gems >= costs.MichelleCost)
+            {
+                GameManager.manager.gems -= costs.MichelleCost;
+                GameManager.manager.Michelle = true;
+                GameManager.manager.currentCharacter = 4;
+                GameManager.manager.Save();
+            }
+        }
+    }
+    // Buying potions
+    public void BuyHealthPotion()
+    {
+        if (GameManager.manager.gems >= costs.healthPotionCost)
+        {
+            GameManager.manager.gems -= costs.healthPotionCost;
+            GameManager.manager.redPotion += 1;
+
+            gem_display_apothecary.text = "" + GameManager.manager.gems;
+            health_potion_display_apothecary.text = "" + GameManager.manager.redPotion;
+
+            GameManager.manager.Save();
+        }
+    }
+    public void BuyScorePotion()
+    {
+        if (GameManager.manager.gems >= costs.scorePotionCost)
+        {
+            GameManager.manager.gems -= costs.scorePotionCost;
+            GameManager.manager.yellowPotion += 1;
+
+            gem_display_apothecary.text = "" + GameManager.manager.gems;
+            score_potion_display_apothecary.text = "" + GameManager.manager.yellowPotion;
+
+            GameManager.manager.Save();
+        }
+    }
+    public void BuyDebuffPotion()
+    {
+        if (GameManager.manager.gems >= costs.debuffPotionCost)
+        {
+            GameManager.manager.gems -= costs.debuffPotionCost;
+            GameManager.manager.greenPotion += 1;
+
+            gem_display_apothecary.text = "" + GameManager.manager.gems;
+            debuff_potion_display_apothecary.text = "" + GameManager.manager.greenPotion;
+
+            GameManager.manager.Save();
+        }
+    }
+    // buying dust
+    public void BuyStoneDust()
+    {
+        if (GameManager.manager.gems >= (costs.dustCost * costs.DustAmount))
+        {
+            GameManager.manager.gems -= (costs.dustCost * costs.DustAmount);
+            GameManager.manager.stoneDust += costs.DustAmount;
+
+            gem_display_apothecary.text = "" + GameManager.manager.gems;
+            stone_dust_display_apothecary.text = "" + GameManager.manager.stoneDust;
+
+            GameManager.manager.Save();
+        }
+    }
+    public void BuyFlowerDust()
+    {
+        if (GameManager.manager.gems >= (costs.dustCost * costs.DustAmount))
+        {
+            GameManager.manager.gems -= (costs.dustCost * costs.DustAmount);
+            GameManager.manager.flowerDust += costs.DustAmount;
+
+            gem_display_apothecary.text = "" + GameManager.manager.gems;
+            flower_dust_display_apothecary.text = "" + GameManager.manager.flowerDust;
+
+            GameManager.manager.Save();
+        }
+    }
+    public void BuyLivingDust()
+    {
+        if (GameManager.manager.gems >= (costs.dustCost * costs.DustAmount))
+        {
+            GameManager.manager.gems -= (costs.dustCost * costs.DustAmount);
+            GameManager.manager.livingDust += costs.DustAmount;
+
+            gem_display_apothecary.text = "" + GameManager.manager.gems;
+            living_dust_display_apothecary.text = "" + GameManager.manager.livingDust;
+
+            GameManager.manager.Save();
+        }
+    }
+    // buying coins
+    public void Buy100Coins()
+    {
+        if (GameManager.manager.gems >= costs.Coins100Cost)
+        {
+            GameManager.manager.gems -= costs.Coins100Cost;
+            GameManager.manager.coins += 100;
+
+            gem_display_shop.text = "" + GameManager.manager.gems;
+            coin_display_shop.text = "" + GameManager.manager.coins;
+
+            GameManager.manager.Save();
+        }
+    }
+    public void Buy500Coins()
+    {
+        if (GameManager.manager.gems >= costs.Coins500Cost)
+        {
+            GameManager.manager.gems -= costs.Coins500Cost;
+            GameManager.manager.coins += 500;
+
+            gem_display_shop.text = "" + GameManager.manager.gems;
+            coin_display_shop.text = "" + GameManager.manager.coins;
+
+            GameManager.manager.Save();
+        }
+    }
+    public void Buy1000Coins()
+    {
+        if (GameManager.manager.gems >= costs.Coins1000Cost)
+        {
+            GameManager.manager.gems -= costs.Coins1000Cost;
+            GameManager.manager.coins += 1000;
+
+            gem_display_shop.text = "" + GameManager.manager.gems;
+            coin_display_shop.text = "" + GameManager.manager.coins;
+
             GameManager.manager.Save();
         }
     }
