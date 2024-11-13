@@ -17,6 +17,11 @@ public class Shop : MonoBehaviour
     public Animator Granny;
     public Animator Michelle;
 
+    public TMP_Text AjButton;
+    public TMP_Text ClaireButton;
+    public TMP_Text GrannyButton;
+    public TMP_Text MichelleButton;
+
     //apothecary tab var
     public Text coin_display_apothecary;
     public Text gem_display_apothecary;
@@ -62,6 +67,40 @@ public class Shop : MonoBehaviour
         Claire.SetBool("Menu", true);
         Granny.SetBool("Menu", true);
         Michelle.SetBool("Menu", true);
+
+        if(GameManager.manager.Claire == true)
+        {
+            ClaireButton.text = "Switch";
+        }
+        else
+        {
+            ClaireButton.text = "" + costs.ClaireCost;
+        }
+
+        if (GameManager.manager.Aj == true)
+        {
+            AjButton.text = "Switch";
+        }
+        else
+        {
+            AjButton.text = "" + costs.AjCost;
+        }
+        if (GameManager.manager.Granny == true)
+        {
+            GrannyButton.text = "Switch";
+        }
+        else
+        {
+            GrannyButton.text = "" + costs.GrannyCost;
+        }
+        if (GameManager.manager.Michelle == true)
+        {
+            MichelleButton.text = "Switch";
+        }
+        else
+        {
+            MichelleButton.text = "" + costs.MichelleCost;
+        }
 
         // apothecary tab
         coin_display_apothecary.text = "" + GameManager.manager.coins;

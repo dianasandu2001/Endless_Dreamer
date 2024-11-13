@@ -11830,7 +11830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &476369413
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25007,7 +25007,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1047699585
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43192,6 +43192,10 @@ MonoBehaviour:
   Claire: {fileID: 1647643393}
   Granny: {fileID: 1941369214}
   Michelle: {fileID: 1665697054}
+  AjButton: {fileID: 82037377}
+  ClaireButton: {fileID: 2022947668}
+  GrannyButton: {fileID: 556972788}
+  MichelleButton: {fileID: 1147322476}
   coin_display_apothecary: {fileID: 85696980}
   gem_display_apothecary: {fileID: 290564388}
   stone_dust_display_apothecary: {fileID: 78832185}
