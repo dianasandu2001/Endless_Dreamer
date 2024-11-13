@@ -74,7 +74,7 @@ public class Shop : MonoBehaviour
         }
         else
         {
-            ClaireButton.text = "" + costs.ClaireCost;
+            ClaireButton.text = "" + costs.ClaireCost + " coins";
         }
 
         if (GameManager.manager.Aj == true)
@@ -83,7 +83,7 @@ public class Shop : MonoBehaviour
         }
         else
         {
-            AjButton.text = "" + costs.AjCost;
+            AjButton.text = "" + costs.AjCost + " coins";
         }
         if (GameManager.manager.Granny == true)
         {
@@ -91,7 +91,7 @@ public class Shop : MonoBehaviour
         }
         else
         {
-            GrannyButton.text = "" + costs.GrannyCost;
+            GrannyButton.text = "" + costs.GrannyCost + " gems";
         }
         if (GameManager.manager.Michelle == true)
         {
@@ -99,7 +99,7 @@ public class Shop : MonoBehaviour
         }
         else
         {
-            MichelleButton.text = "" + costs.MichelleCost;
+            MichelleButton.text = "" + costs.MichelleCost + " gems";
         }
 
         // apothecary tab
