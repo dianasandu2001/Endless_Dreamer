@@ -35,6 +35,8 @@ public class Generate_Level : MonoBehaviour
     public GameObject cam;
 
     public Collectable_Control control;
+
+    public GameObject potionPanel;
     void Start()
     {
         //spawning in the currently selected character
@@ -44,6 +46,13 @@ public class Generate_Level : MonoBehaviour
 
         //assigning the spawned character to the distance tracker in Collectable_Control
         control.player = player;
+
+        //using a score potion
+        if (GameManager.manager.yellowPotion >= 1)
+        {
+            Time.timeScale = 0f;
+            potionPanel.SetActive(true);
+        }
     }
     void Update()
     {

@@ -325,10 +325,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea27a8b8f6b60994a8938b366c8f6fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClaireCost: 0
-  AjCost: 0
-  GrannyCost: 0
-  MichelleCost: 0
+  ClaireCost: 10000
+  AjCost: 50000
+  GrannyCost: 500
+  MichelleCost: 1000
   ingredientCoinCost: 50
   ingredientGemCost: 1
   dustCost: 1.2

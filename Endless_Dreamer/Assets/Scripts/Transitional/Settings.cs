@@ -18,6 +18,8 @@ public class Settings : MonoBehaviour
     public GameObject spawn;
     public GameObject player;
     public Animator animator;
+
+    public Collectable_Control control;
     void Start()
     {
         coin_count_display.text = "" + GameManager.manager.coins;
@@ -129,5 +131,12 @@ public class Settings : MonoBehaviour
     public void HELP()
     {
         Player_Move.grounded = true;
+    }
+    public void useScorePotion(GameObject startPanel)
+    {
+        GameManager.manager.yellowPotion -= 1;
+        control.potion_score_multiplier = 2;
+        startPanel.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
