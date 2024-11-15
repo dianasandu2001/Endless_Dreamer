@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
@@ -20,6 +21,8 @@ public class Settings : MonoBehaviour
     public Animator animator;
 
     public Collectable_Control control;
+    public float healthPotionUsage;
+    public TMP_Text healthPotionButton;
     void Start()
     {
         coin_count_display.text = "" + GameManager.manager.coins;
@@ -138,5 +141,17 @@ public class Settings : MonoBehaviour
         control.potion_score_multiplier = 2;
         startPanel.SetActive(false);
         Time.timeScale = 1f;
+    }
+    public void useHealthPotion(GameObject endPanel)
+    { 
+        GameManager.manager.redPotion -= 1 * healthPotionUsage;
+        endPanel.SetActive(false);
+        Time.timeScale = 1f;
+        player = control.player;
+        player.GetComponent<Player_Move>().enabled = true;
+        animator = player.GetComponent<Animator>();
+        animator.SetBool("Stumble", false);
+        healthPotionUsage += 1;
+        healthPotionButton.text = "Use " + (int)healthPotionUsage;
     }
 }

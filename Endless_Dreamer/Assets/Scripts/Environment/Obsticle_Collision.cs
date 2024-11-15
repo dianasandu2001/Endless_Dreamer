@@ -15,7 +15,7 @@ public class Obsticle_Collision : MonoBehaviour
         this.gameObject.GetComponent<BoxCollider>().enabled = false;
         player.GetComponent<Player_Move>().enabled = false;
         animator = player.GetComponent<Animator>();
-        animator.SetTrigger("Stumble");
+        animator.SetBool("Stumble", true);
         panel.SetActive(true);
     }
 }
