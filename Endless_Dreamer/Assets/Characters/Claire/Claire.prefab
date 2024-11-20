@@ -80,6 +80,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 396f90abf4260fb468313237d48ebf74, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2787180070985173133}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 396f90abf4260fb468313237d48ebf74, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4328470890182476767}
     - targetCorrespondingSourceObject: {fileID: -6271348864047573315, guid: 396f90abf4260fb468313237d48ebf74, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4052274329225106761}
@@ -208,3 +211,20 @@ MonoBehaviour:
   animator: {fileID: 1167426222262538289}
   panel: {fileID: 0}
   coin_FX: {fileID: 0}
+  isProtectedByBubble: 0
+--- !u!114 &4328470890182476767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7701310924888965233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4401a722ddd9c2468527f9ff70166e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubbleTime: 5
+  bubblePower: {fileID: 7763721745426923867, guid: 74422583de3a4f94bbdba8aa7499b5f6, type: 3}
+  player_move: {fileID: 2787180070985173133}
+  player: {fileID: 7701310924888965233}

@@ -68,6 +68,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.05744384
       objectReference: {fileID: 0}
+    - target: {fileID: -398367143235661068, guid: de16a6ea8ce102a4c85c51a7108e8576, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 464141968781854204, guid: de16a6ea8ce102a4c85c51a7108e8576, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: de16a6ea8ce102a4c85c51a7108e8576, type: 3}
       propertyPath: m_Name
       value: Michelle
@@ -96,6 +104,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de16a6ea8ce102a4c85c51a7108e8576, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3129518802804436525}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de16a6ea8ce102a4c85c51a7108e8576, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1202152780987008885}
   m_SourcePrefab: {fileID: 100100000, guid: de16a6ea8ce102a4c85c51a7108e8576, type: 3}
 --- !u!95 &1751169081758706856 stripped
 Animator:
@@ -194,3 +205,20 @@ MonoBehaviour:
   bubblePower: {fileID: 7763721745426923867, guid: 74422583de3a4f94bbdba8aa7499b5f6, type: 3}
   player_move: {fileID: 365105053103012218}
   player: {fileID: 5036884174772005992}
+--- !u!114 &1202152780987008885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5036884174772005992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59003f29c9049254aac50383cf7af996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedTime: 5
+  player: {fileID: 5036884174772005992}
+  mat: {fileID: 2100000, guid: 3be7ebb2d4a739d408da9d59e6271808, type: 2}
+  color: {r: 0.8666667, g: 0.8666667, b: 0.8666667, a: 1}
+  player_move: {fileID: 365105053103012218}
