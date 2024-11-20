@@ -1,17 +1,22 @@
-using TrueClouds;
 using UnityEngine;
+using System.Collections;
 
 public class BubblePower : MonoBehaviour
 {
-    /*
-    void OnCollisionEnter(Collision collision)
+    public float bubbleTime;
+    public GameObject bubblePower;
+    private GameObject bubblePowerInstanciated;
+
+    public Player_Move player_move;
+    public GameObject player;
+    public IEnumerator BubbleTime(float sec)
     {
-        Debug.Log("Collided with: " + collision.gameObject.name);
-        if (collision.gameObject.CompareTag("Obstacle"))
-        {
-            Debug.Log("Destroyer void");
-            Destroy(this.gameObject);
-        }
+        Debug.Log("Coroutine started");
+        player_move.isProtectedByBubble = true;
+        bubblePowerInstanciated = Instantiate(bubblePower, player.transform);
+        yield return new WaitForSeconds(sec);
+        Debug.Log("Coroutine ending");
+        player_move.isProtectedByBubble = false;
+        Destroy(bubblePowerInstanciated);
     }
-    */
 }

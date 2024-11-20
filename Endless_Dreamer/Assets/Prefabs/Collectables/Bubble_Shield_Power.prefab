@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 9059462188738737472}
   - component: {fileID: 2894953791305047723}
   - component: {fileID: 2524231612119338643}
-  - component: {fileID: 5430775607606824168}
   m_Layer: 0
   m_Name: Bubble_Shield_Power
   m_TagString: ShieldPower
@@ -207,15 +206,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5430775607606824168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7763721745426923867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4401a722ddd9c2468527f9ff70166e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

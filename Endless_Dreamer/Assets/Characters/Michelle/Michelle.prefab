@@ -93,6 +93,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de16a6ea8ce102a4c85c51a7108e8576, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5600739925924282823}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de16a6ea8ce102a4c85c51a7108e8576, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3129518802804436525}
   m_SourcePrefab: {fileID: 100100000, guid: de16a6ea8ce102a4c85c51a7108e8576, type: 3}
 --- !u!95 &1751169081758706856 stripped
 Animator:
@@ -124,6 +127,7 @@ MonoBehaviour:
   animator: {fileID: 1751169081758706856}
   panel: {fileID: 0}
   coin_FX: {fileID: 0}
+  isProtectedByBubble: 0
 --- !u!54 &6335611708004053274
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -174,3 +178,19 @@ CapsuleCollider:
   m_Height: 1.7937858
   m_Direction: 1
   m_Center: {x: 0, y: 0.76358736, z: 0}
+--- !u!114 &3129518802804436525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5036884174772005992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4401a722ddd9c2468527f9ff70166e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubbleTime: 5
+  bubblePower: {fileID: 7763721745426923867, guid: 74422583de3a4f94bbdba8aa7499b5f6, type: 3}
+  player_move: {fileID: 365105053103012218}
+  player: {fileID: 5036884174772005992}

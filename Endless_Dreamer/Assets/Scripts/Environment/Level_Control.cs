@@ -13,10 +13,6 @@ public class Level_Control : MonoBehaviour
     public float healthPotionUsage;
     public TMP_Text healthPotionButton;
 
-    public float bubbleTime;
-    public GameObject bubblePower;
-    private GameObject bubblePowerInstanciated;
-
     void Start()
     {
         player = control.player;
@@ -44,14 +40,5 @@ public class Level_Control : MonoBehaviour
         player_move.enabled = true;
         healthPotionUsage += 1;
         healthPotionButton.text = "Use " + (int)healthPotionUsage;
-    }
-    public IEnumerator BubbleTime(float sec)
-    {
-        Debug.Log("Coroutine started");
-        bubblePowerInstanciated = Instantiate(bubblePower, player.transform);
-        yield return new WaitForSeconds(sec);
-        Debug.Log("Coroutine ending");
-        player_move.isProtectedByBubble = false;
-        Destroy(bubblePowerInstanciated);
     }
 }

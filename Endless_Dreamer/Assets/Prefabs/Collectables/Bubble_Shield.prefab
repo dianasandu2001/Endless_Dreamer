@@ -220,5 +220,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mesh: {fileID: 1754460726402179954}
-  collider: {fileID: 451218898863110929}
+  colliderC: {fileID: 451218898863110929}
   level_control: {fileID: 0}
+  bubblePower: {fileID: 0}

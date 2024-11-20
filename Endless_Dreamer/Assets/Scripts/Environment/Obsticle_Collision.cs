@@ -16,8 +16,6 @@ public class Obsticle_Collision : MonoBehaviour
         {
             Debug.Log("Destroyer void");
             Destroy(player.gameObject);
-            //StartCoroutine(Time(1));
-            //player.GetComponent<Player_Move>().isProtectedByBubble = true;
         }
         else if(!player.GetComponent<Player_Move>().isProtectedByBubble)
         {
@@ -29,10 +27,4 @@ public class Obsticle_Collision : MonoBehaviour
             panel.SetActive(true);
         }
     }
-    /*
-     IEnumerator Time(float sec)
-    {
-        yield return new WaitForSeconds(sec);
-    }
-    */
 }
