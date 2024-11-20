@@ -16,13 +16,9 @@ public class Settings : MonoBehaviour
 
     public Player_Move Player_Move;
 
-    public GameObject spawn;
-    public GameObject player;
-    public Animator animator;
-
-    public Collectable_Control control;
-    public float healthPotionUsage;
-    public TMP_Text healthPotionButton;
+    public GameObject spawn_menu;
+    public GameObject player_menu;
+    public Animator animator_menu;
     void Start()
     {
         coin_count_display.text = "" + GameManager.manager.coins;
@@ -31,11 +27,11 @@ public class Settings : MonoBehaviour
         score_count_display.text = "" + (int)GameManager.manager.score;
 
         //spawning currently selected character
-        player = Instantiate(GameManager.manager.characters[GameManager.manager.currentCharacter], spawn.transform);
-        player.GetComponent<Player_Move>().enabled = false;
-        animator = player.GetComponent<Animator>();
-        Player_Move = player.GetComponent<Player_Move>();
-        animator.SetBool("Menu", true);
+        player_menu = Instantiate(GameManager.manager.characters[GameManager.manager.currentCharacter], spawn_menu.transform);
+        player_menu.GetComponent<Player_Move>().enabled = false;
+        animator_menu = player_menu.GetComponent<Animator>();
+        Player_Move = player_menu.GetComponent<Player_Move>();
+        animator_menu.SetBool("Menu", true);
     }
 
     void Update()
@@ -122,6 +118,7 @@ public class Settings : MonoBehaviour
 
     public void Volume(float volumeLevel)
     {
+        //volumeLevel = GameManager.manager.volume;
         mixer.SetFloat("BackgroundMusic", Mathf.Log10(volumeLevel) * 20);
         GameManager.manager.volume = volumeLevel;
     }
@@ -134,24 +131,5 @@ public class Settings : MonoBehaviour
     public void HELP()
     {
         Player_Move.grounded = true;
-    }
-    public void useScorePotion(GameObject startPanel)
-    {
-        GameManager.manager.yellowPotion -= 1;
-        control.potion_score_multiplier = 2;
-        startPanel.SetActive(false);
-        Time.timeScale = 1f;
-    }
-    public void useHealthPotion(GameObject endPanel)
-    { 
-        GameManager.manager.redPotion -= 1 * healthPotionUsage;
-        endPanel.SetActive(false);
-        Time.timeScale = 1f;
-        player = control.player;
-        player.GetComponent<Player_Move>().enabled = true;
-        animator = player.GetComponent<Animator>();
-        animator.SetBool("Stumble", false);
-        healthPotionUsage += 1;
-        healthPotionButton.text = "Use " + (int)healthPotionUsage;
     }
 }

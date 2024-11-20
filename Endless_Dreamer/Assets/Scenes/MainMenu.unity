@@ -1678,7 +1678,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.00001
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2333,9 +2333,9 @@ MonoBehaviour:
   score_count_display: {fileID: 38223555}
   mixer: {fileID: 24100000, guid: 1a139c897f5b81741b0c66da544837de, type: 2}
   Player_Move: {fileID: 0}
-  spawn: {fileID: 864149275}
-  player: {fileID: 0}
-  animator: {fileID: 0}
+  spawn_menu: {fileID: 864149275}
+  player_menu: {fileID: 0}
+  animator_menu: {fileID: 0}
 --- !u!224 &972289665
 RectTransform:
   m_ObjectHideFlags: 0

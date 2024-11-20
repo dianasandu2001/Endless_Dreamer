@@ -19,6 +19,8 @@ public class Player_Move : MonoBehaviour
     public GameObject panel;
 
     public AudioSource coin_FX;
+    public bool isProtectedByBubble = false;
+
     void Update()
     {
         //Continuous running
@@ -61,73 +63,5 @@ public class Player_Move : MonoBehaviour
         {
             grounded = false;
         }
-    }
-    
-    void OnTriggerEnter(Collider obstacle)
-    {
-        /*
-        //Colliding with obstacles
-        if (obstacle.gameObject.CompareTag("Obstacle"))
-        {
-            //coin_FX.Play();
-            obstacle.gameObject.GetComponent<BoxCollider>().enabled = false;
-            this.GetComponent<Player_Move>().enabled = false;
-            animator.SetTrigger("Stumble");
-            panel.SetActive(true);
-        }
-        
-        // Collecting coins
-        if (obstacle.gameObject.CompareTag("Coin"))
-        {
-            coin_FX.Play();
-            Collectable_Control.coin_count += 1;
-            obstacle.gameObject.SetActive(false);
-        }
-        
-        // Collecting gems
-        if (obstacle.gameObject.CompareTag("Gem"))
-        {
-            coin_FX.Play();
-            Collectable_Control.gem_count += 1;
-            obstacle.gameObject.SetActive(false);
-        }
-        // Collecting chests
-        if (obstacle.gameObject.CompareTag("Chest"))
-        {
-            //coin_FX.Play();
-            obstacle.gameObject.SetActive(false);
-            Debug.Log("Chest!");
-        }
-        
-        // Collecting a shield power
-        if (obstacle.gameObject.CompareTag("ShieldPower"))
-        {
-            //coin_FX.Play();
-            obstacle.gameObject.SetActive(false);
-            Debug.Log("Shield Power!");
-        }
-        // Collecting a speed power
-        if (obstacle.gameObject.CompareTag("SpeedPower"))
-        {
-            //coin_FX.Play();
-            obstacle.gameObject.SetActive(false);
-            Debug.Log("Speed Power!");
-        }
-        // Collecting a vision debuff
-        if (obstacle.gameObject.CompareTag("VisionDebuff"))
-        {
-            //coin_FX.Play();
-            obstacle.gameObject.SetActive(false);
-            Debug.Log("Vision Debuff!");
-        }
-        // Collecting a speed power
-        if (obstacle.gameObject.CompareTag("Trip"))
-        {
-            //coin_FX.Play();
-            obstacle.gameObject.SetActive(false);
-            // Make the screen black and white
-            Debug.Log("I Tripped!");
-        }
-        */
     }
 }
