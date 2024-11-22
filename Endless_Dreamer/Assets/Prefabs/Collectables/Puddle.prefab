@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8582542633836970174}
   - component: {fileID: 8575979444254955003}
   - component: {fileID: 1153608003559546913}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Puddle
   m_TagString: Trip
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 401696722557349766}
   - component: {fileID: 3918502364378965747}
   - component: {fileID: 3868598395711133841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EA_Puddle_01c
   m_TagString: Untagged
   m_Icon: {fileID: 0}

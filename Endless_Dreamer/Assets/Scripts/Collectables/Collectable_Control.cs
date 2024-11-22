@@ -7,6 +7,7 @@ public class Collectable_Control : MonoBehaviour
 {
     public static int coin_count;
     public Text coin_count_display;
+    public float coins_collected;
 
     public static int gem_count;
     public Text gem_count_display;
@@ -20,7 +21,6 @@ public class Collectable_Control : MonoBehaviour
     public Text score_count_display;
 
     public float potion_score_multiplier;
-    public float player_score_multiplier;
 
     // Start is called before the first frame update
     void Start()
@@ -30,19 +30,19 @@ public class Collectable_Control : MonoBehaviour
         distance_count = 0;
         score_count = 0;
         potion_score_multiplier = 1;
-        player_score_multiplier = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        coin_count_display.text = "" + coin_count;
+        //coins_collected = coin_count * GameManager.manager.coinMultiplier[GameManager.manager.currentCharacter];
+        coin_count_display.text = "" + coin_count; //(int)coins_collected;
         gem_count_display.text = "" + gem_count;
         
         distance_count = (player.transform.position.z + 25)/2;
         distance_count_display.text = "" + (int)distance_count + " m";
 
-        score_count = distance_count * potion_score_multiplier * player_score_multiplier;
+        score_count = distance_count * potion_score_multiplier; // * GameManager.manager.PlayerScoreMultipleir[GameManager.manager.currentCharacter];
         score_count_display.text = "" + (int)score_count;
     }
 }

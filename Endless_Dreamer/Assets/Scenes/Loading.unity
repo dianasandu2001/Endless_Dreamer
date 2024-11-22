@@ -268,6 +268,75 @@ MonoBehaviour:
   - {fileID: 4410868703902349055, guid: e9c1d5565b83b7d4c8abc8b37b025d5d, type: 3}
   - {fileID: 5036884174772005992, guid: d7f1f2b16192670418fadd1eff96ceea, type: 3}
   currentCharacter: 0
+  bubbleTime:
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  speedTime:
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  speedMultiplier:
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  coinMultiplier:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  PlayerScoreMultipleir:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  trippedTime:
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  level:
+  - 1
+  - 0
+  - 0
+  - 0
+  - 0
+  currentLevelXP:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  levelRequirements:
+  - 0
+  - 500
+  - 1000
+  - 2000
+  - 4000
+  - 8000
+  - 16000
+  - 24000
+  - 32000
+  - 48000
+  - 64000
+  - 80000
+  - 100000
+  - 120000
+  - 140000
+  - 165000
+  - 190000
+  - 220000
+  - 250000
+  - 300000
 --- !u!1 &627910114
 GameObject:
   m_ObjectHideFlags: 0

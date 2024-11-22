@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2802284571130450726}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Meshes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 5589169448533672840}
   - component: {fileID: 2146681615305398101}
   - component: {fileID: 9131955518909245941}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Golden_Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4880,7 +4880,7 @@ GameObject:
   - component: {fileID: 4608915379381107357}
   - component: {fileID: 4357003200913470354}
   - component: {fileID: 2708783379239342748}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shroom_Mesh_01_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4966,7 +4966,7 @@ GameObject:
   - component: {fileID: 9019480892239364318}
   - component: {fileID: 4396025035335650250}
   - component: {fileID: 6844614952716439864}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shroom_Mesh_01_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5052,7 +5052,7 @@ GameObject:
   - component: {fileID: 5391048063740081557}
   - component: {fileID: 3876770222427456432}
   - component: {fileID: 7154023035237668781}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shroom_Mesh_01_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5138,7 +5138,7 @@ GameObject:
   - component: {fileID: 2592502059022855851}
   - component: {fileID: 5195460537134191549}
   - component: {fileID: 48504004769564522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shroom_Mesh_01_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5226,7 +5226,7 @@ GameObject:
   - component: {fileID: 3918077790530651179}
   - component: {fileID: 41843725290317215}
   - component: {fileID: 8418198066320984791}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Speed_Buff_Mushroom
   m_TagString: SpeedPower
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ public class BubbleCollection : MonoBehaviour
     {
         //chest_FX.Play;
         bubblePower = player.GetComponent<BubblePower>();
-        StartCoroutine(bubblePower.BubbleTime(bubblePower.bubbleTime));
+        StartCoroutine(bubblePower.BubbleTime(bubblePower.bubbleTime)); //GameManager.manager.bubbleTime[GameManager.manager.currentCharacter]));
         mesh.enabled = false;
         colliderC.enabled = false;
     }

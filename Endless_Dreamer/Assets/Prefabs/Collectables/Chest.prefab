@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5869054688166477541}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest
   m_TagString: Chest
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 5153194252204823596}
   - component: {fileID: 8975691202058716235}
   - component: {fileID: 2377719027670667107}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest_Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 6805761000527733744}
   - component: {fileID: 5310399204104335112}
   - component: {fileID: 925153274996835396}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest_Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 6618232374650005704}
   - component: {fileID: 4735927672527412545}
   - component: {fileID: 1602244180002822909}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest_Animated
   m_TagString: Chest
   m_Icon: {fileID: 0}

@@ -5,7 +5,7 @@ using System;
 public class SpeedPower : MonoBehaviour
 {
     public float speedTime;
-    public float speedMultiplier;
+
     public GameObject player;
 
     public Material mat;
@@ -25,7 +25,7 @@ public class SpeedPower : MonoBehaviour
         mat.color = color;
 
         gameObject.layer = LayerMask.NameToLayer("Ignore Collision");
-        player_move.move_speed *= speedMultiplier;
+        player_move.move_speed *= 2; //GameManager.manager.speedMultiplier[GameManager.manager.currentCharacter];
 
         yield return new WaitForSeconds(sec);
 

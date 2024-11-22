@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5217297262207633886}
   - component: {fileID: 3460321990999174889}
   - component: {fileID: 7534084692854942778}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 8969656772875513775}
   - component: {fileID: 9184991096754700726}
   - component: {fileID: 692943896627768214}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Coin (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 8958669118754511673}
   - component: {fileID: 8438894927472900932}
   - component: {fileID: 1022254872526948576}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Coin (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 6832429524132213336}
   - component: {fileID: 7912181634955482555}
   - component: {fileID: 3200937711157008728}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Coin (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +507,7 @@ GameObject:
   - component: {fileID: 6365219884891042367}
   - component: {fileID: 1631549430034392123}
   - component: {fileID: 4035015959046226054}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Coins_Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 8245981541086482807}
   - component: {fileID: 3633824133345700557}
   - component: {fileID: 4494309050367410254}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Coin (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

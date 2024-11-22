@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 400324903688759185}
   - component: {fileID: 1773565571314197145}
   - component: {fileID: 8942719245199227704}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shroom_Mesh_01_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 7035607907887319274}
   - component: {fileID: 2046105696133552538}
   - component: {fileID: 5417641448717242214}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shroom_Mesh_01_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 2991430082076903910}
   - component: {fileID: 746666651052557818}
   - component: {fileID: 4730925096601185572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shroom_Mesh_01_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 8595782882125652594}
   - component: {fileID: 6510524664870038890}
   - component: {fileID: 8220447856571193953}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Vision_Debuff_Mushroom
   m_TagString: VisionDebuff
   m_Icon: {fileID: 0}
@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 4957335246265693780}
   - component: {fileID: 7473905892324082882}
   - component: {fileID: 2273456538418509598}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shroom_Mesh_01_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -556,7 +556,7 @@ GameObject:
   - component: {fileID: 2803128698641861093}
   - component: {fileID: 4919856359608684744}
   - component: {fileID: 8623392560435892649}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Golden_Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

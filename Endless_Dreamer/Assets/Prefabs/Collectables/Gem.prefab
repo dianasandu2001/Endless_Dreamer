@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5486646439709375977}
   - component: {fileID: 7394315378177751315}
   - component: {fileID: 355122582402146773}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -264,6 +264,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 261110110e1e0164fa224746174be0f2, type: 3}
       propertyPath: m_Name
       value: Diamon
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 261110110e1e0164fa224746174be0f2, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 261110110e1e0164fa224746174be0f2, type: 3}
       propertyPath: m_TagString
