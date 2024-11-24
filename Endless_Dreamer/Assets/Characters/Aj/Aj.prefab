@@ -143,11 +143,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move_speed: 3
-  left_right_speed: 4
+  left_right_speed: 6
+  speed_increase_rate: 0.05
   grounded: 0
   RB: {fileID: 3041274499697113627}
   jump_force: 5
   animator: {fileID: 4108453496422692702}
+  tripped: 0
   panel: {fileID: 0}
   coin_FX: {fileID: 0}
   isProtectedByBubble: 0

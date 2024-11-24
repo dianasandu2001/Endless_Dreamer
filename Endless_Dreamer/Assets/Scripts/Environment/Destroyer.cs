@@ -6,14 +6,14 @@ using UnityEngine;
 public class Destroyer : MonoBehaviour
 {
     public string parent_name;
-    public float sec_s;
-    public float obj_s;
 
+    public Player_Move player_move;
+    public Generate_Level generate_Level;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player_move = generate_Level.player_move;
     }
 
     // Update is called once per frame
@@ -21,12 +21,12 @@ public class Destroyer : MonoBehaviour
     {
         parent_name = transform.name;
         StartCoroutine(Destroy_Section_Clone());
-        StartCoroutine(Destroy_Object_Clone());
+        //StartCoroutine(Destroy_Object_Clone());
     }
 
     IEnumerator Destroy_Section_Clone()
     {
-        yield return new WaitForSeconds(sec_s);
+        yield return new WaitForSeconds(35 / player_move.move_speed);
         if (parent_name == "Forest_Section(Clone)")
         {
             Destroy(gameObject);
@@ -35,7 +35,7 @@ public class Destroyer : MonoBehaviour
 
     IEnumerator Destroy_Object_Clone()
     {
-      yield return new WaitForSeconds(obj_s);
+      yield return new WaitForSeconds(10 / player_move.move_speed);
       if (parent_name == "Rock(Clone)" || parent_name == "Tree(Clone)" || parent_name == "Tree_Stump(Clone)" || parent_name == "Fallen_Tree(Clone)")
       {
           Destroy(gameObject);

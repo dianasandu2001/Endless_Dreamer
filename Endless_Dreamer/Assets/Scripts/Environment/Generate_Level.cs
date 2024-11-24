@@ -11,17 +11,14 @@ public class Generate_Level : MonoBehaviour
 
     public int z_pos = 50;
     private bool creating_section = false;
-    public float sec_s;
 
     public int obj_num;
     public int obj_z_pos = 0;
     private bool creating_object = false;
-    public float obj_s;
 
     public int coin_num;
     public int coin_z_pos = 0;
     private bool creating_collectables = false;
-    public float coin_s;
     public int c;
     public int l;
 
@@ -35,12 +32,14 @@ public class Generate_Level : MonoBehaviour
     public GameObject cam;
 
     public Collectable_Control control;
+    public Player_Move player_move;
 
     public GameObject potionPanel;
     void Start()
     {
         //spawning in the currently selected character
         player = Instantiate(GameManager.manager.characters[GameManager.manager.currentCharacter], spawn.transform);
+        player_move = player.GetComponent<Player_Move>();
         Instantiate(cloud, player.transform);
         Instantiate(cam, player.transform);
 
@@ -79,7 +78,7 @@ public class Generate_Level : MonoBehaviour
     {
         Instantiate(section, new Vector3(0,0,z_pos), Quaternion.identity);
         z_pos += 50;
-        yield return new WaitForSeconds(sec_s);
+        yield return new WaitForSeconds(35/player_move.move_speed);
         creating_section = false;
     }
 
@@ -95,8 +94,8 @@ public class Generate_Level : MonoBehaviour
         {
             Instantiate(obsticles[obj_num], new Vector3(lane_x_pos[x], y_pos[obj_num], obj_z_pos), Quaternion.identity);
         }
-        obj_z_pos += 10;
-        yield return new WaitForSeconds(obj_s);
+        obj_z_pos += 20;
+        yield return new WaitForSeconds(10/player_move.move_speed);
         creating_object = false;
     }
 
@@ -141,8 +140,8 @@ public class Generate_Level : MonoBehaviour
                 Instantiate(collectables[c], new Vector3(lane_x_pos[l], collectables_y[c], coin_z_pos), Quaternion.identity);
             }
         }
-        coin_z_pos += 10;
-        yield return new WaitForSeconds(coin_s);
+        coin_z_pos += 20;
+        yield return new WaitForSeconds(10/player_move.move_speed);
         creating_collectables = false;
     }
 

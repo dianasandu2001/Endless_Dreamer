@@ -110,7 +110,7 @@ public class Settings : MonoBehaviour
         }
         if (Collectable_Control.score_count > GameManager.manager.score)
         {
-            GameManager.manager.score += Collectable_Control.score_count;
+            GameManager.manager.score = Collectable_Control.score_count;
             Debug.Log("New highscore (score)");
         }
         GameManager.manager.Save();

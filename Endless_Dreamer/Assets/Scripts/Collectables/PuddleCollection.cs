@@ -15,7 +15,6 @@ public class PuddleCollection : MonoBehaviour
 
     public Animator animator;
     public Player_Move player_move;
-    public Level_Control control;
     public GameObject panel;
     void OnTriggerEnter(Collider player)
     {

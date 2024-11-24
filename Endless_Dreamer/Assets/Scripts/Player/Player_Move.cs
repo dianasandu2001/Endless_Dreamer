@@ -5,8 +5,9 @@ using UnityEngine;
 public class Player_Move : MonoBehaviour
 {
     //Moving variables
-    public float move_speed = 3;
-    public float left_right_speed = 4;
+    public float move_speed;
+    public float left_right_speed;
+    public float speed_increase_rate;
 
     //Jumping variables
     public bool grounded;
@@ -25,6 +26,11 @@ public class Player_Move : MonoBehaviour
 
     void Update()
     {
+        if (move_speed < 15)
+        {
+            // Gradually increase move_speed
+            move_speed += speed_increase_rate * Time.deltaTime;
+        }
         //Continuous running
         transform.Translate(Vector3.forward * Time.deltaTime * move_speed, Space.World);
 
