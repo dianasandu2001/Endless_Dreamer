@@ -11,7 +11,7 @@ public class PuddleCollection : MonoBehaviour
 
     public float trippedTime;
     public Image image;
-    private Coroutine trippingCoroutine;
+    public Coroutine trippingCoroutine;
 
     public Animator animator;
     public Player_Move player_move;
@@ -27,11 +27,10 @@ public class PuddleCollection : MonoBehaviour
             player_move.enabled = false;
             animator.SetBool("Stumble", true);
             panel.SetActive(true);
+            Time.timeScale = 0f;
         }
         else
         {
-            image.gameObject.SetActive(true);
-            player_move.tripped = true;
             Debug.Log("Tripped");
             trippingCoroutine = StartCoroutine(TrippedTime(trippedTime)); // GameManager.manager.trippedTime[GameManager.manager.currentCharacter]));
             mesh.SetActive(false);
@@ -43,6 +42,8 @@ public class PuddleCollection : MonoBehaviour
     {
         //player_move.isProtectedByBubble = true;
         Debug.Log("tripped");
+        player_move.tripped = true;
+        image.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(sec);
 

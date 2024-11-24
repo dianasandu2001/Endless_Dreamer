@@ -26,7 +26,7 @@ public class Destroyer : MonoBehaviour
 
     IEnumerator Destroy_Section_Clone()
     {
-        yield return new WaitForSeconds(35 / player_move.move_speed);
+        yield return new WaitForSeconds(45);
         if (parent_name == "Forest_Section(Clone)")
         {
             Destroy(gameObject);

@@ -35,6 +35,7 @@ public class Level_Control : MonoBehaviour
     {
         if (GameManager.manager.redPotion >= 1)
         {
+            Time.timeScale = 1f;
             GameManager.manager.redPotion -= 1 * healthPotionUsage;
             endPanel.SetActive(false);
             Time.timeScale = 1f;

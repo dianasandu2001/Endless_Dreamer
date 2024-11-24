@@ -25,6 +25,7 @@ public class Obsticle_Collision : MonoBehaviour
             animator = player.GetComponent<Animator>();
             animator.SetBool("Stumble", true);
             panel.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 }

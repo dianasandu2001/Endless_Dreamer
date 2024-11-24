@@ -12,7 +12,7 @@ public class VisionDebuffCollection : MonoBehaviour
 
     public float debuffTime;
     public Image image;
-    private Coroutine runningCoroutine;
+    public Coroutine runningCoroutine;
 
     void OnTriggerEnter(Collider player)
     {

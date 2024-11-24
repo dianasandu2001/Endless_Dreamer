@@ -204,6 +204,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3163280322821716288, guid: bb8cfe577e0275f4c922fe11a147b496, type: 3}
   m_PrefabInstance: {fileID: 676033295799646605}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &251432984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251432983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a299ebdc39f50409ce2434419a02d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent_name: 
+  player_move: {fileID: 0}
+  generate_Level: {fileID: 1984615737}
 --- !u!1 &269571544 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7789306770823302917, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
@@ -1300,13 +1315,10 @@ MonoBehaviour:
   - 1.5
   - 0.6
   z_pos: 50
-  sec_s: 15
   obj_num: 0
   obj_z_pos: 0
-  obj_s: 3
   coin_num: 0
   coin_z_pos: 0
-  coin_s: 2
   c: 0
   l: 0
   lane_x_pos:
@@ -1323,6 +1335,7 @@ MonoBehaviour:
   cloud: {fileID: 5782368940563257239, guid: 4f655d84945fe6a43a9cdf9b7932d41a, type: 3}
   cam: {fileID: 4924760653707753942, guid: ed56de1d6d1e6884ca9d318eddf99779, type: 3}
   control: {fileID: 1984615739}
+  player_move: {fileID: 0}
   potionPanel: {fileID: 269571544}
 --- !u!114 &1984615739
 MonoBehaviour:
@@ -1813,6 +1826,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 3176557327221196212, guid: bb8cfe577e0275f4c922fe11a147b496, type: 3}
+      propertyPath: generate_Level
+      value: 
+      objectReference: {fileID: 1984615737}
     - target: {fileID: 3223897123634660634, guid: bb8cfe577e0275f4c922fe11a147b496, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -2552,7 +2569,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3163280322821716288, guid: bb8cfe577e0275f4c922fe11a147b496, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 251432984}
   m_SourcePrefab: {fileID: 100100000, guid: bb8cfe577e0275f4c922fe11a147b496, type: 3}
 --- !u!1001 &782240474267431724
 PrefabInstance:

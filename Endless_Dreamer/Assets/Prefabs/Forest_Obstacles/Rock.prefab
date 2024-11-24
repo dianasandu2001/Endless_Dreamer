@@ -200,7 +200,6 @@ MonoBehaviour:
   image: {fileID: 0}
   animator: {fileID: 0}
   player_move: {fileID: 0}
-  control: {fileID: 0}
   panel: {fileID: 0}
 --- !u!1001 &114749123003190986
 PrefabInstance:
