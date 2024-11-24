@@ -33,12 +33,15 @@ public class Level_Control : MonoBehaviour
     }
     public void useHealthPotion(GameObject endPanel)
     {
-        GameManager.manager.redPotion -= 1 * healthPotionUsage;
-        endPanel.SetActive(false);
-        Time.timeScale = 1f;
-        animator.SetBool("Stumble", false);
-        player_move.enabled = true;
-        healthPotionUsage += 1;
-        healthPotionButton.text = "Use " + (int)healthPotionUsage;
+        if (GameManager.manager.redPotion >= 1)
+        {
+            GameManager.manager.redPotion -= 1 * healthPotionUsage;
+            endPanel.SetActive(false);
+            Time.timeScale = 1f;
+            animator.SetBool("Stumble", false);
+            player_move.enabled = true;
+            healthPotionUsage += 1;
+            healthPotionButton.text = "Use " + (int)healthPotionUsage;
+        }
     }
 }

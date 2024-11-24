@@ -1,13 +1,68 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using System;
 
 public class PuddleCollection : MonoBehaviour
 {
+    public GameObject mesh;
+    public Collider colliderC;
     //public AudioSource chest_FX;
-    void OnTriggerEnter(Collider puddle)
+
+    public float trippedTime;
+    public Image image;
+    private Coroutine trippingCoroutine;
+
+    public Animator animator;
+    public Player_Move player_move;
+    public Level_Control control;
+    public GameObject panel;
+    void OnTriggerEnter(Collider player)
     {
+        //animator = player.GetComponent<Animator>();
+        player_move = player.GetComponent<Player_Move>();
+        animator = player.GetComponent<Animator>();
         //chest_FX.Play();
-        //Collectable_Control.chest_count += 1;
-        Debug.Log("Puddle");
-        this.gameObject.SetActive(false);
+        if (player_move.tripped == true)
+        {
+            player_move.enabled = false;
+            animator.SetBool("Stumble", true);
+            panel.SetActive(true);
+        }
+        else
+        {
+            image.gameObject.SetActive(true);
+            player_move.tripped = true;
+            Debug.Log("Tripped");
+            trippingCoroutine = StartCoroutine(TrippedTime(trippedTime)); // GameManager.manager.trippedTime[GameManager.manager.currentCharacter]));
+            mesh.SetActive(false);
+            colliderC.enabled = false;
+        }
+    }
+
+    public IEnumerator TrippedTime(float sec)
+    {
+        //player_move.isProtectedByBubble = true;
+        Debug.Log("tripped");
+
+        yield return new WaitForSeconds(sec);
+
+        image.gameObject.SetActive(false);
+        Debug.Log("tripped ending");
+        player_move.tripped = false;
+    }
+
+    public void TrippedPotion()
+    {
+        if (trippingCoroutine == null)
+        {
+            //nothing
+            Debug.Log("???");
+        }
+        else
+        {
+            StopCoroutine(trippingCoroutine);
+            image.gameObject.SetActive(false);
+        }
     }
 }

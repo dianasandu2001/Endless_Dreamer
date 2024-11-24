@@ -14,6 +14,8 @@ public class Player_Move : MonoBehaviour
     public float jump_force;
     public Animator animator;
 
+    public bool tripped;
+
     //Colliding variables
     //public AudioSource coin_FX;
     public GameObject panel;
@@ -48,6 +50,13 @@ public class Player_Move : MonoBehaviour
             RB.linearVelocity = new Vector2(0, jump_force);
             animator.SetBool("Jump", true);
         }
+
+        if (tripped == true)
+        {
+            animator.SetBool("Tripped", true);
+            StartCoroutine(TimeC());
+            animator.SetBool("Tripped", false);
+        }
     }
     private void OnCollisionEnter(Collision ground)
     {
@@ -63,5 +72,9 @@ public class Player_Move : MonoBehaviour
         {
             grounded = false;
         }
+    }
+    public IEnumerator TimeC()
+    {
+        yield return new WaitForSeconds(1);
     }
 }

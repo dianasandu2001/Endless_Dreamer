@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7990685874984410909}
   - component: {fileID: 7682582095812903}
   - component: {fileID: 4763253072105771911}
+  - component: {fileID: 5758325617828594891}
   m_Layer: 0
   m_Name: TrippingMechanism
   m_TagString: Trip
@@ -106,8 +107,28 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 0.9999999, z: 0.9999999}
-  m_Center: {x: 0, y: 0, z: -0.00000095367426}
+  m_Size: {x: 1, y: 0.9999999, z: 1.5009562}
+  m_Center: {x: 0, y: 0, z: 0.3246943}
+--- !u!114 &5758325617828594891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445144623487844815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4974fefa87a2937439da5446d46999d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 445144623487844815}
+  colliderC: {fileID: 4550949110953532401}
+  trippedTime: 10
+  image: {fileID: 0}
+  player: {fileID: 0}
+  animator: {fileID: 0}
+  player_move: {fileID: 0}
+  control: {fileID: 0}
 --- !u!1 &3370740597331474806
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,8 +189,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 0.8563745, z: 0.92832565}
-  m_Center: {x: 0, y: -0.28516826, z: -0.23652394}
+  m_Size: {x: 1.137164, y: 0.7797319, z: 0.382363}
+  m_Center: {x: -0.0025402547, y: -0.3716627, z: -0.5576769}
 --- !u!114 &7893376480370136771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,7 +204,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  stumble_animation: {fileID: 0}
   panel: {fileID: 0}
 --- !u!1001 &3759370377685870478
 PrefabInstance:

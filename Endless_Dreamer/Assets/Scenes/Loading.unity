@@ -304,6 +304,7 @@ MonoBehaviour:
   - 10
   - 10
   - 10
+  debuffTime: []
   level:
   - 1
   - 0

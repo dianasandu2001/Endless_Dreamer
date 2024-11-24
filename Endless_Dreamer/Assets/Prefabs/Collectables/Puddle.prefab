@@ -165,6 +165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4974fefa87a2937439da5446d46999d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mesh: {fileID: 4332384648453417044}
+  colliderC: {fileID: 8582542633836970174}
+  trippedTime: 10
+  image: {fileID: 0}
 --- !u!1 &4332384648453417044
 GameObject:
   m_ObjectHideFlags: 0
