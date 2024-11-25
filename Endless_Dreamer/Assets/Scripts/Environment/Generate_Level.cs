@@ -78,7 +78,7 @@ public class Generate_Level : MonoBehaviour
     {
         Instantiate(section, new Vector3(0,0,z_pos), Quaternion.identity);
         z_pos += 50;
-        yield return new WaitForSeconds(35/player_move.move_speed);
+        yield return new WaitForSeconds(38/player_move.move_speed);
         creating_section = false;
     }
 
@@ -95,7 +95,7 @@ public class Generate_Level : MonoBehaviour
             Instantiate(obsticles[obj_num], new Vector3(lane_x_pos[x], y_pos[obj_num], obj_z_pos), Quaternion.identity);
         }
         obj_z_pos += 20;
-        yield return new WaitForSeconds(10/player_move.move_speed);
+        yield return new WaitForSeconds(15/player_move.move_speed);
         creating_object = false;
     }
 
@@ -141,7 +141,7 @@ public class Generate_Level : MonoBehaviour
             }
         }
         coin_z_pos += 20;
-        yield return new WaitForSeconds(10/player_move.move_speed);
+        yield return new WaitForSeconds(15/player_move.move_speed);
         creating_collectables = false;
     }
 

@@ -9,6 +9,7 @@ public class Obsticle_Collision : MonoBehaviour
     //public AudioSource coin_FX;
     public Animator animator;
     public GameObject panel;
+    public Collider tripCollider;
 
     void OnTriggerEnter(Collider player)
     {
@@ -21,6 +22,7 @@ public class Obsticle_Collision : MonoBehaviour
         {
             //coin_FX.Play();
             this.gameObject.GetComponent<BoxCollider>().enabled = false;
+            tripCollider.enabled = false;
             player.GetComponent<Player_Move>().enabled = false;
             animator = player.GetComponent<Animator>();
             animator.SetBool("Stumble", true);

@@ -2917,11 +2917,11 @@ PrefabInstance:
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 484081141}
+      objectReference: {fileID: 1459939586}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1459939586}
+      objectReference: {fileID: 484081141}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -2932,27 +2932,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrippedPotion
-      objectReference: {fileID: 0}
-    - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: DebuffPotion
       objectReference: {fileID: 0}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PuddleCollection, Assembly-CSharp
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TrippedPotion
       objectReference: {fileID: 0}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: VisionDebuffCollection, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PuddleCollection, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 
+      value: TrippedTime
       objectReference: {fileID: 0}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: TrippedTime
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

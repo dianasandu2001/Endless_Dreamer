@@ -70,6 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   panel: {fileID: 0}
+  tripCollider: {fileID: 2854993486282926260}
 --- !u!1001 &4158036678460334765
 PrefabInstance:
   m_ObjectHideFlags: 0
