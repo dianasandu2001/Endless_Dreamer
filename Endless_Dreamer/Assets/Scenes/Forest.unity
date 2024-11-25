@@ -824,6 +824,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5972872455055213400, guid: a7a89f4019fb55c4eb3e24f967eb1a85, type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 23527090}
+    - target: {fileID: 5972872455055213400, guid: a7a89f4019fb55c4eb3e24f967eb1a85, type: 3}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 782240474267431727}
     - target: {fileID: 6921265908778359260, guid: a7a89f4019fb55c4eb3e24f967eb1a85, type: 3}
       propertyPath: panel
       value: 
@@ -850,6 +858,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1129197814}
     m_Modifications:
+    - target: {fileID: 876620733377922153, guid: ac83c7072a334b740938b2d05730b2c4, type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 23527090}
+    - target: {fileID: 876620733377922153, guid: ac83c7072a334b740938b2d05730b2c4, type: 3}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 782240474267431727}
     - target: {fileID: 2201521844816808151, guid: ac83c7072a334b740938b2d05730b2c4, type: 3}
       propertyPath: m_Name
       value: Rock
@@ -1143,6 +1159,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1129197814}
     m_Modifications:
+    - target: {fileID: 308066028377534509, guid: 7ce941ff0842261429d5d955b7d5798e, type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 23527090}
+    - target: {fileID: 308066028377534509, guid: 7ce941ff0842261429d5d955b7d5798e, type: 3}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 782240474267431727}
     - target: {fileID: 3370740597331474806, guid: 7ce941ff0842261429d5d955b7d5798e, type: 3}
       propertyPath: m_Name
       value: Fallen_Tree

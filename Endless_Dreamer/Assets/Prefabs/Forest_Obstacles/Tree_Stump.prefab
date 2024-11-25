@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7457746960769170546}
   - component: {fileID: 8305764910487713597}
   - component: {fileID: 4255148624263478942}
+  - component: {fileID: 5972872455055213400}
   m_Layer: 0
   m_Name: TrippingMechanism
   m_TagString: Trip
@@ -108,6 +109,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.0626038, z: 0.8165079}
   m_Center: {x: 0, y: 0.21911927, z: 0.091746114}
+--- !u!114 &5972872455055213400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487784134383598897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4974fefa87a2937439da5446d46999d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 487784134383598897}
+  colliderC: {fileID: 4685713689310430068}
+  trippedTime: 10
+  image: {fileID: 0}
+  animator: {fileID: 0}
+  player_move: {fileID: 0}
+  panel: {fileID: 0}
 --- !u!1 &8449746081526770993
 GameObject:
   m_ObjectHideFlags: 0

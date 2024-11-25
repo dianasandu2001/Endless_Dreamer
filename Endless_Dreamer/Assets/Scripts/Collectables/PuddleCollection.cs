@@ -44,9 +44,9 @@ public class PuddleCollection : MonoBehaviour
         Debug.Log("tripped");
         player_move.tripped = true;
         image.gameObject.SetActive(true);
-
+        Debug.Log("before waiting");
         yield return new WaitForSeconds(sec);
-
+        Debug.Log("waited");
         image.gameObject.SetActive(false);
         Debug.Log("tripped ending");
         player_move.tripped = false;
