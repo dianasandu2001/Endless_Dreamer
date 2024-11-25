@@ -13,7 +13,7 @@ public class SpeedBuffCollection : MonoBehaviour
         //chest_FX.Play();
         Debug.Log("Speed Buff");
         speedPower = player.GetComponent<SpeedPower>();
-        StartCoroutine(speedPower.SpeedTime(speedPower.speedTime)); // GameManager.manager.speedTime[GameManager.manager.currentCharacter]));
+        StartCoroutine(speedPower.SpeedTime(GameManager.manager.speedTime[GameManager.manager.currentCharacter]));
         mesh.SetActive(false);
         colliderC.enabled = false;
     }

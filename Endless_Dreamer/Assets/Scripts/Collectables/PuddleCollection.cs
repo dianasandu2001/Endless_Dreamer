@@ -9,7 +9,6 @@ public class PuddleCollection : MonoBehaviour
     public Collider colliderC;
     //public AudioSource chest_FX;
 
-    public float trippedTime;
     public Image image;
     public Coroutine trippingCoroutine;
 
@@ -32,7 +31,7 @@ public class PuddleCollection : MonoBehaviour
         else
         {
             Debug.Log("Tripped");
-            trippingCoroutine = StartCoroutine(TrippedTime(trippedTime)); // GameManager.manager.trippedTime[GameManager.manager.currentCharacter]));
+            trippingCoroutine = StartCoroutine(TrippedTime(GameManager.manager.trippedTime[GameManager.manager.currentCharacter]));
             mesh.SetActive(false);
             colliderC.enabled = false;
         }

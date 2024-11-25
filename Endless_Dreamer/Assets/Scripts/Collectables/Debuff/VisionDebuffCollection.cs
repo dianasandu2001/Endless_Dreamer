@@ -10,7 +10,6 @@ public class VisionDebuffCollection : MonoBehaviour
     public Collider colliderC;
     //public AudioSource chest_FX;
 
-    public float debuffTime;
     public Image image;
     public Coroutine runningCoroutine;
 
@@ -19,7 +18,7 @@ public class VisionDebuffCollection : MonoBehaviour
         //chest_FX.Play();
         //Collectable_Control.chest_count += 1;
         Debug.Log("Vision Debuff");
-        runningCoroutine = StartCoroutine(DebuffTime(debuffTime)); // GameManager.manager.debuffTime[GameManager.manager.currentCharacter]));
+        runningCoroutine = StartCoroutine(DebuffTime(GameManager.manager.debuffTime[GameManager.manager.currentCharacter]));
         mesh.SetActive(false);
         colliderC.enabled = false;
     }

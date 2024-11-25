@@ -111,8 +111,8 @@ public class GameManager : MonoBehaviour
 
     public void Save()
     {
-        BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
+        //BinaryFormatter bf = new BinaryFormatter();
+        //FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
         PlayerData data = new PlayerData();
 
         //copy info from GM to PlayerData
@@ -186,19 +186,24 @@ public class GameManager : MonoBehaviour
         data.currentLevelXP = new List<float>(currentLevelXP);
         */
 
-        bf.Serialize(file, data);
-        file.Close();
+        string jason = JsonUtility.ToJson(data);
+        File.WriteAllText(Application.persistentDataPath + "/playerInfo.json", jason);
+
+        //bf.Serialize(file, data);
+        //file.Close();
     }
 
     public void Load()
     {
-        if (File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
+        if (File.Exists(Application.persistentDataPath + "/playerInfo.json"))
         {
-            BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
-            PlayerData data = (PlayerData)bf.Deserialize(file);
-            file.Close();
+            //BinaryFormatter bf = new BinaryFormatter();
+            //FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
+            //PlayerData data = (PlayerData)bf.Deserialize(file);
+            //file.Close();
 
+            string json = File.ReadAllText(Application.persistentDataPath + "/playerInfo.json");
+            PlayerData data = JsonUtility.FromJson<PlayerData>(json);
             // move the info to GM
 
             //audio

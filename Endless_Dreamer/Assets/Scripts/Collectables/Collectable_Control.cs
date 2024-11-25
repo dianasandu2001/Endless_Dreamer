@@ -35,14 +35,14 @@ public class Collectable_Control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //coins_collected = coin_count * GameManager.manager.coinMultiplier[GameManager.manager.currentCharacter];
-        coin_count_display.text = "" + coin_count; //(int)coins_collected;
+        coins_collected = coin_count * GameManager.manager.coinMultiplier[GameManager.manager.currentCharacter];
+        coin_count_display.text = "" + (int)coins_collected;
         gem_count_display.text = "" + gem_count;
         
         distance_count = (player.transform.position.z + 25)/2;
         distance_count_display.text = "" + (int)distance_count + " m";
 
-        score_count = distance_count * potion_score_multiplier; // * GameManager.manager.PlayerScoreMultipleir[GameManager.manager.currentCharacter];
+        score_count = distance_count * potion_score_multiplier * GameManager.manager.PlayerScoreMultipleir[GameManager.manager.currentCharacter];
         score_count_display.text = "" + (int)score_count;
     }
 }
