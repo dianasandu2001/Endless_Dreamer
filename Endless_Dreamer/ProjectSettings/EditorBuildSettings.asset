@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: 619df33964e50f64f971c8d41eea6181
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
-    guid: 0adde7eec43a3bc48b7ac1bbc0a299a5
+    guid: c98a058505137b945830b03b87e76bda
   - enabled: 1
     path: Assets/Scenes/Forest.unity
     guid: e8725129d62e82648b3a01b818fe4628
