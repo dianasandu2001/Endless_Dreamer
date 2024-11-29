@@ -17,6 +17,7 @@ public class Shop : MonoBehaviour
     public Animator Granny;
     public Animator Michelle;
 
+    public TMP_Text AmyButton;
     public TMP_Text AjButton;
     public TMP_Text ClaireButton;
     public TMP_Text GrannyButton;
@@ -68,39 +69,7 @@ public class Shop : MonoBehaviour
         Granny.SetBool("Menu", true);
         Michelle.SetBool("Menu", true);
 
-        if(GameManager.manager.Claire == true)
-        {
-            ClaireButton.text = "Switch";
-        }
-        else
-        {
-            ClaireButton.text = "" + costs.ClaireCost + " coins";
-        }
-
-        if (GameManager.manager.Aj == true)
-        {
-            AjButton.text = "Switch";
-        }
-        else
-        {
-            AjButton.text = "" + costs.AjCost + " coins";
-        }
-        if (GameManager.manager.Granny == true)
-        {
-            GrannyButton.text = "Switch";
-        }
-        else
-        {
-            GrannyButton.text = "" + costs.GrannyCost + " gems";
-        }
-        if (GameManager.manager.Michelle == true)
-        {
-            MichelleButton.text = "Switch";
-        }
-        else
-        {
-            MichelleButton.text = "" + costs.MichelleCost + " gems";
-        }
+        UpdateCharacterButtons();
 
         // apothecary tab
         coin_display_apothecary.text = "" + GameManager.manager.coins;
@@ -134,7 +103,7 @@ public class Shop : MonoBehaviour
 
     void Update()
     {
-
+        
     }
 
     public void Menu()
@@ -191,27 +160,15 @@ public class Shop : MonoBehaviour
     // Buying and/or switching to chacters
     public void BuyAmy()
     {
-        if(GameManager.manager.Amy == true)
-        {
-            GameManager.manager.currentCharacter = 0;
-            GameManager.manager.Save();
-        }
-        else
-        {
-            //Currency amount here
-            //she is default so no need to get 
-            GameManager.manager.Amy = true;
-            GameManager.manager.currentCharacter = 0;
-            //change button from amount to switch
-            GameManager.manager.Save();
-        }
+        GameManager.manager.currentCharacter = 0;
+        GameManager.manager.Save();
+        UpdateCharacterButtons();
     }
     public void BuyClaire()
     {
         if (GameManager.manager.Claire == true)
         {
             GameManager.manager.currentCharacter = 1;
-            GameManager.manager.Save();
         }
         else
         {
@@ -220,16 +177,16 @@ public class Shop : MonoBehaviour
                 GameManager.manager.coins -= costs.ClaireCost;
                 GameManager.manager.Claire = true;
                 GameManager.manager.currentCharacter = 1;
-                GameManager.manager.Save();
             }
         }
+        GameManager.manager.Save();
+        UpdateCharacterButtons();
     }
     public void BuyAj()
     {
         if (GameManager.manager.Aj == true)
         {
             GameManager.manager.currentCharacter = 2;
-            GameManager.manager.Save();
         }
         else
         {
@@ -238,16 +195,16 @@ public class Shop : MonoBehaviour
                 GameManager.manager.coins -= costs.AjCost;
                 GameManager.manager.Aj = true;
                 GameManager.manager.currentCharacter = 2;
-                GameManager.manager.Save();
             }
         }
+        GameManager.manager.Save();
+        UpdateCharacterButtons();
     }
     public void BuyGranny()
     {
         if (GameManager.manager.Granny == true)
         {
             GameManager.manager.currentCharacter = 3;
-            GameManager.manager.Save();
         }
         else
         {
@@ -256,16 +213,16 @@ public class Shop : MonoBehaviour
                 GameManager.manager.gems -= costs.GrannyCost;
                 GameManager.manager.Granny = true;
                 GameManager.manager.currentCharacter = 3;
-                GameManager.manager.Save();
             }
         }
+        GameManager.manager.Save();
+        UpdateCharacterButtons();
     }
     public void BuyMichelle()
     {
         if (GameManager.manager.Michelle == true)
         {
             GameManager.manager.currentCharacter = 4;
-            GameManager.manager.Save();
         }
         else
         {
@@ -274,9 +231,10 @@ public class Shop : MonoBehaviour
                 GameManager.manager.gems -= costs.MichelleCost;
                 GameManager.manager.Michelle = true;
                 GameManager.manager.currentCharacter = 4;
-                GameManager.manager.Save();
             }
         }
+        GameManager.manager.Save();
+        UpdateCharacterButtons();
     }
     // Buying potions
     public void BuyHealthPotion()
@@ -396,6 +354,31 @@ public class Shop : MonoBehaviour
             coin_display_shop.text = "" + GameManager.manager.coins;
 
             GameManager.manager.Save();
+        }
+    }
+
+    private void UpdateCharacterButtons()
+    {
+        UpdateButtonText(AmyButton, GameManager.manager.Amy, 0, 0);
+        UpdateButtonText(ClaireButton, GameManager.manager.Claire, costs.ClaireCost, 1);
+        UpdateButtonText(AjButton, GameManager.manager.Aj, costs.AjCost, 2);
+        UpdateButtonText(GrannyButton, GameManager.manager.Granny, costs.GrannyCost, 3);
+        UpdateButtonText(MichelleButton, GameManager.manager.Michelle, costs.MichelleCost, 4);
+    }
+
+    private void UpdateButtonText(TMP_Text button, bool isOwned, float cost, int characterIndex, bool isGemCost = false)
+    {
+        if (GameManager.manager.currentCharacter == characterIndex)
+        {
+            button.text = "Active";
+        }
+        else if (isOwned == true)
+        {
+            button.text = "Switch";
+        }
+        else
+        {
+            button.text = "" + cost;
         }
     }
 }
