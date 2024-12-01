@@ -17,6 +17,11 @@ public class Player_Move : MonoBehaviour
 
     public bool tripped;
 
+    // Ground check variables
+    public Transform ground_check_position;  // Reference to the position where the ray starts (e.g., under the player's feet)
+    public float ground_check_distance = 0.2f;  // How far to cast the ray
+    public LayerMask ground_layer;  // Layers considered as "ground"
+
     //Colliding variables
     //public AudioSource coin_FX;
     public GameObject panel;
@@ -26,6 +31,10 @@ public class Player_Move : MonoBehaviour
 
     void Update()
     {
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        Debug.Log("Current State: " + stateInfo.shortNameHash);
+
+
         if (move_speed < 15)
         {
             // Gradually increase move_speed
@@ -50,37 +59,39 @@ public class Player_Move : MonoBehaviour
             }
         }
 
-        //Jumping
+        // grounded
+        grounded = Physics.Raycast(ground_check_position.position, Vector3.down, ground_check_distance, ground_layer);
+
+        // Jumping
         if (Input.GetKey(KeyCode.Space) && grounded == true)
         {
+            Debug.Log("Jump triggered");
             RB.linearVelocity = new Vector2(0, jump_force);
-            animator.SetBool("Jump", true);
+            //animator.SetBool("Jump", true);
+        }
+        // Reset the animation when grounded
+        if (grounded == true)
+        {
+            Debug.Log("Player grounded, resetting Jump animation");
+            animator.SetBool("Jump", false); // Exit jump animation
         }
 
         if (tripped == true)
         {
             animator.SetBool("Tripped", true);
-            StartCoroutine(TimeC());
-            animator.SetBool("Tripped", false);
+            //StartCoroutine(TimeC());
+            //animator.SetBool("Tripped", false);
         }
     }
-    private void OnCollisionEnter(Collision ground)
-    {
-        if (ground.gameObject.CompareTag("Ground"))
-        {
-            grounded = true;
-            animator.SetBool("Jump", false);
-        }
-    }
-    private void OnCollisionExit(Collision ground)
-    {
-        if (ground.gameObject.CompareTag("Ground"))
-        {
-            grounded = false;
-        }
-    }
+
     public IEnumerator TimeC()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(4);
+    }
+    private void OnDrawGizmos()
+    {
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(ground_check_position.position, ground_check_position.position + Vector3.down * ground_check_distance);
+    
     }
 }

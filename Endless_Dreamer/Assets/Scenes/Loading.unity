@@ -238,11 +238,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e085e5dd674e34197e643666cabfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLevel: 
   volume: 0
   soundEffects: 0
   ForentSong: {fileID: 0}
-  currentMap: 
   coins: 0
   gems: 0
   distance: 0
@@ -268,6 +266,17 @@ MonoBehaviour:
   - {fileID: 4410868703902349055, guid: e9c1d5565b83b7d4c8abc8b37b025d5d, type: 3}
   - {fileID: 5036884174772005992, guid: d7f1f2b16192670418fadd1eff96ceea, type: 3}
   currentCharacter: 0
+  mapModels:
+  - {fileID: 3163280322821716288, guid: bb8cfe577e0275f4c922fe11a147b496, type: 3}
+  - {fileID: 4124117932681594229, guid: bffac850eeaf6b94091a97d714027297, type: 3}
+  - {fileID: 2427784011684599258, guid: f781648a5f5762345b55545cb43a8874, type: 3}
+  - {fileID: 432488060752955390, guid: d26c6148f1eeaa94db6f44b4d5457b04, type: 3}
+  mapScenes:
+  - Forest
+  - Desert
+  - Clouds
+  - Dungeon
+  currentMap: 0
   bubbleTime:
   - 5
   - 5

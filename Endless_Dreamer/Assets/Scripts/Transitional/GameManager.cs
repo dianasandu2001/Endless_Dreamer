@@ -10,15 +10,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager manager;
 
-    public string currentLevel;
-
     //audio
     public float volume;
     public float soundEffects;
 
     //map
     public AudioClip ForentSong;
-    public string currentMap; 
 
     //currency
     public float coins;  // coins collected
@@ -54,19 +51,21 @@ public class GameManager : MonoBehaviour
     //changing characters
     public GameObject[] characters;
     public int currentCharacter;
-    /*
-    public List<float> bubbleTime = new List<float> { 5f, 5f, 5f, 5f, 5f };
-    public List<float> speedTime = new List<float> { 5f, 5f, 5f, 5f, 5f };
-    public List<float> speedMultiplier = new List<float> { 2f, 2f, 2f, 2f, 2f };
-    public List<float> coinMultiplier = new List<float> { 1f, 1f, 1f, 1f, 1f };
-    public List<float> PlayerScoreMultipleir = new List<float> { 1f, 1f, 1f, 1f, 1f };
-    public List<float> trippedTime = new List<float> { 10f, 10f, 10f, 10f, 10f };
-    public List<float> level = new List<float> { 1f, 0f, 0f, 0f, 0f };
-    public List<float> currentLevelXP = new List<float> { 0f, 0f, 0f, 0f, 0f };
-    */
+
+    //map bool
+    public bool forest;
+    public bool desert;
+    public bool clouds;
+    public bool dungeon;
+
+    //changing maps
+    public GameObject[] mapModels;
+    public string[] mapScenes;
+    public int currentMap;
+
     //character upgrades
         //buffs
-    public float[] bubbleTime = new float[5]; //default is 5s
+    public float[] bubbleTime; //default is 5s
     public float[] speedTime; //default is 5s
     public float[] speedMultiplier; //default is 2
     public float[] coinMultiplier; //default is 1
@@ -74,7 +73,7 @@ public class GameManager : MonoBehaviour
         //debuffs
     public float[] trippedTime; //default is 10s
     public float[] debuffTime; //default is 15s
-    //levels
+        //levels
     public float[] level; //defualt is 0 (before purchase)
     public float[] currentLevelXP; //how much XP is earned at the current level for each character
     
@@ -154,15 +153,18 @@ public class GameManager : MonoBehaviour
         //changing characters
         data.currentCharacter = currentCharacter;
 
+        //map bool
+        data.forest = forest;
+        data.desert = desert;
+        data.clouds = clouds;
+        data.dungeon = dungeon;
+
+        //changing maps
+        data.currentMap = currentMap;
         
         //character upgrades
         //buffs
         data.bubbleTime = bubbleTime;
-        //data.bubbleTime[0] = bubbleTime[0];
-        //data.bubbleTime[1] = bubbleTime[1];
-        //data.bubbleTime[2] = bubbleTime[2];
-        //data.bubbleTime[3] = bubbleTime[3];
-        //data.bubbleTime[4] = bubbleTime[4];
         data.speedTime = speedTime;
         data.speedMultiplier = speedMultiplier;
         data.coinMultiplier = coinMultiplier;
@@ -173,18 +175,7 @@ public class GameManager : MonoBehaviour
             //levels
         data.level = level;
         data.currentLevelXP = currentLevelXP;
-        
 
-        /*
-        data.bubbleTime = new List<float>(bubbleTime);
-        data.speedTime = new List<float>(speedTime);
-        data.speedMultiplier = new List<float>(speedMultiplier);
-        data.coinMultiplier = new List<float>(coinMultiplier);
-        data.PlayerScoreMultipleir = new List<float>(PlayerScoreMultipleir);
-        data.trippedTime = new List<float>(trippedTime);
-        data.level = new List<float>(level);
-        data.currentLevelXP = new List<float>(currentLevelXP);
-        */
 
         string jason = JsonUtility.ToJson(data);
         File.WriteAllText(Application.persistentDataPath + "/playerInfo.json", jason);
@@ -243,15 +234,18 @@ public class GameManager : MonoBehaviour
             //changing characters
             currentCharacter = data.currentCharacter;
 
-            
+            //map bool
+            forest = data.forest;
+            desert = data.desert;
+            clouds = data.clouds;
+            dungeon = data.dungeon;
+
+            //changing maps
+            currentMap = data.currentMap;
+
             //character upgrades
             //buffs
             bubbleTime = data.bubbleTime;
-            //bubbleTime[0] = data.bubbleTime[0];
-            //bubbleTime[1] = data.bubbleTime[1];
-            //bubbleTime[2] = data.bubbleTime[2];
-            //bubbleTime[3] = data.bubbleTime[3];
-            //bubbleTime[4] = data.bubbleTime[4];
             speedTime = data.speedTime;
             speedMultiplier = data.speedMultiplier;
             coinMultiplier = data.coinMultiplier;
@@ -262,17 +256,7 @@ public class GameManager : MonoBehaviour
                 //levels
             level = data.level;
             currentLevelXP = data.currentLevelXP;
-            
-            /*
-            bubbleTime = new List<float>(data.bubbleTime);
-            speedTime = new List<float>(data.speedTime);
-            speedMultiplier = new List<float>(data.speedMultiplier);
-            coinMultiplier = new List<float>(data.coinMultiplier);
-            PlayerScoreMultipleir = new List<float>(data.PlayerScoreMultipleir);
-            trippedTime = new List<float>(data.trippedTime);
-            level = new List<float>(data.level);
-            currentLevelXP = new List<float>(data.currentLevelXP);
-            */
+
         }
     }
 }
@@ -321,20 +305,18 @@ class PlayerData
     //changing characters
     public int currentCharacter;
 
-    /*
-    public List<float> bubbleTime;
-    public List<float> speedTime;
-    public List<float> speedMultiplier;
-    public List<float> coinMultiplier;
-    public List<float> PlayerScoreMultipleir;
-    public List<float> trippedTime;
-    public List<float> level;
-    public List<float> currentLevelXP;
-    */
-    
+    //map bool
+    public bool forest;
+    public bool desert;
+    public bool clouds;
+    public bool dungeon;
+
+    //changing maps
+    public int currentMap;
+
     //character upgrades
-        //buffs
-    public float[] bubbleTime = new float[5]; //default is 5s
+    //buffs
+    public float[] bubbleTime; //default is 5s
     public float[] speedTime; //default is 5s
     public float[] speedMultiplier; //default is 2
     public float[] coinMultiplier; //default is 1

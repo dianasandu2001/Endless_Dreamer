@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7531008789729496723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3448279181012281843}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3448279181012281843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531008789729496723}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5669270883972298450}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5271448698807603513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90,7 +121,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: de16a6ea8ce102a4c85c51a7108e8576, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3448279181012281843}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de16a6ea8ce102a4c85c51a7108e8576, type: 3}
       insertIndex: -1
@@ -138,6 +172,11 @@ MonoBehaviour:
   jump_force: 5
   animator: {fileID: 1751169081758706856}
   tripped: 0
+  ground_check_position: {fileID: 3448279181012281843}
+  ground_check_distance: 0.2
+  ground_layer:
+    serializedVersion: 2
+    m_Bits: 128
   panel: {fileID: 0}
   coin_FX: {fileID: 0}
   isProtectedByBubble: 0
@@ -203,7 +242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4401a722ddd9c2468527f9ff70166e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bubbleTime: 5
   bubblePower: {fileID: 7763721745426923867, guid: 74422583de3a4f94bbdba8aa7499b5f6, type: 3}
   player_move: {fileID: 365105053103012218}
   player: {fileID: 5036884174772005992}
@@ -219,8 +257,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59003f29c9049254aac50383cf7af996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedTime: 5
   player: {fileID: 5036884174772005992}
   mat: {fileID: 2100000, guid: 3be7ebb2d4a739d408da9d59e6271808, type: 2}
   color: {r: 0.8666667, g: 0.8666667, b: 0.8666667, a: 1}
   player_move: {fileID: 365105053103012218}
+--- !u!4 &5669270883972298450 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: de16a6ea8ce102a4c85c51a7108e8576, type: 3}
+  m_PrefabInstance: {fileID: 5271448698807603513}
+  m_PrefabAsset: {fileID: 0}

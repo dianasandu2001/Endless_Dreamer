@@ -46,7 +46,7 @@ public class Settings : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("Forest");
+        SceneManager.LoadScene(GameManager.manager.mapScenes[GameManager.manager.currentMap]);
     }
     public void Shop()
     {

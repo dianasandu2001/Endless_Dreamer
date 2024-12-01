@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3074992941764011621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6910708129279462651}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6910708129279462651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3074992941764011621}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8062574161291226404}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7525159860946389711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75,7 +106,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 825894089210680117, guid: ec96549d9f4a6df48891fe5664c9ae5a, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: ec96549d9f4a6df48891fe5664c9ae5a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6910708129279462651}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ec96549d9f4a6df48891fe5664c9ae5a, type: 3}
       insertIndex: -1
@@ -153,6 +187,11 @@ MonoBehaviour:
   jump_force: 5
   animator: {fileID: 4108453496422692702}
   tripped: 0
+  ground_check_position: {fileID: 6910708129279462651}
+  ground_check_distance: 0.2
+  ground_layer:
+    serializedVersion: 2
+    m_Bits: 128
   panel: {fileID: 0}
   coin_FX: {fileID: 0}
   isProtectedByBubble: 0
@@ -237,3 +276,8 @@ MonoBehaviour:
   mat: {fileID: 2100000, guid: 0276f537f5b82fb488f00cdfe228e1e7, type: 2}
   color: {r: 0.8666667, g: 0.8666667, b: 0.8666667, a: 1}
   player_move: {fileID: 7526695658720648010}
+--- !u!4 &8062574161291226404 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ec96549d9f4a6df48891fe5664c9ae5a, type: 3}
+  m_PrefabInstance: {fileID: 7525159860946389711}
+  m_PrefabAsset: {fileID: 0}

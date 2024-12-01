@@ -18,6 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Forest.unity
     guid: e8725129d62e82648b3a01b818fe4628
   - enabled: 1
+    path: Assets/Scenes/Desert.unity
+    guid: 7d05d2e688853c94a8bde3928e924a1f
+  - enabled: 1
+    path: Assets/Scenes/Clouds.unity
+    guid: 1f155932891aca64c8c4feae5cf120ad
+  - enabled: 1
+    path: Assets/Scenes/Dungeon.unity
+    guid: feb2d7010c403334f99ef5742c49aa0f
+  - enabled: 1
     path: Assets/Scenes/Craft.unity
     guid: 735257f938b55d54bb2b21ddce182034
   - enabled: 1

@@ -15,7 +15,10 @@ public class GoToMainMenu : MonoBehaviour
         }
         else
         {
+            GameManager.manager.forest = true;
+            GameManager.manager.currentMap = 0; //just in case
             GameManager.manager.Amy = true;
+            GameManager.manager.currentCharacter = 0; //just in case
             SceneManager.LoadScene("Tutorial");
         }    
     }
