@@ -266,6 +266,10 @@ MonoBehaviour:
   - {fileID: 4410868703902349055, guid: e9c1d5565b83b7d4c8abc8b37b025d5d, type: 3}
   - {fileID: 5036884174772005992, guid: d7f1f2b16192670418fadd1eff96ceea, type: 3}
   currentCharacter: 0
+  forest: 0
+  desert: 0
+  clouds: 0
+  dungeon: 0
   mapModels:
   - {fileID: 3163280322821716288, guid: bb8cfe577e0275f4c922fe11a147b496, type: 3}
   - {fileID: 4124117932681594229, guid: bffac850eeaf6b94091a97d714027297, type: 3}
@@ -277,6 +281,12 @@ MonoBehaviour:
   - Clouds
   - Dungeon
   currentMap: 0
+  upgradeCosts: d00700008813000010270000204e000014000000
+  speedPowerUpgrade: 0
+  shieldPowerUpgrade: 0
+  visionDebuffUpgrade: 0
+  trippingUpgrade: 0
+  coinMultiplierUpgrade: 0
   bubbleTime:
   - 5
   - 5

@@ -64,6 +64,13 @@ public class GameManager : MonoBehaviour
     public int currentMap;
 
     //character upgrades
+        //universal upgrades
+    public int[] upgradeCosts;
+    public int speedPowerUpgrade;
+    public int shieldPowerUpgrade;
+    public int visionDebuffUpgrade;
+    public int trippingUpgrade;
+    public int coinMultiplierUpgrade;
         //buffs
     public float[] bubbleTime; //default is 5s
     public float[] speedTime; //default is 5s
@@ -161,9 +168,15 @@ public class GameManager : MonoBehaviour
 
         //changing maps
         data.currentMap = currentMap;
-        
+
         //character upgrades
-        //buffs
+            //universal upgrades
+        data.speedPowerUpgrade = speedPowerUpgrade;
+        data.shieldPowerUpgrade = shieldPowerUpgrade;
+        data.visionDebuffUpgrade = visionDebuffUpgrade;
+        data.trippingUpgrade = trippingUpgrade;
+        data.coinMultiplierUpgrade = coinMultiplierUpgrade;
+            //buffs
         data.bubbleTime = bubbleTime;
         data.speedTime = speedTime;
         data.speedMultiplier = speedMultiplier;
@@ -244,7 +257,13 @@ public class GameManager : MonoBehaviour
             currentMap = data.currentMap;
 
             //character upgrades
-            //buffs
+                //universal upgrades
+            speedPowerUpgrade = data.speedPowerUpgrade;
+            shieldPowerUpgrade = data.shieldPowerUpgrade;
+            visionDebuffUpgrade = data.visionDebuffUpgrade;
+            trippingUpgrade = data.trippingUpgrade;
+            coinMultiplierUpgrade = data.coinMultiplierUpgrade;
+                //buffs
             bubbleTime = data.bubbleTime;
             speedTime = data.speedTime;
             speedMultiplier = data.speedMultiplier;
@@ -315,7 +334,13 @@ class PlayerData
     public int currentMap;
 
     //character upgrades
-    //buffs
+        //universal upgrades
+    public int speedPowerUpgrade;
+    public int shieldPowerUpgrade;
+    public int visionDebuffUpgrade;
+    public int trippingUpgrade;
+    public int coinMultiplierUpgrade;
+        //buffs
     public float[] bubbleTime; //default is 5s
     public float[] speedTime; //default is 5s
     public float[] speedMultiplier; //default is 2
