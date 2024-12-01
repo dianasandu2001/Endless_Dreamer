@@ -22,6 +22,8 @@ public class Settings : MonoBehaviour
 
     public TMP_Text XP;
     public TMP_Text levels;
+    public TMP_Text XPToNext;
+
     private int levelsGained;
     void Start()
     {
@@ -115,8 +117,11 @@ public class Settings : MonoBehaviour
             GameManager.manager.level[GameManager.manager.currentCharacter]++;
             levelsGained++;
         }
-        XP.text = Collectable_Control.score_count + " XP earned!";
-        levels.text = levelsGained + " levels gained!";
+        XP.text = (int)Collectable_Control.score_count + " XP earned!";
+        if(levelsGained >= 1) { levels.text = levelsGained + " levels gained!"; }
+        else { levels.text = ""; }
+        XPToNext.text = (int)(GameManager.manager.levelRequirements[GameManager.manager.level[GameManager.manager.currentCharacter]] - GameManager.manager.currentLevelXP[GameManager.manager.currentCharacter]) + " XP until next level";
+
         GameManager.manager.coins += Collectable_Control.coin_count;
         GameManager.manager.gems += Collectable_Control.gem_count;
         if (Collectable_Control.distance_count> GameManager.manager.distance)

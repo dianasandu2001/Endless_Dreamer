@@ -23,6 +23,12 @@ public class Shop : MonoBehaviour
     public TMP_Text GrannyButton;
     public TMP_Text MichelleButton;
 
+    public TMP_Text AmyLevel;
+    public TMP_Text AjLevel;
+    public TMP_Text ClaireLevel;
+    public TMP_Text GrannyLevel;
+    public TMP_Text MichelleLevel;
+
     //apothecary tab var
     public Text coin_display_apothecary;
     public Text gem_display_apothecary;
@@ -62,6 +68,12 @@ public class Shop : MonoBehaviour
         // character tab
         coin_count_display.text = "" + GameManager.manager.coins;
         gem_count_display.text = "" + GameManager.manager.gems;
+
+        AmyLevel.text = "" + GameManager.manager.level[0];
+        AjLevel.text = "" + GameManager.manager.level[1];
+        ClaireLevel.text = "" + GameManager.manager.level[2];
+        GrannyLevel.text = "" + GameManager.manager.level[3];
+        MichelleLevel.text = "" + GameManager.manager.level[4];
 
         Amy.SetBool("Menu", true);
         Aj.SetBool("Menu", true);
