@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class UpgradesScript : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class UpgradesScript : MonoBehaviour
     //character side
     public TMP_Text characterLevel;
 
+    public Image XPBar;
 
     void Start()
     {
@@ -54,6 +56,7 @@ public class UpgradesScript : MonoBehaviour
         UpdateLevelAndCosts(coinMultiplierLevel, coinMultiplierButton, GameManager.manager.upgradeCosts, GameManager.manager.coinMultiplierUpgrade, 5);
 
         characterLevel.text = "" + GameManager.manager.level[GameManager.manager.currentCharacter];
+        XPBar.fillAmount = GameManager.manager.currentLevelXP[GameManager.manager.currentCharacter] / GameManager.manager.levelRequirements[GameManager.manager.level[GameManager.manager.currentCharacter]];
     }
 
     void Update()

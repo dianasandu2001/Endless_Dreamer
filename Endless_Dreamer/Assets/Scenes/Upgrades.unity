@@ -6138,10 +6138,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 1768188401, guid: 8a6b714ffdac02f4e9017ec6ef1c1812, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -11223,6 +11223,7 @@ MonoBehaviour:
   - {fileID: 603754925}
   - {fileID: 2017831188}
   characterLevel: {fileID: 2048233392}
+  XPBar: {fileID: 866016659}
 --- !u!1 &1852902510
 GameObject:
   m_ObjectHideFlags: 0
