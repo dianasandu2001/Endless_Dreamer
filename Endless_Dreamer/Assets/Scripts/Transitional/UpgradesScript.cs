@@ -8,24 +8,30 @@ public class UpgradesScript : MonoBehaviour
     public Text coin_display;
     public Text gem_display;
 
+    //button text of universal upgrades
     public TMP_Text speedPowerButton;
     public TMP_Text shieldPowerButton;
     public TMP_Text visionDebuffButton;
     public TMP_Text trippingButton;
     public TMP_Text coinMultiplierButton;
 
+    // levels of universal ungrades
     public TMP_Text speedPowerLevel;
     public TMP_Text shieldPowerLevel;
     public TMP_Text visionDebuffLevel;
     public TMP_Text trippingLevel;
     public TMP_Text coinMultiplierLevel;
 
-    //images
+    //images for universal upgrades
     public GameObject[] speedPowerImage;
     public GameObject[] shieldPowerImage;
     public GameObject[] visionDebuffImage;
     public GameObject[] trippingImage;
     public GameObject[] coinMultiplierImage;
+
+    //character side
+    public TMP_Text characterLevel;
+
 
     void Start()
     {
@@ -46,6 +52,8 @@ public class UpgradesScript : MonoBehaviour
         UpdateLevelAndCosts(visionDebuffLevel, visionDebuffButton, GameManager.manager.upgradeCosts, GameManager.manager.visionDebuffUpgrade, 5);
         UpdateLevelAndCosts(trippingLevel, trippingButton, GameManager.manager.upgradeCosts, GameManager.manager.trippingUpgrade, 5);
         UpdateLevelAndCosts(coinMultiplierLevel, coinMultiplierButton, GameManager.manager.upgradeCosts, GameManager.manager.coinMultiplierUpgrade, 5);
+
+        characterLevel.text = "" + GameManager.manager.level[GameManager.manager.currentCharacter];
     }
 
     void Update()

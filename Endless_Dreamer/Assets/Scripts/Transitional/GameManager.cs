@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
     public float[] trippedTime; //default is 10s
     public float[] debuffTime; //default is 15s
         //levels
-    public float[] level; //defualt is 0 (before purchase)
+    public int[] level; //defualt is 0 (before purchase)
     public float[] currentLevelXP; //how much XP is earned at the current level for each character
     
     public float[] levelRequirements; //amount of XP needed to get to the next level
@@ -350,7 +350,7 @@ class PlayerData
     public float[] trippedTime; //default is 10s
     public float[] debuffTime; //default is 15s
         //levels
-    public float[] level; //defualt is 0 (before purchase)
+    public int[] level; //defualt is 0 (before purchase)
     public float[] currentLevelXP; //how much XP is earned at the current level for each character
     
 }

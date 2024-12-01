@@ -176,6 +176,7 @@ public class Shop : MonoBehaviour
             {
                 GameManager.manager.coins -= costs.ClaireCost;
                 GameManager.manager.Claire = true;
+                GameManager.manager.level[1] = 1;
                 GameManager.manager.currentCharacter = 1;
             }
         }
@@ -194,6 +195,7 @@ public class Shop : MonoBehaviour
             {
                 GameManager.manager.coins -= costs.AjCost;
                 GameManager.manager.Aj = true;
+                GameManager.manager.level[2] = 1;
                 GameManager.manager.currentCharacter = 2;
             }
         }
@@ -212,6 +214,7 @@ public class Shop : MonoBehaviour
             {
                 GameManager.manager.gems -= costs.GrannyCost;
                 GameManager.manager.Granny = true;
+                GameManager.manager.level[3] = 1;
                 GameManager.manager.currentCharacter = 3;
             }
         }
@@ -230,6 +233,7 @@ public class Shop : MonoBehaviour
             {
                 GameManager.manager.gems -= costs.MichelleCost;
                 GameManager.manager.Michelle = true;
+                GameManager.manager.level[4] = 1;
                 GameManager.manager.currentCharacter = 4;
             }
         }

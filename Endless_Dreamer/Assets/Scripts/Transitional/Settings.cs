@@ -19,6 +19,10 @@ public class Settings : MonoBehaviour
     public GameObject spawn_menu;
     public GameObject player_menu;
     public Animator animator_menu;
+
+    public TMP_Text XP;
+    public TMP_Text levels;
+    private int levelsGained;
     void Start()
     {
         coin_count_display.text = "" + GameManager.manager.coins;
@@ -32,6 +36,8 @@ public class Settings : MonoBehaviour
         animator_menu = player_menu.GetComponent<Animator>();
         Player_Move = player_menu.GetComponent<Player_Move>();
         animator_menu.SetBool("Menu", true);
+
+        levelsGained = 0;
     }
 
     void Update()
@@ -99,8 +105,18 @@ public class Settings : MonoBehaviour
     }
     public void EndRun()
     {
-        SceneManager.LoadScene("MainMenu"); // or where the character levels up to show levels
+        //SceneManager.LoadScene("MainMenu"); // or where the character levels up to show levels
         Debug.Log("I ended the run");
+        GameManager.manager.currentLevelXP[GameManager.manager.currentCharacter] += Collectable_Control.score_count;
+
+        while(GameManager.manager.currentLevelXP[GameManager.manager.currentCharacter] >= GameManager.manager.levelRequirements[GameManager.manager.level[GameManager.manager.currentCharacter]])
+        {
+            GameManager.manager.currentLevelXP[GameManager.manager.currentCharacter] -= GameManager.manager.levelRequirements[GameManager.manager.level[GameManager.manager.currentCharacter]];
+            GameManager.manager.level[GameManager.manager.currentCharacter]++;
+            levelsGained++;
+        }
+        XP.text = Collectable_Control.score_count + " XP earned!";
+        levels.text = levelsGained + " levels gained!";
         GameManager.manager.coins += Collectable_Control.coin_count;
         GameManager.manager.gems += Collectable_Control.gem_count;
         if (Collectable_Control.distance_count> GameManager.manager.distance)
