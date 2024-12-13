@@ -67,18 +67,20 @@ public class Player_Move : MonoBehaviour
         {
             Debug.Log("Jump triggered");
             RB.linearVelocity = new Vector2(0, jump_force);
-            //animator.SetBool("Jump", true);
+            animator.SetBool("Jump", true);
         }
-        // Reset the animation when grounded
         if (grounded == true)
         {
             Debug.Log("Player grounded, resetting Jump animation");
             animator.SetBool("Jump", false); // Exit jump animation
         }
 
+        // Tripping
         if (tripped == true)
         {
-            animator.SetBool("Tripped", true);
+            //animator.SetBool("Tripped", true);
+            animator.SetTrigger("Trip");
+
             //StartCoroutine(TimeC());
             //animator.SetBool("Tripped", false);
         }
