@@ -15,7 +15,6 @@ public class Settings : MonoBehaviour
     public AudioMixer mixer;
 
     public Player_Move Player_Move;
-
     public GameObject spawn_menu;
     public GameObject player_menu;
     public Animator animator_menu;

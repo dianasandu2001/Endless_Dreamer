@@ -32,8 +32,13 @@ public class UpgradesScript : MonoBehaviour
 
     //character side
     public TMP_Text characterLevel;
-
     public Image XPBar;
+
+    public GameObject spawn_uprades;
+    private GameObject player_upgrades;
+    private Animator animator_upgrades;
+    public TMP_Text charName;
+    public string[] charNames;
 
     void Start()
     {
@@ -54,11 +59,32 @@ public class UpgradesScript : MonoBehaviour
         UpdateLevelAndCosts(visionDebuffLevel, visionDebuffButton, GameManager.manager.upgradeCosts, GameManager.manager.visionDebuffUpgrade, 5);
         UpdateLevelAndCosts(trippingLevel, trippingButton, GameManager.manager.upgradeCosts, GameManager.manager.trippingUpgrade, 5);
         UpdateLevelAndCosts(coinMultiplierLevel, coinMultiplierButton, GameManager.manager.upgradeCosts, GameManager.manager.coinMultiplierUpgrade, 5);
-
+        
+        //Character
+            // levels and XP bar
         characterLevel.text = "" + GameManager.manager.level[GameManager.manager.currentCharacter];
         XPBar.fillAmount = GameManager.manager.currentLevelXP[GameManager.manager.currentCharacter] / GameManager.manager.levelRequirements[GameManager.manager.level[GameManager.manager.currentCharacter]];
+            // char model
+        charName.text = charNames[GameManager.manager.currentCharacter];
+        player_upgrades = Instantiate(GameManager.manager.characters[GameManager.manager.currentCharacter], spawn_uprades.transform);
+        SetLayerRecursively(player_upgrades, 5);
+        player_upgrades.GetComponent<Player_Move>().enabled = false;
+        Destroy(player_upgrades.GetComponent<Rigidbody>()); //destroy rigid body so it doesnt fall
+        animator_upgrades = player_upgrades.GetComponent<Animator>();
+        animator_upgrades.SetBool("Menu", true);
     }
+    void SetLayerRecursively(GameObject obj, int newLayer)
+    {
+        if (obj == null) return;
 
+        obj.layer = newLayer;
+
+        foreach (Transform child in obj.transform)
+        {
+            if (child == null) continue;
+            SetLayerRecursively(child.gameObject, newLayer);
+        }
+    }
     void Update()
     {
 
@@ -72,7 +98,6 @@ public class UpgradesScript : MonoBehaviour
     {
         SceneManager.LoadScene("Shop");
     }
-
     public void SpeedPowerUpgrade()
     {
         if(GameManager.manager.speedPowerUpgrade < 4)
