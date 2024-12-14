@@ -9,6 +9,11 @@ public class Costs : MonoBehaviour
     public float GrannyCost; // Gems
     public float MichelleCost; // Gems
 
+    //map costs
+    public float desertCost; // coins
+    public float cloudsCost; //
+    public float dungeonCost; //
+
     //ingredients
     public float ingredientCoinCost; // Coins
     public float ingredientGemCost; // Gems

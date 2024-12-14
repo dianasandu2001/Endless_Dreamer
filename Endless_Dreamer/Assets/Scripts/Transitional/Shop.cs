@@ -382,7 +382,7 @@ public class Shop : MonoBehaviour
         UpdateButtonText(MichelleButton, GameManager.manager.Michelle, costs.MichelleCost, 4);
     }
 
-    private void UpdateButtonText(TMP_Text button, bool isOwned, float cost, int characterIndex, bool isGemCost = false)
+    private void UpdateButtonText(TMP_Text button, bool isOwned, float cost, int characterIndex)
     {
         if (GameManager.manager.currentCharacter == characterIndex)
         {

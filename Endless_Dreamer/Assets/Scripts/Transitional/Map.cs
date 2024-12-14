@@ -11,77 +11,18 @@ public class Map : MonoBehaviour
     public Text coin_count_display;
     public Text gem_count_display;
 
-    public Animator Amy;
-    public Animator Aj;
-    public Animator Claire;
-    public Animator Granny;
-    public Animator Michelle;
+    public TMP_Text forestButton;
+    public TMP_Text desertButton;
+    public TMP_Text cloudsButton;
+    public TMP_Text dungeonButton;
 
-    public TMP_Text AmyButton;
-    public TMP_Text AjButton;
-    public TMP_Text ClaireButton;
-    public TMP_Text GrannyButton;
-    public TMP_Text MichelleButton;
-
-    public TMP_Text AmyLevel;
-    public TMP_Text AjLevel;
-    public TMP_Text ClaireLevel;
-    public TMP_Text GrannyLevel;
-    public TMP_Text MichelleLevel;
-
-    //apothecary tab var
-    public Text coin_display_apothecary;
-    public Text gem_display_apothecary;
-
-    public Text stone_dust_display_apothecary;
-    public Text flower_dust_display_apothecary;
-    public Text living_dust_display_apothecary;
-
-    public Text health_potion_display_apothecary;
-    public Text score_potion_display_apothecary;
-    public Text debuff_potion_display_apothecary;
-
-    public Text coin_display_shop;
-    public Text gem_display_shop;
-
-    //changing tabs
-    public GameObject Panel1;
-    public GameObject Panel2;
-    public GameObject Panel3;
-
-    // potion purchase buttons
-    public TMP_Text health_button;
-    public TMP_Text score_button;
-    public TMP_Text debuff_button;
-
-    //dust purchase buttons
-    public TMP_Text stone_button;
-    public TMP_Text flower_button;
-    public TMP_Text living_button;
-
-    //coins purchase buttons
-    public TMP_Text coins100;
-    public TMP_Text coins500;
-    public TMP_Text coins1000;
     void Start()
     {
         // character tab
         coin_count_display.text = "" + GameManager.manager.coins;
         gem_count_display.text = "" + GameManager.manager.gems;
 
-        AmyLevel.text = "" + GameManager.manager.level[0];
-        AjLevel.text = "" + GameManager.manager.level[1];
-        ClaireLevel.text = "" + GameManager.manager.level[2];
-        GrannyLevel.text = "" + GameManager.manager.level[3];
-        MichelleLevel.text = "" + GameManager.manager.level[4];
-
-        Amy.SetBool("Menu", true);
-        Aj.SetBool("Menu", true);
-        Claire.SetBool("Menu", true);
-        Granny.SetBool("Menu", true);
-        Michelle.SetBool("Menu", true);
-
-        UpdateCharacterButtons();
+        UpdateMapButtons();
     }
     public void Menu()
     {
@@ -117,101 +58,77 @@ public class Map : MonoBehaviour
         settingsPanel.SetActive(false);
     }
     // Buying and/or switching to chacters
-    public void BuyAmy()
+    public void BuyForest()
     {
-        GameManager.manager.currentCharacter = 0;
+        GameManager.manager.currentMap = 0;
         GameManager.manager.Save();
-        UpdateCharacterButtons();
+        UpdateMapButtons();
     }
-    public void BuyClaire()
+    public void BuyDesert()
     {
-        if (GameManager.manager.Claire == true)
+        if (GameManager.manager.desert == true)
         {
-            GameManager.manager.currentCharacter = 1;
+            GameManager.manager.currentMap = 1;
         }
         else
         {
-            if (GameManager.manager.coins >= costs.ClaireCost)
+            if (GameManager.manager.coins >= costs.desertCost)
             {
-                GameManager.manager.coins -= costs.ClaireCost;
-                GameManager.manager.Claire = true;
-                GameManager.manager.level[1] = 1;
-                GameManager.manager.currentCharacter = 1;
+                GameManager.manager.coins -= costs.desertCost;
+                GameManager.manager.desert = true;
+                GameManager.manager.currentMap = 1;
             }
         }
         GameManager.manager.Save();
-        UpdateCharacterButtons();
+        UpdateMapButtons();
     }
-    public void BuyAj()
+    public void BuyClouds()
     {
-        if (GameManager.manager.Aj == true)
+        if (GameManager.manager.clouds == true)
         {
-            GameManager.manager.currentCharacter = 2;
+            GameManager.manager.currentMap = 2;
         }
         else
         {
-            if (GameManager.manager.coins >= costs.AjCost)
+            if (GameManager.manager.coins >= costs.cloudsCost)
             {
-                GameManager.manager.coins -= costs.AjCost;
-                GameManager.manager.Aj = true;
-                GameManager.manager.level[2] = 1;
-                GameManager.manager.currentCharacter = 2;
+                GameManager.manager.coins -= costs.cloudsCost;
+                GameManager.manager.clouds = true;
+                GameManager.manager.currentMap = 2;
             }
         }
         GameManager.manager.Save();
-        UpdateCharacterButtons();
+        UpdateMapButtons();
     }
-    public void BuyGranny()
+    public void BuyDungeon()
     {
-        if (GameManager.manager.Granny == true)
+        if (GameManager.manager.dungeon == true)
         {
-            GameManager.manager.currentCharacter = 3;
+            GameManager.manager.currentMap = 3;
         }
         else
         {
-            if (GameManager.manager.gems >= costs.GrannyCost)
+            if (GameManager.manager.gems >= costs.dungeonCost)
             {
-                GameManager.manager.gems -= costs.GrannyCost;
-                GameManager.manager.Granny = true;
-                GameManager.manager.level[3] = 1;
-                GameManager.manager.currentCharacter = 3;
+                GameManager.manager.gems -= costs.dungeonCost;
+                GameManager.manager.dungeon = true;
+                GameManager.manager.currentMap = 3;
             }
         }
         GameManager.manager.Save();
-        UpdateCharacterButtons();
+        UpdateMapButtons();
     }
-    public void BuyMichelle()
+    private void UpdateMapButtons()
     {
-        if (GameManager.manager.Michelle == true)
-        {
-            GameManager.manager.currentCharacter = 4;
-        }
-        else
-        {
-            if (GameManager.manager.gems >= costs.MichelleCost)
-            {
-                GameManager.manager.gems -= costs.MichelleCost;
-                GameManager.manager.Michelle = true;
-                GameManager.manager.level[4] = 1;
-                GameManager.manager.currentCharacter = 4;
-            }
-        }
-        GameManager.manager.Save();
-        UpdateCharacterButtons();
+        UpdateButtonText(forestButton, GameManager.manager.forest, 0, 0);
+        UpdateButtonText(desertButton, GameManager.manager.desert, costs.desertCost, 1);
+        UpdateButtonText(cloudsButton, GameManager.manager.clouds, costs.cloudsCost, 2);
+        UpdateButtonText(dungeonButton, GameManager.manager.dungeon, costs.dungeonCost, 3);
     }
 
-    private void UpdateCharacterButtons()
+    private void UpdateButtonText(TMP_Text button, bool isOwned, float cost, int characterIndex)
     {
-        UpdateButtonText(AmyButton, GameManager.manager.Amy, 0, 0);
-        UpdateButtonText(ClaireButton, GameManager.manager.Claire, costs.ClaireCost, 1);
-        UpdateButtonText(AjButton, GameManager.manager.Aj, costs.AjCost, 2);
-        UpdateButtonText(GrannyButton, GameManager.manager.Granny, costs.GrannyCost, 3);
-        UpdateButtonText(MichelleButton, GameManager.manager.Michelle, costs.MichelleCost, 4);
-    }
-
-    private void UpdateButtonText(TMP_Text button, bool isOwned, float cost, int characterIndex, bool isGemCost = false)
-    {
-        if (GameManager.manager.currentCharacter == characterIndex)
+        if (GameManager.manager.currentMap == characterIndex)
         {
             button.text = "Active";
         }
