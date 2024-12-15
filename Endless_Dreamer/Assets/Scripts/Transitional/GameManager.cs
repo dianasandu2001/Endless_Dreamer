@@ -86,7 +86,6 @@ public class GameManager : MonoBehaviour
     
     public float[] levelRequirements; //amount of XP needed to get to the next level
         //level rewards
-    public bool[][] levelRewards = new bool[5][];
     public bool[] AmyRewards = new bool[20];
     public bool[] ClaireRewards = new bool[20];
     public bool[] AjRewards = new bool[20];
@@ -104,15 +103,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    void Start()
-    {
-        levelRewards[0] = AmyRewards;
-        levelRewards[1] = ClaireRewards;
-        levelRewards[2] = AjRewards;
-        levelRewards[3] = GrannyRewards;
-        levelRewards[4] = MichelleRewards;
     }
 
     void Update()
@@ -228,7 +218,7 @@ public class GameManager : MonoBehaviour
             // move the info to GM
 
             //audio
-            volume = data.volume = volume;
+            volume = data.volume;
             soundEffects = data.soundEffects;
 
             //currency

@@ -141,11 +141,13 @@ public class Settings : MonoBehaviour
         //volumeLevel = GameManager.manager.volume;
         mixer.SetFloat("BackgroundMusic", Mathf.Log10(volumeLevel) * 20);
         GameManager.manager.volume = volumeLevel;
+        GameManager.manager.Save();
     }
-    public void SoundEffects(float sounfEffectsLevel)
+    public void SoundEffects(float soundEffectsLevel)
     {
-        mixer.SetFloat("SoundEffects", Mathf.Log10(sounfEffectsLevel) * 20);
-        GameManager.manager.soundEffects = sounfEffectsLevel;
+        mixer.SetFloat("SoundEffects", Mathf.Log10(soundEffectsLevel) * 20);
+        GameManager.manager.soundEffects = soundEffectsLevel;
+        GameManager.manager.Save();
     }
 
     public void HELP()
