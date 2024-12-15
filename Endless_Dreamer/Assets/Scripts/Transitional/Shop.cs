@@ -70,8 +70,8 @@ public class Shop : MonoBehaviour
         gem_count_display.text = "" + GameManager.manager.gems;
 
         AmyLevel.text = "" + GameManager.manager.level[0];
-        AjLevel.text = "" + GameManager.manager.level[1];
-        ClaireLevel.text = "" + GameManager.manager.level[2];
+        ClaireLevel.text = "" + GameManager.manager.level[1];
+        AjLevel.text = "" + GameManager.manager.level[2];
         GrannyLevel.text = "" + GameManager.manager.level[3];
         MichelleLevel.text = "" + GameManager.manager.level[4];
 

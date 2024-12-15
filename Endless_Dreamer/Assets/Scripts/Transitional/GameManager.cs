@@ -85,6 +85,13 @@ public class GameManager : MonoBehaviour
     public float[] currentLevelXP; //how much XP is earned at the current level for each character
     
     public float[] levelRequirements; //amount of XP needed to get to the next level
+        //level rewards
+    public bool[][] levelRewards = new bool[5][];
+    public bool[] AmyRewards = new bool[20];
+    public bool[] ClaireRewards = new bool[20];
+    public bool[] AjRewards = new bool[20];
+    public bool[] GrannyRewards = new bool[20];
+    public bool[] MichelleRewards = new bool[20];
     
     private void Awake()
     {
@@ -101,7 +108,11 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-
+        levelRewards[0] = AmyRewards;
+        levelRewards[1] = ClaireRewards;
+        levelRewards[2] = AjRewards;
+        levelRewards[3] = GrannyRewards;
+        levelRewards[4] = MichelleRewards;
     }
 
     void Update()
@@ -188,6 +199,12 @@ public class GameManager : MonoBehaviour
             //levels
         data.level = level;
         data.currentLevelXP = currentLevelXP;
+            //level rewards
+        data.AmyRewards = AmyRewards;
+        data.ClaireRewards = ClaireRewards;
+        data.AjRewards = AjRewards;
+        data.GrannyRewards = GrannyRewards;
+        data.MichelleRewards = MichelleRewards;
 
 
         string jason = JsonUtility.ToJson(data);
@@ -275,6 +292,12 @@ public class GameManager : MonoBehaviour
                 //levels
             level = data.level;
             currentLevelXP = data.currentLevelXP;
+                //level rewards
+            AmyRewards = data.AmyRewards;
+            ClaireRewards = data.ClaireRewards;
+            AjRewards = data.AjRewards;
+            GrannyRewards = data.GrannyRewards;
+            MichelleRewards = data.MichelleRewards;
 
         }
     }
@@ -352,5 +375,10 @@ class PlayerData
         //levels
     public int[] level; //defualt is 0 (before purchase)
     public float[] currentLevelXP; //how much XP is earned at the current level for each character
-    
+        //level rewards
+    public bool[] AmyRewards;
+    public bool[] ClaireRewards;
+    public bool[] AjRewards;
+    public bool[] GrannyRewards;
+    public bool[] MichelleRewards;
 }

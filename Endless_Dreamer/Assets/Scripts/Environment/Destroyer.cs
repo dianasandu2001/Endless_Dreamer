@@ -21,7 +21,7 @@ public class Destroyer : MonoBehaviour
     {
         parent_name = transform.name;
         StartCoroutine(Destroy_Section_Clone());
-        //StartCoroutine(Destroy_Object_Clone());
+        StartCoroutine(Destroy_Object_Clone());
     }
 
     IEnumerator Destroy_Section_Clone()

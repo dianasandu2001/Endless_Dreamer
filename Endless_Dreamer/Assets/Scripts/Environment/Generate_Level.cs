@@ -78,7 +78,7 @@ public class Generate_Level : MonoBehaviour
     {
         Instantiate(section, new Vector3(0,0,z_pos), Quaternion.identity);
         z_pos += 50;
-        yield return new WaitForSeconds(38/player_move.move_speed);
+        yield return new WaitForSeconds(45/player_move.move_speed);
         creating_section = false;
     }
 
