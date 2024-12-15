@@ -22,8 +22,10 @@ public class Settings : MonoBehaviour
     public TMP_Text XP;
     public TMP_Text levels;
     public TMP_Text XPToNext;
-
     private int levelsGained;
+
+    public Slider backgroundMusicSlider;
+    public Slider soundEffectsSlider;
     void Start()
     {
         coin_count_display.text = "" + GameManager.manager.coins;
@@ -39,6 +41,9 @@ public class Settings : MonoBehaviour
         animator_menu.SetBool("Menu", true);
 
         levelsGained = 0;
+
+        ApplySavedVolume(backgroundMusicSlider, "BackgroundMusic", GameManager.manager.volume);
+        ApplySavedVolume(soundEffectsSlider, "SoundEffects", GameManager.manager.soundEffects);
     }
 
     void Update()
@@ -149,9 +154,12 @@ public class Settings : MonoBehaviour
         GameManager.manager.soundEffects = soundEffectsLevel;
         GameManager.manager.Save();
     }
-
-    public void HELP()
+    public void ApplySavedVolume(Slider volumeSlider, string mixerParameter, float savedVolumeLevel)
     {
-        Player_Move.grounded = true;
+        // Set the slider's value to the saved volume
+        volumeSlider.value = savedVolumeLevel;
+
+        // Apply the volume level to the mixer
+        mixer.SetFloat(mixerParameter, Mathf.Log10(savedVolumeLevel) * 20);
     }
 }

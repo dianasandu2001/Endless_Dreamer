@@ -2339,6 +2339,8 @@ MonoBehaviour:
   XP: {fileID: 0}
   levels: {fileID: 0}
   XPToNext: {fileID: 0}
+  backgroundMusicSlider: {fileID: 710829559}
+  soundEffectsSlider: {fileID: 1282209362}
 --- !u!224 &972289665
 RectTransform:
   m_ObjectHideFlags: 0

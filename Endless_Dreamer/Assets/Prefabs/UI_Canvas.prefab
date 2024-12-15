@@ -6733,9 +6733,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d519b4ceeef921449d08b630b75a58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coin_count_display: {fileID: 7425546385329244700}
+  coin_count_display: {fileID: 4610438866721805863}
   gem_count_display: {fileID: 0}
-  distance_count_display: {fileID: 6209355813028489876}
+  distance_count_display: {fileID: 8534332655127624978}
   score_count_display: {fileID: 0}
   mixer: {fileID: 0}
   Player_Move: {fileID: 0}
@@ -6744,7 +6744,9 @@ MonoBehaviour:
   animator_menu: {fileID: 0}
   XP: {fileID: 0}
   levels: {fileID: 0}
-  XPtoNext: {fileID: 0}
+  XPToNext: {fileID: 0}
+  backgroundMusicSlider: {fileID: 1605271043120255477}
+  soundEffectsSlider: {fileID: 3364094616361201755}
 --- !u!1 &8980847041316081710
 GameObject:
   m_ObjectHideFlags: 0
