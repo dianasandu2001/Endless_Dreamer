@@ -13,6 +13,7 @@ public class Collectable_Control : MonoBehaviour
     public Text gem_count_display;
 
     public GameObject player;
+    public Player_Move player_move;
 
     public static float distance_count;
     public Text distance_count_display;
@@ -21,6 +22,11 @@ public class Collectable_Control : MonoBehaviour
     public Text score_count_display;
 
     public float potion_score_multiplier;
+
+    public Image powerBar;
+    public static int power;
+    public GameObject run;
+    public GameObject powerButton;
 
     // Start is called before the first frame update
     void Start()
@@ -44,5 +50,17 @@ public class Collectable_Control : MonoBehaviour
 
         score_count = distance_count * potion_score_multiplier * GameManager.manager.PlayerScoreMultipleir[GameManager.manager.currentCharacter];
         score_count_display.text = "" + (int)score_count;
+
+        if (player_move.tripped == true)
+        {
+            power = 0;
+        }    
+
+        if (power == GameManager.manager.powerCollectionAmount[GameManager.manager.currentCharacter])
+        {
+            run.SetActive(false);
+            powerButton.SetActive(true);
+        }
+        powerBar.fillAmount = power / GameManager.manager.powerCollectionAmount[GameManager.manager.currentCharacter];
     }
 }

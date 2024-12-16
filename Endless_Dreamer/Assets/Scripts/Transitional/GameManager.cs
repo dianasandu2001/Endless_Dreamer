@@ -83,7 +83,6 @@ public class GameManager : MonoBehaviour
         //levels
     public int[] level; //defualt is 0 (before purchase)
     public float[] currentLevelXP; //how much XP is earned at the current level for each character
-    
     public float[] levelRequirements; //amount of XP needed to get to the next level
         //level rewards
     public bool[] AmyRewards = new bool[20];
@@ -91,7 +90,8 @@ public class GameManager : MonoBehaviour
     public bool[] AjRewards = new bool[20];
     public bool[] GrannyRewards = new bool[20];
     public bool[] MichelleRewards = new bool[20];
-    
+    //power
+    public float[] powerCollectionAmount = new float[5];
     private void Awake()
     {
         if (manager == null)
@@ -195,7 +195,8 @@ public class GameManager : MonoBehaviour
         data.AjRewards = AjRewards;
         data.GrannyRewards = GrannyRewards;
         data.MichelleRewards = MichelleRewards;
-
+            //power
+        data.powerCollectionAmount = powerCollectionAmount;
 
         string jason = JsonUtility.ToJson(data);
         File.WriteAllText(Application.persistentDataPath + "/playerInfo.json", jason);
@@ -288,7 +289,8 @@ public class GameManager : MonoBehaviour
             AjRewards = data.AjRewards;
             GrannyRewards = data.GrannyRewards;
             MichelleRewards = data.MichelleRewards;
-
+                //power
+            powerCollectionAmount = data.powerCollectionAmount;
         }
     }
 }
@@ -371,4 +373,6 @@ class PlayerData
     public bool[] AjRewards;
     public bool[] GrannyRewards;
     public bool[] MichelleRewards;
+        //power
+    public float[] powerCollectionAmount;
 }
