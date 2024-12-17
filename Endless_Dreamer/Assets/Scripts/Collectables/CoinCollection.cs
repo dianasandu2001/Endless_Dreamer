@@ -7,7 +7,7 @@ public class CoinCollection : MonoBehaviour
     {
         coin_FX.Play();
         Collectable_Control.coin_count += 1;
-        Collectable_Control.power += 1;
+        Collectable_Control.power += 1 * GameManager.manager.coinMultiplier[GameManager.manager.currentCharacter];
         this.gameObject.SetActive(false);
     }
 }

@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class Collectable_Control : MonoBehaviour
 {
-    public static int coin_count;
+    public static float coin_count;
     public Text coin_count_display;
     public float coins_collected;
 
-    public static int gem_count;
+    public static float gem_count;
     public Text gem_count_display;
 
     public GameObject player;
@@ -24,9 +24,11 @@ public class Collectable_Control : MonoBehaviour
     public float potion_score_multiplier;
 
     public Image powerBar;
-    public static int power;
+    public static float power;
     public GameObject run;
     public GameObject powerButton;
+
+    public SpeedPower speedPower;
 
     // Start is called before the first frame update
     void Start()
@@ -56,11 +58,38 @@ public class Collectable_Control : MonoBehaviour
             power = 0;
         }    
 
-        if (power == GameManager.manager.powerCollectionAmount[GameManager.manager.currentCharacter])
+        if (power >= GameManager.manager.powerCollectionAmount[GameManager.manager.currentCharacter])
         {
             run.SetActive(false);
             powerButton.SetActive(true);
         }
         powerBar.fillAmount = power / GameManager.manager.powerCollectionAmount[GameManager.manager.currentCharacter];
+    }
+
+    public void Power()
+    {
+        if(GameManager.manager.currentCharacter == 0) // amy
+        {
+            coin_count += GameManager.manager.coinPower; //amy gets x amount of coins when the power is used                     //maybe i should change to double coins for x amount of time ?
+        }
+        else if(GameManager.manager.currentCharacter == 1) //claire
+        {
+            //                                                              //score multiplier for x amount of time?
+        }
+        else if (GameManager.manager.currentCharacter == 2) //aj
+        {
+            //                                                              //bubble?
+        }
+        else if (GameManager.manager.currentCharacter == 3) //granny
+        {
+            StartCoroutine(speedPower.SpeedTime(GameManager.manager.speedTime[GameManager.manager.currentCharacter])); //speed buff
+        }
+        else if (GameManager.manager.currentCharacter == 4) //michelle
+        {
+            gem_count += GameManager.manager.gemPower; //gets x amount of gems
+        }
+        power = 0;
+        powerButton.SetActive(false);
+        run.SetActive(true);
     }
 }

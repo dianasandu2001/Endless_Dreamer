@@ -92,6 +92,8 @@ public class GameManager : MonoBehaviour
     public bool[] MichelleRewards = new bool[20];
     //power
     public float[] powerCollectionAmount = new float[5];
+    public float coinPower; //def is 50
+    public float gemPower; //def is 2
     private void Awake()
     {
         if (manager == null)
@@ -197,6 +199,8 @@ public class GameManager : MonoBehaviour
         data.MichelleRewards = MichelleRewards;
             //power
         data.powerCollectionAmount = powerCollectionAmount;
+        data.coinPower = coinPower;
+        data.gemPower = gemPower;
 
         string jason = JsonUtility.ToJson(data);
         File.WriteAllText(Application.persistentDataPath + "/playerInfo.json", jason);
@@ -291,6 +295,8 @@ public class GameManager : MonoBehaviour
             MichelleRewards = data.MichelleRewards;
                 //power
             powerCollectionAmount = data.powerCollectionAmount;
+            coinPower = data.coinPower;
+            gemPower = data.gemPower;
         }
     }
 }
@@ -375,4 +381,6 @@ class PlayerData
     public bool[] MichelleRewards;
         //power
     public float[] powerCollectionAmount;
+    public float coinPower;
+    public float gemPower;
 }

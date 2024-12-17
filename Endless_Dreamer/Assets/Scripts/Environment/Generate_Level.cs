@@ -46,6 +46,7 @@ public class Generate_Level : MonoBehaviour
         //assigning the spawned character to the distance tracker in Collectable_Control
         control.player = player;
         control.player_move = player_move;
+        control.speedPower = player.GetComponent<SpeedPower>();
 
         //using a score potion
         if (GameManager.manager.yellowPotion >= 1)
