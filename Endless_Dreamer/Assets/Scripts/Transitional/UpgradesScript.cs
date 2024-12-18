@@ -30,6 +30,9 @@ public class UpgradesScript : MonoBehaviour
     public GameObject[] trippingImage;
     public GameObject[] coinMultiplierImage;
 
+    public string[] upgradeCosts;
+    public GameObject[] overlay;
+
     //character side
     public TMP_Text characterLevel;
     public Image XPBar;
@@ -54,11 +57,11 @@ public class UpgradesScript : MonoBehaviour
 
 
         //updating upgrade level and cost
-        UpdateLevelAndCosts(speedPowerLevel, speedPowerButton, GameManager.manager.upgradeCosts, GameManager.manager.speedPowerUpgrade, 5);
-        UpdateLevelAndCosts(shieldPowerLevel, shieldPowerButton, GameManager.manager.upgradeCosts, GameManager.manager.shieldPowerUpgrade, 5);
-        UpdateLevelAndCosts(visionDebuffLevel, visionDebuffButton, GameManager.manager.upgradeCosts, GameManager.manager.visionDebuffUpgrade, 5);
-        UpdateLevelAndCosts(trippingLevel, trippingButton, GameManager.manager.upgradeCosts, GameManager.manager.trippingUpgrade, 5);
-        UpdateLevelAndCosts(coinMultiplierLevel, coinMultiplierButton, GameManager.manager.upgradeCosts, GameManager.manager.coinMultiplierUpgrade, 5);
+        UpdateLevelAndCosts(speedPowerLevel, speedPowerButton, upgradeCosts, GameManager.manager.speedPowerUpgrade, 5, overlay, 0);
+        UpdateLevelAndCosts(shieldPowerLevel, shieldPowerButton, upgradeCosts, GameManager.manager.shieldPowerUpgrade, 5, overlay, 1);
+        UpdateLevelAndCosts(visionDebuffLevel, visionDebuffButton, upgradeCosts, GameManager.manager.visionDebuffUpgrade, 5, overlay, 3);
+        UpdateLevelAndCosts(trippingLevel, trippingButton, upgradeCosts, GameManager.manager.trippingUpgrade, 5, overlay, 2);
+        UpdateLevelAndCosts(coinMultiplierLevel, coinMultiplierButton, upgradeCosts, GameManager.manager.coinMultiplierUpgrade, 5, overlay, 4);
         
         //Character
             // levels and XP bar
@@ -118,7 +121,7 @@ public class UpgradesScript : MonoBehaviour
                 AddUpgrade(GameManager.manager.speedTime, 1f);
             }
         }
-        UpdateLevelAndCosts(speedPowerLevel, speedPowerButton, GameManager.manager.upgradeCosts, GameManager.manager.speedPowerUpgrade, 5);
+        UpdateLevelAndCosts(speedPowerLevel, speedPowerButton, upgradeCosts, GameManager.manager.speedPowerUpgrade, 5, overlay, 0);
         UpdateUpgradeProgress(speedPowerImage, GameManager.manager.speedPowerUpgrade);
         GameManager.manager.Save();
         coin_display.text = "" + GameManager.manager.coins;
@@ -144,7 +147,7 @@ public class UpgradesScript : MonoBehaviour
                 AddUpgrade(GameManager.manager.bubbleTime, 1f);
             }
         }
-        UpdateLevelAndCosts(shieldPowerLevel, shieldPowerButton, GameManager.manager.upgradeCosts, GameManager.manager.shieldPowerUpgrade, 5);
+        UpdateLevelAndCosts(shieldPowerLevel, shieldPowerButton, upgradeCosts, GameManager.manager.shieldPowerUpgrade, 5, overlay, 1);
         UpdateUpgradeProgress(shieldPowerImage, GameManager.manager.shieldPowerUpgrade);
         GameManager.manager.Save();
         coin_display.text = "" + GameManager.manager.coins;
@@ -170,7 +173,7 @@ public class UpgradesScript : MonoBehaviour
                 SubtractUpgrade(GameManager.manager.trippedTime, 0.5f);
             }
         }
-        UpdateLevelAndCosts(trippingLevel, trippingButton, GameManager.manager.upgradeCosts, GameManager.manager.trippingUpgrade, 5);
+        UpdateLevelAndCosts(trippingLevel, trippingButton, upgradeCosts, GameManager.manager.trippingUpgrade, 5, overlay, 2);
         UpdateUpgradeProgress(trippingImage, GameManager.manager.trippingUpgrade);
         GameManager.manager.Save();
         coin_display.text = "" + GameManager.manager.coins;
@@ -196,7 +199,7 @@ public class UpgradesScript : MonoBehaviour
                 SubtractUpgrade(GameManager.manager.debuffTime, 1f);
             }
         }
-        UpdateLevelAndCosts(visionDebuffLevel, visionDebuffButton, GameManager.manager.upgradeCosts, GameManager.manager.visionDebuffUpgrade, 5);
+        UpdateLevelAndCosts(visionDebuffLevel, visionDebuffButton, upgradeCosts, GameManager.manager.visionDebuffUpgrade, 5, overlay, 3);
         UpdateUpgradeProgress(visionDebuffImage, GameManager.manager.visionDebuffUpgrade);
         GameManager.manager.Save();
         coin_display.text = "" + GameManager.manager.coins;
@@ -222,7 +225,7 @@ public class UpgradesScript : MonoBehaviour
                 AddUpgrade(GameManager.manager.coinMultiplier, 0.2f);
             }
         }
-        UpdateLevelAndCosts(coinMultiplierLevel, coinMultiplierButton, GameManager.manager.upgradeCosts, GameManager.manager.coinMultiplierUpgrade, 5);
+        UpdateLevelAndCosts(coinMultiplierLevel, coinMultiplierButton, upgradeCosts, GameManager.manager.coinMultiplierUpgrade, 5, overlay, 4);
         UpdateUpgradeProgress(coinMultiplierImage, GameManager.manager.coinMultiplierUpgrade);
         GameManager.manager.Save();
         coin_display.text = "" + GameManager.manager.coins;
@@ -259,16 +262,17 @@ public class UpgradesScript : MonoBehaviour
         }
     }
 
-    void UpdateLevelAndCosts(TMP_Text TMP_level, TMP_Text TMP_button, int[] list, int val, int max)
+    void UpdateLevelAndCosts(TMP_Text TMP_level, TMP_Text TMP_button, string[] list, int val, int max, GameObject[] overlay, int overlayVal)
     {
         if(val == max)
         {
             TMP_button.text = "Upgrade Complete";
             TMP_level.text = "" + max;
+            overlay[overlayVal].SetActive(true);
         }
         else
         {
-            TMP_button.text = "" + list[val];
+            TMP_button.text = list[val];
             TMP_level.text = "" + val;
         }
     }

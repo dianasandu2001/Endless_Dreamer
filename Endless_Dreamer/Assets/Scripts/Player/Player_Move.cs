@@ -31,7 +31,8 @@ public class Player_Move : MonoBehaviour
 
     void Update()
     {
-        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        // checking animations state for debugging
+        //AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         //Debug.Log("Current State: " + stateInfo.shortNameHash);
 
 
@@ -74,6 +75,5 @@ public class Player_Move : MonoBehaviour
     {
             Gizmos.color = Color.red;
             Gizmos.DrawLine(ground_check_position.position, ground_check_position.position + Vector3.down * ground_check_distance);
-    
     }
 }

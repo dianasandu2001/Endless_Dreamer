@@ -1,10 +1,12 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelRewards : MonoBehaviour
 {
     public TMP_Text[] levelButtonsText;
     public GameObject[] levelButtons;
+    public GameObject[] overlays;
 
     void Start()
     {
@@ -20,6 +22,7 @@ public class LevelRewards : MonoBehaviour
             if (currentRewards != null && currentRewards[i])
             {
                 levelButtonsText[i].text = "Claimed!";
+                overlays[i].SetActive(true);
             }
         }
     }
@@ -32,10 +35,15 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[0] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 1);
+
+            //reward
+            GameManager.manager.flowerDust += 1;
+            GameManager.manager.stoneDust += 1;
+            GameManager.manager.livingDust += 1;
 
             // Update UI
             levelButtonsText[0].text = "Claimed!";
+            overlays[0].SetActive(true);
 
             // Save
             GameManager.manager.Save();
@@ -50,10 +58,15 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[1] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 2);
+
+            //reward
+            GameManager.manager.flowerDust += 3;
+            GameManager.manager.stoneDust += 3;
+            GameManager.manager.livingDust += 3;
 
             // Update UI
             levelButtonsText[1].text = "Claimed!";
+            overlays[1].SetActive(true);
 
             // Save
             GameManager.manager.Save();
@@ -68,10 +81,14 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[2] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 3);
+
+            //reward
+            GameManager.manager.greenPotion += 1;
 
             // Update UI
             levelButtonsText[2].text = "Claimed!";
+            overlays[2].SetActive(true);
+
             // Save
             GameManager.manager.Save();
         }
@@ -85,10 +102,15 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[3] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 4);
+
+            //reward
+            GameManager.manager.gems += 5;
+            GameManager.manager.coins += 100;
 
             // Update UI
             levelButtonsText[3].text = "Claimed!";
+            overlays[3].SetActive(true);
+
             // Save
             GameManager.manager.Save();
         }
@@ -102,10 +124,14 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[4] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 5);
+
+            //rewards
+            GameManager.manager.PlayerScoreMultipleir[GameManager.manager.currentCharacter] += 0.25f;
 
             // Update UI
             levelButtonsText[4].text = "Claimed!";
+            overlays[4].SetActive(true);
+
             // Save
             GameManager.manager.Save();
         }
@@ -123,6 +149,8 @@ public class LevelRewards : MonoBehaviour
 
             // Update UI
             levelButtonsText[5].text = "Claimed!";
+            overlays[5].SetActive(true);
+
             // Save
             GameManager.manager.Save();
         }
@@ -140,6 +168,8 @@ public class LevelRewards : MonoBehaviour
 
             // Update UI
             levelButtonsText[6].text = "Claimed!";
+            overlays[6].SetActive(true);
+
             // Save
             GameManager.manager.Save();
         }
@@ -157,6 +187,8 @@ public class LevelRewards : MonoBehaviour
 
             // Update UI
             levelButtonsText[7].text = "Claimed!";
+            overlays[7].SetActive(true);
+
             // Save
             GameManager.manager.Save();
         }
@@ -174,6 +206,8 @@ public class LevelRewards : MonoBehaviour
 
             // Update UI
             levelButtonsText[8].text = "Claimed!";
+            overlays[8].SetActive(true);
+
             // Save
             GameManager.manager.Save();
         }
@@ -191,6 +225,8 @@ public class LevelRewards : MonoBehaviour
 
             // Update UI
             levelButtonsText[9].text = "Claimed!";
+            overlays[9].SetActive(true);
+
             // Save
             GameManager.manager.Save();
         }
@@ -208,6 +244,8 @@ public class LevelRewards : MonoBehaviour
 
             // Update UI
             levelButtonsText[10].text = "Claimed!";
+            overlays[10].SetActive(true);
+
             // Save
             GameManager.manager.Save();
         }
@@ -225,6 +263,8 @@ public class LevelRewards : MonoBehaviour
 
             // Update UI
             levelButtonsText[11].text = "Claimed!";
+            overlays[11].SetActive(true);
+
             // Save
             GameManager.manager.Save();
         }
@@ -242,6 +282,8 @@ public class LevelRewards : MonoBehaviour
 
             // Update UI
             levelButtonsText[12].text = "Claimed!";
+            overlays[12].SetActive(true);
+
             // Save
             GameManager.manager.Save();
         }
@@ -259,6 +301,8 @@ public class LevelRewards : MonoBehaviour
 
             // Update UI
             levelButtonsText[13].text = "Claimed!";
+            overlays[13].SetActive(true);
+
             // Save
             GameManager.manager.Save();
         }
@@ -276,6 +320,8 @@ public class LevelRewards : MonoBehaviour
 
             // Update UI
             levelButtonsText[14].text = "Claimed!";
+            overlays[14].SetActive(true);
+
             // Save
             GameManager.manager.Save();
         }
@@ -293,6 +339,8 @@ public class LevelRewards : MonoBehaviour
 
             // Update UI
             levelButtonsText[15].text = "Claimed!";
+            overlays[15].SetActive(true);
+
             // Save
             GameManager.manager.Save();
         }
@@ -310,6 +358,8 @@ public class LevelRewards : MonoBehaviour
 
             // Update UI
             levelButtonsText[16].text = "Claimed!";
+            overlays[16].SetActive(true);
+
             // Save
             GameManager.manager.Save();
         }
@@ -327,6 +377,8 @@ public class LevelRewards : MonoBehaviour
 
             // Update UI
             levelButtonsText[17].text = "Claimed!";
+            overlays[17].SetActive(true);
+
             // Save
             GameManager.manager.Save();
         }
@@ -344,6 +396,8 @@ public class LevelRewards : MonoBehaviour
 
             // Update UI
             levelButtonsText[18].text = "Claimed!";
+            overlays[18].SetActive(true);
+
             // Save
             GameManager.manager.Save();
         }
@@ -361,6 +415,7 @@ public class LevelRewards : MonoBehaviour
 
             // Update UI
             levelButtonsText[19].text = "Claimed!";
+            overlays[19].SetActive(true);
             // Save
             GameManager.manager.Save();
         }

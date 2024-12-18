@@ -329,6 +329,9 @@ MonoBehaviour:
   AjCost: 50000
   GrannyCost: 500
   MichelleCost: 1000
+  desertCost: 0
+  cloudsCost: 0
+  dungeonCost: 0
   ingredientCoinCost: 50
   ingredientGemCost: 1
   dustCost: 1.2
@@ -2817,7 +2820,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -175.00006, y: -25}
+  m_AnchoredPosition: {x: -175.00003, y: -25}
   m_SizeDelta: {x: -1050, y: -150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &89818049
@@ -17438,7 +17441,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -175.00006, y: -25}
+  m_AnchoredPosition: {x: -175.00003, y: -25}
   m_SizeDelta: {x: -1050, y: -150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &701659104
@@ -18414,7 +18417,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -175.00006, y: -25}
+  m_AnchoredPosition: {x: -175.00003, y: -25}
   m_SizeDelta: {x: -1050, y: -150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &739428258
@@ -31250,7 +31253,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -175.00006, y: -25}
+  m_AnchoredPosition: {x: -175.00003, y: -25}
   m_SizeDelta: {x: -1050, y: -150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1314977056
