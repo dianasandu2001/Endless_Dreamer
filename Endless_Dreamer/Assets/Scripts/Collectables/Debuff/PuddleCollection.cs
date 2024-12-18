@@ -35,6 +35,7 @@ public class PuddleCollection : MonoBehaviour
         }
         else
         {
+            animator.SetTrigger("Trip");
             trippingCoroutine = StartCoroutine(TrippedTime(GameManager.manager.trippedTime[GameManager.manager.currentCharacter]));
 
             mesh.SetActive(false);

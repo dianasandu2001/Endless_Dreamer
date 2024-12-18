@@ -32,7 +32,7 @@ public class Player_Move : MonoBehaviour
     void Update()
     {
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        Debug.Log("Current State: " + stateInfo.shortNameHash);
+        //Debug.Log("Current State: " + stateInfo.shortNameHash);
 
 
         if (move_speed < 15)
@@ -65,31 +65,11 @@ public class Player_Move : MonoBehaviour
         // Jumping
         if (Input.GetKey(KeyCode.Space) && grounded == true)
         {
-            Debug.Log("Jump triggered");
             RB.linearVelocity = new Vector2(0, jump_force);
-            animator.SetBool("Jump", true);
-        }
-        if (grounded == true)
-        {
-            Debug.Log("Player grounded, resetting Jump animation");
-            animator.SetBool("Jump", false); // Exit jump animation
-        }
-
-        // Tripping
-        if (tripped == true)
-        {
-            //animator.SetBool("Tripped", true);
-            animator.SetTrigger("Trip");
-
-            //StartCoroutine(TimeC());
-            //animator.SetBool("Tripped", false);
+            animator.SetTrigger("Jump");
         }
     }
 
-    public IEnumerator TimeC()
-    {
-        yield return new WaitForSeconds(4);
-    }
     private void OnDrawGizmos()
     {
             Gizmos.color = Color.red;
