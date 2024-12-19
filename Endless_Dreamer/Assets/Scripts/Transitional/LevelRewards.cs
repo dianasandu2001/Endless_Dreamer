@@ -145,7 +145,9 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[5] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 6);
+
+            //reward
+            GameManager.manager.powerCollectionAmount[GameManager.manager.currentCharacter] -= 25;
 
             // Update UI
             levelButtonsText[5].text = "Claimed!";
@@ -164,7 +166,11 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[6] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 7);
+
+            //reward
+            GameManager.manager.flowerDust += 5;
+            GameManager.manager.stoneDust += 5;
+            GameManager.manager.livingDust += 5;
 
             // Update UI
             levelButtonsText[6].text = "Claimed!";
@@ -183,7 +189,11 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[7] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 8);
+
+            //reward
+            GameManager.manager.greenPotion += 1;
+            GameManager.manager.yellowPotion += 1;
+            GameManager.manager.redPotion += 1;
 
             // Update UI
             levelButtonsText[7].text = "Claimed!";
@@ -202,7 +212,10 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[8] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 9);
+
+            //reward
+            GameManager.manager.gems += 10;
+            GameManager.manager.coins += 200;
 
             // Update UI
             levelButtonsText[8].text = "Claimed!";
@@ -221,7 +234,9 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[9] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 10);
+
+            //reward
+            GameManager.manager.PlayerScoreMultipleir[GameManager.manager.currentCharacter] += 0.25f;
 
             // Update UI
             levelButtonsText[9].text = "Claimed!";
@@ -240,7 +255,10 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[10] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 11);
+
+            //reward
+            GameManager.manager.trippedTime[GameManager.manager.currentCharacter] -= 1f;
+            GameManager.manager.debuffTime[GameManager.manager.currentCharacter] -= 1f;
 
             // Update UI
             levelButtonsText[10].text = "Claimed!";
@@ -259,7 +277,28 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[11] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 12);
+
+            //reward
+            if (GameManager.manager.currentCharacter == 0)
+            {
+                GameManager.manager.coinPower += 25f;
+            }
+            else if (GameManager.manager.currentCharacter == 1)
+            {
+                GameManager.manager.scorePower += 0.5f;
+            }
+            else if (GameManager.manager.currentCharacter == 2)
+            {
+                GameManager.manager.bubbleTime[2] += 1.25f;
+            }
+            else if (GameManager.manager.currentCharacter == 3)
+            {
+                GameManager.manager.speedTime[3] += 1.25f;
+            }
+            else if (GameManager.manager.currentCharacter == 4)
+            {
+                GameManager.manager.gemPower += 2f;
+            }
 
             // Update UI
             levelButtonsText[11].text = "Claimed!";
@@ -278,7 +317,9 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[12] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 13);
+
+            //reward
+            GameManager.manager.coinMultiplier[GameManager.manager.currentCharacter] += 0.5f;
 
             // Update UI
             levelButtonsText[12].text = "Claimed!";
@@ -297,7 +338,10 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[13] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 14);
+
+            //reward
+            GameManager.manager.gems += 20;
+            GameManager.manager.coins += 500;
 
             // Update UI
             levelButtonsText[13].text = "Claimed!";
@@ -316,7 +360,9 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[14] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 15);
+
+            //reward
+            GameManager.manager.PlayerScoreMultipleir[GameManager.manager.currentCharacter] += 0.5f;
 
             // Update UI
             levelButtonsText[14].text = "Claimed!";
@@ -335,7 +381,11 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[15] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 16);
+
+
+            //reward
+            GameManager.manager.trippedTime[GameManager.manager.currentCharacter] -= 1f;
+            GameManager.manager.debuffTime[GameManager.manager.currentCharacter] -= 1f;
 
             // Update UI
             levelButtonsText[15].text = "Claimed!";
@@ -356,6 +406,28 @@ public class LevelRewards : MonoBehaviour
             currentRewards[16] = true;
             Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 17);
 
+            //reward
+            if (GameManager.manager.currentCharacter == 0)
+            {
+                GameManager.manager.coinPower += 25f;
+            }
+            else if (GameManager.manager.currentCharacter == 1)
+            {
+                GameManager.manager.scorePowerTime += 2.5f;
+            }
+            else if (GameManager.manager.currentCharacter == 2)
+            {
+                GameManager.manager.bubbleTime[2] += 1.25f;
+            }
+            else if (GameManager.manager.currentCharacter == 3)
+            {
+                GameManager.manager.speedTime[3] += 1.25f;
+            }
+            else if (GameManager.manager.currentCharacter == 4)
+            {
+                GameManager.manager.gemPower += 2f;
+            }
+
             // Update UI
             levelButtonsText[16].text = "Claimed!";
             overlays[16].SetActive(true);
@@ -373,7 +445,11 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[17] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 18);
+
+            //reward
+            GameManager.manager.greenPotion += 3;
+            GameManager.manager.yellowPotion += 3;
+            GameManager.manager.redPotion += 3;
 
             // Update UI
             levelButtonsText[17].text = "Claimed!";
@@ -392,7 +468,11 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[18] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 19);
+
+            //reward
+            GameManager.manager.trippedTime[GameManager.manager.currentCharacter] -= 2f;
+            GameManager.manager.debuffTime[GameManager.manager.currentCharacter] -= 2f;
+
 
             // Update UI
             levelButtonsText[18].text = "Claimed!";
@@ -411,7 +491,10 @@ public class LevelRewards : MonoBehaviour
         {
             // Update the reward
             currentRewards[19] = true;
-            Debug.Log("Rewards of " + GameManager.manager.currentCharacter + " earned for level " + 20);
+
+            //reward
+            GameManager.manager.gems += 50;
+            GameManager.manager.powerCollectionAmount[GameManager.manager.currentCharacter] -= 50f;
 
             // Update UI
             levelButtonsText[19].text = "Claimed!";

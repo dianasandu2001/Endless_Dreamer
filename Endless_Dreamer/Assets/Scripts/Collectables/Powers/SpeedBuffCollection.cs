@@ -10,11 +10,14 @@ public class SpeedBuffCollection : MonoBehaviour
     public SpeedPower speedPower;
     void OnTriggerEnter(Collider player)
     {
-        //chest_FX.Play();
-        Debug.Log("Speed Buff");
-        speedPower = player.GetComponent<SpeedPower>();
-        StartCoroutine(speedPower.SpeedTime(GameManager.manager.speedTime[GameManager.manager.currentCharacter]));
-        mesh.SetActive(false);
-        colliderC.enabled = false;
+        if (!player.gameObject.CompareTag("Destroyer"))
+        {
+            //chest_FX.Play();
+            Debug.Log("Speed Buff");
+            speedPower = player.GetComponent<SpeedPower>();
+            StartCoroutine(speedPower.SpeedTime(GameManager.manager.speedTime[GameManager.manager.currentCharacter]));
+            mesh.SetActive(false);
+            colliderC.enabled = false;
+        }
     }
 }

@@ -47,6 +47,7 @@ public class Generate_Level : MonoBehaviour
         control.player = player;
         control.player_move = player_move;
         control.speedPower = player.GetComponent<SpeedPower>();
+        control.bubblePower = player.GetComponent<BubblePower>();
 
         //using a score potion
         if (GameManager.manager.yellowPotion >= 1)

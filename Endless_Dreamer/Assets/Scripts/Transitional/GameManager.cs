@@ -94,6 +94,8 @@ public class GameManager : MonoBehaviour
     public float[] powerCollectionAmount = new float[5];
     public float coinPower; //def is 50
     public float gemPower; //def is 2
+    public float scorePower; //def is x2
+    public float scorePowerTime; //def is 5s
     private void Awake()
     {
         if (manager == null)
@@ -201,6 +203,8 @@ public class GameManager : MonoBehaviour
         data.powerCollectionAmount = powerCollectionAmount;
         data.coinPower = coinPower;
         data.gemPower = gemPower;
+        data.scorePower = scorePower;
+        data.scorePowerTime = scorePowerTime;
 
         string jason = JsonUtility.ToJson(data);
         File.WriteAllText(Application.persistentDataPath + "/playerInfo.json", jason);
@@ -297,6 +301,8 @@ public class GameManager : MonoBehaviour
             powerCollectionAmount = data.powerCollectionAmount;
             coinPower = data.coinPower;
             gemPower = data.gemPower;
+            scorePower = data.scorePower;
+            scorePowerTime = data.scorePowerTime;
         }
     }
 }
@@ -383,4 +389,6 @@ class PlayerData
     public float[] powerCollectionAmount;
     public float coinPower;
     public float gemPower;
+    public float scorePower;
+    public float scorePowerTime;
 }

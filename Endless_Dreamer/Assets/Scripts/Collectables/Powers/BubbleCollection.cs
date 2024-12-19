@@ -11,10 +11,13 @@ public class BubbleCollection : MonoBehaviour
     public BubblePower bubblePower;
     void OnTriggerEnter(Collider player)
     {
-        //chest_FX.Play;
-        bubblePower = player.GetComponent<BubblePower>();
-        StartCoroutine(bubblePower.BubbleTime(GameManager.manager.bubbleTime[GameManager.manager.currentCharacter]));
-        mesh.enabled = false;
-        colliderC.enabled = false;
+        if (!player.gameObject.CompareTag("Destroyer"))
+        {
+            //chest_FX.Play;
+            bubblePower = player.GetComponent<BubblePower>();
+            StartCoroutine(bubblePower.BubbleTime(GameManager.manager.bubbleTime[GameManager.manager.currentCharacter]));
+            mesh.enabled = false;
+            colliderC.enabled = false;
+        }
     }
 }

@@ -9,6 +9,12 @@ public class Costs : MonoBehaviour
     public float GrannyCost; // Gems
     public float MichelleCost; // Gems
 
+    //character costs text
+    public string ClaireCostText; // Coins
+    public string AjCostText; // Coins
+    public string GrannyCostText; // Gems
+    public string MichelleCostText; // Gems
+
     //map costs
     public float desertCost; // coins
     public float cloudsCost; //

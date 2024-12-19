@@ -332,6 +332,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1812230955041878475}
   - component: {fileID: -9211645135087748243}
+  - component: {fileID: 5471986284995880229}
   m_Layer: 0
   m_Name: Forest
   m_TagString: Untagged
@@ -422,6 +423,27 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!65 &5471986284995880229
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3163280322821716288}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 45.604324, y: 1, z: 46.609604}
+  m_Center: {x: 0.34717178, y: 0, z: -0.21251678}
 --- !u!1 &3607767290456719388
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,29 +17,32 @@ public class PuddleCollection : MonoBehaviour
     public GameObject panel;
     void OnTriggerEnter(Collider player)
     {
-        player_move = player.GetComponent<Player_Move>();
-        animator = player.GetComponent<Animator>();
-        //chest_FX.Play();
-
-        if (player_move.isProtectedByBubble == true)
+        if (!player.gameObject.CompareTag("Destroyer"))
         {
-            //nothing
-        }
-        else if(player_move.tripped == true)
-        {
-            player_move.enabled = false;
-            animator.SetBool("Stumble", true);
+            player_move = player.GetComponent<Player_Move>();
+            animator = player.GetComponent<Animator>();
+            //chest_FX.Play();
 
-            panel.SetActive(true);
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            animator.SetTrigger("Trip");
-            trippingCoroutine = StartCoroutine(TrippedTime(GameManager.manager.trippedTime[GameManager.manager.currentCharacter]));
+            if (player_move.isProtectedByBubble == true)
+            {
+                //nothing
+            }
+            else if (player_move.tripped == true)
+            {
+                player_move.enabled = false;
+                animator.SetBool("Stumble", true);
 
-            mesh.SetActive(false);
-            colliderC.enabled = false;
+                panel.SetActive(true);
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                animator.SetTrigger("Trip");
+                trippingCoroutine = StartCoroutine(TrippedTime(GameManager.manager.trippedTime[GameManager.manager.currentCharacter]));
+
+                mesh.SetActive(false);
+                colliderC.enabled = false;
+            }
         }
     }
 

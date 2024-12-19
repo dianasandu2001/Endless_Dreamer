@@ -375,14 +375,14 @@ public class Shop : MonoBehaviour
 
     private void UpdateCharacterButtons()
     {
-        UpdateButtonText(AmyButton, GameManager.manager.Amy, 0, 0);
-        UpdateButtonText(ClaireButton, GameManager.manager.Claire, costs.ClaireCost, 1);
-        UpdateButtonText(AjButton, GameManager.manager.Aj, costs.AjCost, 2);
-        UpdateButtonText(GrannyButton, GameManager.manager.Granny, costs.GrannyCost, 3);
-        UpdateButtonText(MichelleButton, GameManager.manager.Michelle, costs.MichelleCost, 4);
+        UpdateButtonText(AmyButton, GameManager.manager.Amy, "free", 0);
+        UpdateButtonText(ClaireButton, GameManager.manager.Claire, costs.ClaireCostText, 1);
+        UpdateButtonText(AjButton, GameManager.manager.Aj, costs.AjCostText, 2);
+        UpdateButtonText(GrannyButton, GameManager.manager.Granny, costs.GrannyCostText, 3);
+        UpdateButtonText(MichelleButton, GameManager.manager.Michelle, costs.MichelleCostText, 4);
     }
 
-    private void UpdateButtonText(TMP_Text button, bool isOwned, float cost, int characterIndex)
+    private void UpdateButtonText(TMP_Text button, bool isOwned, string cost, int characterIndex)
     {
         if (GameManager.manager.currentCharacter == characterIndex)
         {

@@ -15,12 +15,15 @@ public class VisionDebuffCollection : MonoBehaviour
 
     void OnTriggerEnter(Collider player)
     {
+        if (!player.gameObject.CompareTag("Destroyer"))
+        {
+            Debug.Log("Vision Debuff");
+            runningCoroutine = StartCoroutine(DebuffTime(GameManager.manager.debuffTime[GameManager.manager.currentCharacter]));
+            mesh.SetActive(false);
+            colliderC.enabled = false;
+        }
         //chest_FX.Play();
         //Collectable_Control.chest_count += 1;
-        Debug.Log("Vision Debuff");
-        runningCoroutine = StartCoroutine(DebuffTime(GameManager.manager.debuffTime[GameManager.manager.currentCharacter]));
-        mesh.SetActive(false);
-        colliderC.enabled = false;
     }
 
     public IEnumerator DebuffTime(float sec)

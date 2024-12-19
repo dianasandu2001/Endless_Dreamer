@@ -13,6 +13,7 @@ TagManager:
   - SpeedPower
   - Trip
   - VisionDebuff
+  - Destroyer
   layers:
   - Default
   - TransparentFX

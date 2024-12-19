@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Collectable_Control : MonoBehaviour
 {
@@ -25,10 +26,11 @@ public class Collectable_Control : MonoBehaviour
 
     public Image powerBar;
     public static float power;
-    public GameObject run;
+    public GameObject[] charPower;
     public GameObject powerButton;
 
     public SpeedPower speedPower;
+    public BubblePower bubblePower;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +40,8 @@ public class Collectable_Control : MonoBehaviour
         distance_count = 0;
         score_count = 0;
         potion_score_multiplier = 1;
+
+        charPower[GameManager.manager.currentCharacter].SetActive(true);
     }
 
     // Update is called once per frame
@@ -60,7 +64,7 @@ public class Collectable_Control : MonoBehaviour
 
         if (power >= GameManager.manager.powerCollectionAmount[GameManager.manager.currentCharacter])
         {
-            run.SetActive(false);
+            charPower[GameManager.manager.currentCharacter].SetActive(false);
             powerButton.SetActive(true);
         }
         powerBar.fillAmount = power / GameManager.manager.powerCollectionAmount[GameManager.manager.currentCharacter];
@@ -74,15 +78,15 @@ public class Collectable_Control : MonoBehaviour
         }
         else if(GameManager.manager.currentCharacter == 1) //claire
         {
-            //                                                              //score multiplier for x amount of time?
+            StartCoroutine(ClairePower(GameManager.manager.scorePowerTime, GameManager.manager.scorePower));
         }
         else if (GameManager.manager.currentCharacter == 2) //aj
         {
-            //                                                              //bubble?
+            StartCoroutine(bubblePower.BubbleTime(GameManager.manager.bubbleTime[2]));
         }
         else if (GameManager.manager.currentCharacter == 3) //granny
         {
-            StartCoroutine(speedPower.SpeedTime(GameManager.manager.speedTime[GameManager.manager.currentCharacter])); //speed buff
+            StartCoroutine(speedPower.SpeedTime(GameManager.manager.speedTime[3])); //speed buff
         }
         else if (GameManager.manager.currentCharacter == 4) //michelle
         {
@@ -90,6 +94,13 @@ public class Collectable_Control : MonoBehaviour
         }
         power = 0;
         powerButton.SetActive(false);
-        run.SetActive(true);
+        charPower[GameManager.manager.currentCharacter].SetActive(true);
+    }
+    public IEnumerator ClairePower(float sec, float magnitude)
+    {
+        GameManager.manager.PlayerScoreMultipleir[1] += magnitude;
+        yield return new WaitForSeconds(sec);
+        GameManager.manager.PlayerScoreMultipleir[1] -= magnitude;
+
     }
 }

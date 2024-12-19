@@ -325,10 +325,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea27a8b8f6b60994a8938b366c8f6fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClaireCost: 10000
-  AjCost: 50000
+  ClaireCost: 50000
+  AjCost: 10000
   GrannyCost: 500
   MichelleCost: 1000
+  ClaireCostText: 50 000 <sprite=2>
+  AjCostText: 10 000 <sprite=2>
+  GrannyCostText: 500 <sprite=0>
+  MichelleCostText: 1 000 <sprite=0>
   desertCost: 0
   cloudsCost: 0
   dungeonCost: 0
@@ -2083,7 +2087,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
+  m_spriteAsset: {fileID: 11400000, guid: 4bded8e654216d9458045a3aed832b07, type: 2}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
   m_TextStyleHashCode: -1183493901
@@ -2820,7 +2824,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -175.00003, y: -25}
+  m_AnchoredPosition: {x: -175.00006, y: -25}
   m_SizeDelta: {x: -1050, y: -150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &89818049
@@ -3370,7 +3374,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4cb087607c9156245b4c16e2b5cb161f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e1075d012598af54bab5735059c964ae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13789,7 +13793,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4cb087607c9156245b4c16e2b5cb161f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4bd43ca258a932042ba3bba44f45bfbd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14367,7 +14371,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
+  m_spriteAsset: {fileID: 11400000, guid: 4bded8e654216d9458045a3aed832b07, type: 2}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
   m_TextStyleHashCode: -1183493901
@@ -17441,7 +17445,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -175.00003, y: -25}
+  m_AnchoredPosition: {x: -175.00006, y: -25}
   m_SizeDelta: {x: -1050, y: -150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &701659104
@@ -18417,7 +18421,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -175.00003, y: -25}
+  m_AnchoredPosition: {x: -175.00006, y: -25}
   m_SizeDelta: {x: -1050, y: -150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &739428258
@@ -23991,7 +23995,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4cb087607c9156245b4c16e2b5cb161f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb51190bb2cf9fa44a2ef2f16e73bdb7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -27022,7 +27026,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
+  m_spriteAsset: {fileID: 11400000, guid: 4bded8e654216d9458045a3aed832b07, type: 2}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
   m_TextStyleHashCode: -1183493901
@@ -31253,7 +31257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -175.00003, y: -25}
+  m_AnchoredPosition: {x: -175.00006, y: -25}
   m_SizeDelta: {x: -1050, y: -150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1314977056
@@ -40152,7 +40156,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
+  m_spriteAsset: {fileID: 11400000, guid: 4bded8e654216d9458045a3aed832b07, type: 2}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
   m_TextStyleHashCode: -1183493901
@@ -49416,7 +49420,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4cb087607c9156245b4c16e2b5cb161f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c355759ad122e414a905f18b391be158, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -49510,7 +49514,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
+  m_spriteAsset: {fileID: 11400000, guid: 4bded8e654216d9458045a3aed832b07, type: 2}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
   m_TextStyleHashCode: -1183493901
