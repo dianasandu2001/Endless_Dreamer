@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class LevelRewards : MonoBehaviour
 {
+    public UpgradesScript upgradesScript;
     public TMP_Text[] levelButtonsText;
     public GameObject[] levelButtons;
     public GameObject[] overlays;
@@ -106,6 +107,9 @@ public class LevelRewards : MonoBehaviour
             //reward
             GameManager.manager.gems += 5;
             GameManager.manager.coins += 100;
+
+            upgradesScript.coin_display.text = "" + GameManager.manager.coins;
+            upgradesScript.gem_display.text = "" + GameManager.manager.gems;
 
             // Update UI
             levelButtonsText[3].text = "Claimed!";
@@ -216,6 +220,9 @@ public class LevelRewards : MonoBehaviour
             //reward
             GameManager.manager.gems += 10;
             GameManager.manager.coins += 200;
+
+            upgradesScript.coin_display.text = "" + GameManager.manager.coins;
+            upgradesScript.gem_display.text = "" + GameManager.manager.gems;
 
             // Update UI
             levelButtonsText[8].text = "Claimed!";
@@ -342,6 +349,9 @@ public class LevelRewards : MonoBehaviour
             //reward
             GameManager.manager.gems += 20;
             GameManager.manager.coins += 500;
+
+            upgradesScript.coin_display.text = "" + GameManager.manager.coins;
+            upgradesScript.gem_display.text = "" + GameManager.manager.gems;
 
             // Update UI
             levelButtonsText[13].text = "Claimed!";
@@ -495,6 +505,8 @@ public class LevelRewards : MonoBehaviour
             //reward
             GameManager.manager.gems += 50;
             GameManager.manager.powerCollectionAmount[GameManager.manager.currentCharacter] -= 50f;
+
+            upgradesScript.gem_display.text = "" + GameManager.manager.gems;
 
             // Update UI
             levelButtonsText[19].text = "Claimed!";

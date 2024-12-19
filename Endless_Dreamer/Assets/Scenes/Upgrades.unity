@@ -11985,6 +11985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00aff775937a581439c50aa35c4c1672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradesScript: {fileID: 1839895091}
   levelButtonsText:
   - {fileID: 2048233389}
   - {fileID: 1172610486}

@@ -13,7 +13,11 @@ public class Obsticle_Collision : MonoBehaviour
 
     void OnTriggerEnter(Collider player)
     {
-        if (player.gameObject.CompareTag("ShieldPower"))
+        if (player.gameObject.CompareTag("Destroyer"))
+        {
+            Destroy(gameObject);
+        }
+        else if (player.gameObject.CompareTag("ShieldPower"))
         {
             Debug.Log("Destroyer void");
             Destroy(player.gameObject);

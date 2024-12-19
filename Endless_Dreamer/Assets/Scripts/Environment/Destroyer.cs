@@ -4,11 +4,11 @@ public class Destroyer : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Obstacle"))
-        {
-            Destroy(other.gameObject); // Destroys the obstacle GameObject
-        }
-        else if (other.CompareTag("Ground"))
+        //if (other.CompareTag("Obstacle"))
+        //{
+        //    Destroy(other.gameObject); // Destroys the obstacle GameObject
+        //}
+        if (other.CompareTag("Ground"))
         {
             Destroy(other.gameObject); // Destroys the obstacle GameObject
         }
