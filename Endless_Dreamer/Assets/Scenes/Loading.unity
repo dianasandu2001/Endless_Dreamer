@@ -368,6 +368,10 @@ MonoBehaviour:
   - 150
   - 150
   - 150
+  coinPower: 50
+  gemPower: 2
+  scorePower: 2
+  scorePowerTime: 5
 --- !u!1 &627910114
 GameObject:
   m_ObjectHideFlags: 0
