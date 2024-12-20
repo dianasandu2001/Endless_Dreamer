@@ -9,6 +9,7 @@ public class GemCollection : MonoBehaviour
         {
             gem_FX.Play();
             Collectable_Control.gem_count += 1;
+            Collectable_Control.power += 20;
             this.gameObject.SetActive(false);
         }
     }

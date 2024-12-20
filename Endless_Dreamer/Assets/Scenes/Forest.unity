@@ -228,6 +228,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 782240474267431727}
     - target: {fileID: 1153608003559546913, guid: b67b28d7726262c4988cdd5a2f7dcdc1, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 1669669007}
+    - target: {fileID: 1153608003559546913, guid: b67b28d7726262c4988cdd5a2f7dcdc1, type: 3}
       propertyPath: control
       value: 
       objectReference: {fileID: 1984615740}
@@ -1979,6 +1983,10 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 782240474267431727}
+    - target: {fileID: 5972872455055213400, guid: a7a89f4019fb55c4eb3e24f967eb1a85, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 1669669007}
     - target: {fileID: 6921265908778359260, guid: a7a89f4019fb55c4eb3e24f967eb1a85, type: 3}
       propertyPath: panel
       value: 
@@ -2033,6 +2041,10 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 782240474267431727}
+    - target: {fileID: 876620733377922153, guid: ac83c7072a334b740938b2d05730b2c4, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 1669669007}
     - target: {fileID: 2201521844816808151, guid: ac83c7072a334b740938b2d05730b2c4, type: 3}
       propertyPath: m_Name
       value: Rock
@@ -2234,6 +2246,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 840014432}
     - target: {fileID: 8220447856571193953, guid: c415e8065de31b24abd410331b84dfc1, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 1669669007}
+    - target: {fileID: 8220447856571193953, guid: c415e8065de31b24abd410331b84dfc1, type: 3}
       propertyPath: debuffTime
       value: 15
       objectReference: {fileID: 0}
@@ -2340,6 +2356,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1669669007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6355365799040025201, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
+  m_PrefabInstance: {fileID: 782240474267431724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1671149086 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6104825343819824928, guid: 7ce941ff0842261429d5d955b7d5798e, type: 3}
@@ -2365,6 +2386,10 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 782240474267431727}
+    - target: {fileID: 308066028377534509, guid: 7ce941ff0842261429d5d955b7d5798e, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 1669669007}
     - target: {fileID: 2933338882275632822, guid: 7ce941ff0842261429d5d955b7d5798e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.000500679
@@ -4362,6 +4387,10 @@ PrefabInstance:
     - target: {fileID: 5924224064587767175, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355365799040025201, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6406378229874380415, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_AnchoredPosition.x
