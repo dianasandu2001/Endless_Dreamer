@@ -15,6 +15,11 @@ public class VisionDebuffCollection : MonoBehaviour
     //public Coroutine runningCoroutine;
 
     public GameObject button;
+
+    void Awake()
+    {
+        levelControl = GameObject.FindAnyObjectByType<Level_Control>();
+    }
     void OnTriggerEnter(Collider player)
     {
         if (!player.gameObject.CompareTag("Destroyer"))

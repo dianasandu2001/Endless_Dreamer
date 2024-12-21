@@ -29,6 +29,8 @@ public class Player_Move : MonoBehaviour
     public AudioSource coin_FX;
     public bool isProtectedByBubble = false;
 
+    private float jt = 1f;
+
     void Update()
     {
         // checking animations state for debugging
@@ -61,11 +63,16 @@ public class Player_Move : MonoBehaviour
         }
 
         // grounded
-        grounded = Physics.Raycast(ground_check_position.position, Vector3.down, ground_check_distance, ground_layer);
+        if (Time.realtimeSinceStartup - jt > 0.1f)
+        {
+            grounded = Physics.Raycast(ground_check_position.position, Vector3.down, ground_check_distance, ground_layer);
+        }
 
         // Jumping
         if (Input.GetKey(KeyCode.Space) && grounded == true)
         {
+            jt = Time.realtimeSinceStartup;
+            grounded = false;
             RB.linearVelocity = new Vector2(0, jump_force);
             animator.SetTrigger("Jump");
         }

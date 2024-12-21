@@ -116,8 +116,6 @@ public class GameManager : MonoBehaviour
             Load();
             SceneManager.LoadScene("MainMenu");
         }
-
-
     }
 
     public void Save()

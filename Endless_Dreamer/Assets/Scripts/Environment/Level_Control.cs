@@ -65,14 +65,12 @@ public class Level_Control : MonoBehaviour
         }
         else
         {
-            Debug.Log("tripping");
             if (GameManager.manager.greenPotion > 1)
             {
-                Debug.Log("tripping is ending1");
-                StopCoroutine(trippingCoroutine);
-                Debug.Log("tripping is ending2");
+                StopCoroutine("TrippedTime");
+                trippingCoroutine = null;
 
-                image.gameObject.SetActive(false);
+                trippingImage.gameObject.SetActive(false);
                 player_move.tripped = false;
 
                 GameManager.manager.greenPotion -= 1;
@@ -88,7 +86,8 @@ public class Level_Control : MonoBehaviour
         {
             if (GameManager.manager.greenPotion > 1)
             {
-                StopCoroutine(visionCoroutine);
+                StopCoroutine("DebuffTime");
+                visionCoroutine = null;
 
                 image.gameObject.SetActive(false);
 
@@ -108,6 +107,7 @@ public class Level_Control : MonoBehaviour
         image.gameObject.SetActive(false);
         Debug.Log("Coroutine ending");
         //button.SetActive(false);
+        visionCoroutine = null;
     }
 
     public IEnumerator TrippedTime(float sec)
@@ -119,5 +119,6 @@ public class Level_Control : MonoBehaviour
         trippingImage.gameObject.SetActive(false);
         player_move.tripped = false;
         //button.SetActive(false);
+        trippingCoroutine = null;
     }
 }

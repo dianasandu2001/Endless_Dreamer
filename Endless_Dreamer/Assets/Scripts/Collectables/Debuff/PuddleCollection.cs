@@ -17,6 +17,12 @@ public class PuddleCollection : MonoBehaviour
     public Animator animator;
     public Player_Move player_move;
     public GameObject panel;
+
+    void Awake()
+    {
+        levelControl = GameObject.FindAnyObjectByType<Level_Control>();
+    }
+
     void OnTriggerEnter(Collider player)
     {
         if (!player.gameObject.CompareTag("Destroyer"))
