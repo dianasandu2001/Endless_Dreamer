@@ -9,10 +9,10 @@ public class VisionDebuffCollection : MonoBehaviour
     public GameObject mesh;
     public Collider colliderC;
     //public AudioSource chest_FX;
-    public Level_Control level_Control;
+    public Level_Control levelControl;
 
     public Image image;
-    public Coroutine runningCoroutine;
+    //public Coroutine runningCoroutine;
 
     public GameObject button;
     void OnTriggerEnter(Collider player)
@@ -20,7 +20,7 @@ public class VisionDebuffCollection : MonoBehaviour
         if (!player.gameObject.CompareTag("Destroyer"))
         {
             Debug.Log("Vision Debuff");
-            runningCoroutine = StartCoroutine(level_Control.DebuffTime(GameManager.manager.debuffTime[GameManager.manager.currentCharacter]));
+            levelControl.visionCoroutine = StartCoroutine(levelControl.DebuffTime(GameManager.manager.debuffTime[GameManager.manager.currentCharacter]));
             //button.SetActive(true);
             mesh.SetActive(false);
             colliderC.enabled = false;

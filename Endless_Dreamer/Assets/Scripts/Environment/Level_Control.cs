@@ -14,11 +14,11 @@ public class Level_Control : MonoBehaviour
     public TMP_Text healthPotionButton;
 
     public Image trippingImage;
-    //public Coroutine trippingCoroutine;
+    public Coroutine trippingCoroutine;
     public PuddleCollection trippingScript;
 
     public Image image;
-    //public Coroutine runningCoroutine;
+    public Coroutine visionCoroutine;
     public VisionDebuffCollection visionDebuffScript;
 
     public GameObject button;
@@ -58,15 +58,19 @@ public class Level_Control : MonoBehaviour
 
     public void useDebuffPotion()
     {
-        if (trippingScript.trippingCoroutine == null)
+        if (trippingCoroutine == null)
         {
+            Debug.Log("tripping is null");
             //nothing
         }
         else
         {
+            Debug.Log("tripping");
             if (GameManager.manager.greenPotion > 1)
             {
-                StopCoroutine(trippingScript.trippingCoroutine);
+                Debug.Log("tripping is ending1");
+                StopCoroutine(trippingCoroutine);
+                Debug.Log("tripping is ending2");
 
                 image.gameObject.SetActive(false);
                 player_move.tripped = false;
@@ -75,15 +79,17 @@ public class Level_Control : MonoBehaviour
                 //button.SetActive(false);
             }
         }
-        if (visionDebuffScript.runningCoroutine == null)
+        if (visionCoroutine == null)
         {
+            Debug.Log("debuff is null");
             //nothing
         }
         else
         {
             if (GameManager.manager.greenPotion > 1)
             {
-                StopCoroutine(visionDebuffScript.runningCoroutine);
+                StopCoroutine(visionCoroutine);
+
                 image.gameObject.SetActive(false);
 
                 GameManager.manager.greenPotion -= 1;

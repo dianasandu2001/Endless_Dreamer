@@ -235,6 +235,10 @@ PrefabInstance:
       propertyPath: control
       value: 
       objectReference: {fileID: 1984615740}
+    - target: {fileID: 1153608003559546913, guid: b67b28d7726262c4988cdd5a2f7dcdc1, type: 3}
+      propertyPath: levelControl
+      value: 
+      objectReference: {fileID: 1984615740}
     - target: {fileID: 2188490396625667691, guid: b67b28d7726262c4988cdd5a2f7dcdc1, type: 3}
       propertyPath: m_Name
       value: Puddle
@@ -1815,7 +1819,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Speed_Buff_Mushroom
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 41843725290317215, guid: 7d7365bab708367408d757b613858240, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1987,6 +1992,10 @@ PrefabInstance:
       propertyPath: button
       value: 
       objectReference: {fileID: 1669669007}
+    - target: {fileID: 5972872455055213400, guid: a7a89f4019fb55c4eb3e24f967eb1a85, type: 3}
+      propertyPath: levelControl
+      value: 
+      objectReference: {fileID: 1984615740}
     - target: {fileID: 6921265908778359260, guid: a7a89f4019fb55c4eb3e24f967eb1a85, type: 3}
       propertyPath: panel
       value: 
@@ -2010,17 +2019,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7230140316984293085, guid: a7a89f4019fb55c4eb3e24f967eb1a85, type: 3}
   m_PrefabInstance: {fileID: 1240473377}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1240473380 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5972872455055213400, guid: a7a89f4019fb55c4eb3e24f967eb1a85, type: 3}
-  m_PrefabInstance: {fileID: 1240473377}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4974fefa87a2937439da5446d46999d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1253200147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2045,6 +2043,10 @@ PrefabInstance:
       propertyPath: button
       value: 
       objectReference: {fileID: 1669669007}
+    - target: {fileID: 876620733377922153, guid: ac83c7072a334b740938b2d05730b2c4, type: 3}
+      propertyPath: levelControl
+      value: 
+      objectReference: {fileID: 1984615740}
     - target: {fileID: 2201521844816808151, guid: ac83c7072a334b740938b2d05730b2c4, type: 3}
       propertyPath: m_Name
       value: Rock
@@ -2136,17 +2138,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5374848180157106224, guid: ac83c7072a334b740938b2d05730b2c4, type: 3}
   m_PrefabInstance: {fileID: 1253200147}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1253200150 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 876620733377922153, guid: ac83c7072a334b740938b2d05730b2c4, type: 3}
-  m_PrefabInstance: {fileID: 1253200147}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4974fefa87a2937439da5446d46999d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1279228877 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2779704511238921876, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
@@ -2253,6 +2244,10 @@ PrefabInstance:
       propertyPath: debuffTime
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 8220447856571193953, guid: c415e8065de31b24abd410331b84dfc1, type: 3}
+      propertyPath: levelControl
+      value: 
+      objectReference: {fileID: 1984615740}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2390,6 +2385,10 @@ PrefabInstance:
       propertyPath: button
       value: 
       objectReference: {fileID: 1669669007}
+    - target: {fileID: 308066028377534509, guid: 7ce941ff0842261429d5d955b7d5798e, type: 3}
+      propertyPath: levelControl
+      value: 
+      objectReference: {fileID: 1984615740}
     - target: {fileID: 2933338882275632822, guid: 7ce941ff0842261429d5d955b7d5798e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.000500679
@@ -2688,10 +2687,10 @@ MonoBehaviour:
   control: {fileID: 1984615739}
   healthPotionUsage: 1
   healthPotionButton: {fileID: 782240474267431725}
-  trippingImage: {fileID: 0}
-  trippingScript: {fileID: 0}
-  image: {fileID: 0}
-  visionDebuffScript: {fileID: 0}
+  trippingImage: {fileID: 840014433}
+  trippingScript: {fileID: 484081141}
+  image: {fileID: 840014432}
+  visionDebuffScript: {fileID: 1459939586}
   button: {fileID: 0}
 --- !u!114 &2041927993 stripped
 MonoBehaviour:
@@ -4403,7 +4402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -4428,19 +4427,19 @@ PrefabInstance:
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1459939586}
+      objectReference: {fileID: 1984615740}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 484081141}
+      objectReference: {fileID: 1969671083}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1240473380}
+      objectReference: {fileID: 1969671083}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 1253200150}
+      objectReference: {fileID: 1969671083}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
@@ -4467,7 +4466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DebuffPotion
+      value: useDebuffPotion
       objectReference: {fileID: 0}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -4487,7 +4486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: VisionDebuffCollection, Assembly-CSharp
+      value: Level_Control, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -4507,7 +4506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: TrippedTime
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6873085354434296023, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument

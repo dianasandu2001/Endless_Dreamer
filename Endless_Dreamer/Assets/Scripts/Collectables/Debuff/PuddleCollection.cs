@@ -10,9 +10,9 @@ public class PuddleCollection : MonoBehaviour
     //public AudioSource chest_FX;
 
     public Image image;
-    public Coroutine trippingCoroutine;
+    //public Coroutine trippingCoroutine;
     public GameObject button;
-    public Level_Control level_Control;
+    public Level_Control levelControl;
 
     public Animator animator;
     public Player_Move player_move;
@@ -40,7 +40,7 @@ public class PuddleCollection : MonoBehaviour
             else
             {
                 animator.SetTrigger("Trip");
-                trippingCoroutine = StartCoroutine(level_Control.TrippedTime(GameManager.manager.trippedTime[GameManager.manager.currentCharacter]));
+                levelControl.trippingCoroutine = StartCoroutine(levelControl.TrippedTime(GameManager.manager.trippedTime[GameManager.manager.currentCharacter]));
                 //button.SetActive(true);
 
                 mesh.SetActive(false);
