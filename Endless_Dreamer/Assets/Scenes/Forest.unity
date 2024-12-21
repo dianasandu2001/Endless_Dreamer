@@ -2688,6 +2688,11 @@ MonoBehaviour:
   control: {fileID: 1984615739}
   healthPotionUsage: 1
   healthPotionButton: {fileID: 782240474267431725}
+  trippingImage: {fileID: 0}
+  trippingScript: {fileID: 0}
+  image: {fileID: 0}
+  visionDebuffScript: {fileID: 0}
+  button: {fileID: 0}
 --- !u!114 &2041927993 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3364094616361201755, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
@@ -4390,7 +4395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6355365799040025201, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6406378229874380415, guid: a130c34d71a93ef4797f057a7af4e865, type: 3}
       propertyPath: m_AnchoredPosition.x

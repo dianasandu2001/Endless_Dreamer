@@ -12,7 +12,7 @@ public class PuddleCollection : MonoBehaviour
     public Image image;
     public Coroutine trippingCoroutine;
     public GameObject button;
-    //public Level_Control level_Control;
+    public Level_Control level_Control;
 
     public Animator animator;
     public Player_Move player_move;
@@ -40,15 +40,15 @@ public class PuddleCollection : MonoBehaviour
             else
             {
                 animator.SetTrigger("Trip");
-                trippingCoroutine = StartCoroutine(TrippedTime(GameManager.manager.trippedTime[GameManager.manager.currentCharacter]));
-                button.SetActive(true);
+                trippingCoroutine = StartCoroutine(level_Control.TrippedTime(GameManager.manager.trippedTime[GameManager.manager.currentCharacter]));
+                //button.SetActive(true);
 
                 mesh.SetActive(false);
                 colliderC.enabled = false;
             }
         }
     }
- 
+ /*
     public IEnumerator TrippedTime(float sec)
     {
         player_move.tripped = true;
@@ -80,5 +80,5 @@ public class PuddleCollection : MonoBehaviour
             }
         }
     }
-  
+  */
 }
