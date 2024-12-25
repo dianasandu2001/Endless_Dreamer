@@ -910,19 +910,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 532843394}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1839895091}
-        m_TargetAssemblyTypeName: Map, Assembly-CSharp
-        m_MethodName: BuyDungeon
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &532843394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3125,19 +3113,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1236522047}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1839895091}
-        m_TargetAssemblyTypeName: Map, Assembly-CSharp
-        m_MethodName: BuyClouds
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1236522047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4187,6 +4163,10 @@ MonoBehaviour:
   AjCost: 0
   GrannyCost: 0
   MichelleCost: 0
+  ClaireCostText: 
+  AjCostText: 
+  GrannyCostText: 
+  MichelleCostText: 
   desertCost: 20000
   cloudsCost: 50000
   dungeonCost: 500
@@ -4757,19 +4737,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1937854257}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1839895091}
-        m_TargetAssemblyTypeName: Map, Assembly-CSharp
-        m_MethodName: BuyDesert
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1937854257
 MonoBehaviour:
   m_ObjectHideFlags: 0
