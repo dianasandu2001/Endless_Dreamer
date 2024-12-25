@@ -100,6 +100,103 @@ Transform:
   - {fileID: 2736627697416086493}
   m_Father: {fileID: 1272779058602790038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &535367505203575475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 527398492691652826}
+  - component: {fileID: 8385790523835014032}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &527398492691652826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535367505203575475}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.87, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2347536232962671928}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &8385790523835014032
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535367505203575475}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 1, g: 0.6367924, b: 0.98989224, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1 &767828099279551122
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,6 +541,103 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 45.604324, y: 1, z: 46.609604}
   m_Center: {x: 0.34717178, y: 0, z: -0.21251678}
+--- !u!1 &3387116157916638903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2831285989037490584}
+  - component: {fileID: 1628767068310647222}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2831285989037490584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3387116157916638903}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 7.32, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5738369763214997438}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1628767068310647222
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3387116157916638903}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 1, g: 0.6367924, b: 0.98989224, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1 &3607767290456719388
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,6 +855,103 @@ Transform:
   - {fileID: 8839151784110269027}
   m_Father: {fileID: 1812230955041878475}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4369662765401629575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6920483629457017259}
+  - component: {fileID: 5350776939738634834}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6920483629457017259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4369662765401629575}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.541484, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4511137878421410329}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &5350776939738634834
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4369662765401629575}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 1, g: 0.6367924, b: 0.98989224, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1 &4434822616115552361
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,6 +1028,103 @@ Transform:
   - {fileID: 111245348985040951}
   m_Father: {fileID: 1272779058602790038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4606917840846288768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8748656343975702552}
+  - component: {fileID: 7778225824247710884}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8748656343975702552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4606917840846288768}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.88, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4960350180177551649}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &7778225824247710884
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4606917840846288768}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 1, g: 0.6367924, b: 0.98989224, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1 &4970375391267753391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,6 +1643,103 @@ Transform:
   - {fileID: 3611876792890061239}
   m_Father: {fileID: 8839151784110269027}
   m_LocalEulerAnglesHint: {x: 7.631, y: 106.675, z: -3.709}
+--- !u!1 &8295927020790513725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4154781300023532331}
+  - component: {fileID: 2909757190729903334}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4154781300023532331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8295927020790513725}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 7.31, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6373233806139407048}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &2909757190729903334
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8295927020790513725}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 1, g: 0.6367924, b: 0.98989224, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1 &8494475065780620011
 GameObject:
   m_ObjectHideFlags: 0
@@ -1745,6 +2230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree1 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.99
@@ -1806,6 +2295,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
       propertyPath: m_Name
       value: Willow_tree2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2327,6 +2820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.193969
@@ -2726,6 +3223,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
       propertyPath: m_Name
       value: Willow_tree1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4533,6 +5034,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree1 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.29
@@ -5345,6 +5850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.780001
@@ -6061,6 +6570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.3328915
@@ -6103,7 +6616,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 527398492691652826}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
 --- !u!4 &2347536232962671928 stripped
@@ -6444,6 +6960,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
       propertyPath: m_Name
       value: Willow_tree2 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9433,6 +9953,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.7954073
@@ -9475,7 +9999,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6920483629457017259}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
 --- !u!4 &4511137878421410329 stripped
@@ -9841,6 +10368,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree1 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.11
@@ -10101,6 +10632,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.24
@@ -10299,6 +10834,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.6
@@ -10341,7 +10880,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8748656343975702552}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
 --- !u!4 &4960350180177551649 stripped
@@ -10562,6 +11104,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
       propertyPath: m_Name
       value: Willow_tree2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11277,6 +11823,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.380001
@@ -11537,6 +12087,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree1 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.6
@@ -11579,7 +12133,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2831285989037490584}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
 --- !u!4 &5738369763214997438 stripped
@@ -12291,6 +12848,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.980627
@@ -12489,6 +13050,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.6600003
@@ -12613,6 +13178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.709627
@@ -12655,7 +13224,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4154781300023532331}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
 --- !u!4 &6373233806139407048 stripped
@@ -13861,6 +14433,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.45
@@ -14413,6 +14989,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.130001
@@ -14964,6 +15544,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
       propertyPath: m_Name
       value: Willow_tree1 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15625,6 +16209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.04
@@ -15959,6 +16547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.45
@@ -16281,6 +16873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Willow_tree1 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f83075210a9b3f48a6bd351928af1bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.5
@@ -16552,6 +17148,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
       propertyPath: m_Name
       value: Willow_tree2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dab68bb983131fc4399b0dc71187b976, type: 3}
       propertyPath: m_LocalPosition.x

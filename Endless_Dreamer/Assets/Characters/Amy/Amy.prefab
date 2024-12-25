@@ -228,6 +228,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Amy
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4ddcff74c5075a74ab3c4913feb2fb4e, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3183749884578473501, guid: 4ddcff74c5075a74ab3c4913feb2fb4e, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.0000005549941

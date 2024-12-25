@@ -59,6 +59,8 @@ public class Settings : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene(GameManager.manager.mapScenes[GameManager.manager.currentMap]);
+        Time.timeScale = 1f;
+        Collectable_Control.power = 0;
     }
     public void Shop()
     {
